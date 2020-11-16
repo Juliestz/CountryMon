@@ -15,6 +15,8 @@ private :
     std::string m_description;
 public:
     Special();
+    void setDescription(const std::string& description);
+    void afficher();
     ~Special();
 };
 
