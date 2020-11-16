@@ -1,11 +1,12 @@
 #include <iostream>
 #include "Special.h"
+#include "SpeBombeAt.h"
 
 
 void creationDesCartes(){
-    Special test;
-    test.setDescription("Ceci est un test");
-    test.afficher();
+    SpeBombeAt sixAout45;
+    SpeBombeAt neufAout45;
+    sixAout45.afficher();
 }
 
 int main() {

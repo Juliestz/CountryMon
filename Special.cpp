@@ -14,7 +14,7 @@ void Special::setDescription(const std::string& description){
 
 void Special::afficher() {
     //std::cout<< m_name << " :" <<std::endl;
-    std::cout<< m_description <<std::endl;
+    std::cout<< "Description : " <<std::endl << m_description <<std::endl;
 }
 
 Special::~Special(){}
