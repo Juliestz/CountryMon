@@ -7,7 +7,8 @@
 
 
 class Card {
-
+public:
+    void setName(const std::string& name);
 };
 
 

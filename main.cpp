@@ -5,7 +5,9 @@
 
 void creationDesCartes(){
     SpeBombeAt sixAout45;
+    //sixAout45.setName("sixAout45");
     SpeBombeAt neufAout45;
+    //neufAout45.setName("neufAout45")
     sixAout45.afficher();
 }
 
