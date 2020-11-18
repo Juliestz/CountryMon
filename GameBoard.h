@@ -11,29 +11,36 @@
 
 
 class Playeur;
+
 class Collection;
 
 
 class GameBoard {
 
 private:
-    std::queue<Card*>m_deck;
-    std::vector<char>m_tebElements;
+    std::queue<Card> m_deck;
+    std::vector<char> m_tebElements;
     Card m_enjeu;
     Card m_creature;
     int m_PV;
     Card m_cemetary;
-    Playeur* m_playeur;
-    Collection* m_collection;
+    Playeur *m_playeur;
+    Collection *m_collection;
 
 public:
-    GameBoard(Playeur* Playeur, Collection* Collection);
+    GameBoard(Playeur *Playeur, Collection *Collection);
+
     void display();
+
     void envoyerCartAuCimetière(Card carteMorte);
+
     Card pickUp();
-    void creatADeck(std::queue<Card*>m_deck, Collection& collection );
-    void mutPV(int montantPV);
-    void putACard (Card creature, Card cartePioche);
+
+    void creatADeck(std::queue<Card> m_deck, Collection &collection);
+
+    void recoisDegats(int montantPV);
+
+    void putACard(Card cartePioche);
 
 
 
