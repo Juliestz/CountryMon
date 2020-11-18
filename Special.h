@@ -16,7 +16,7 @@ private :
 public:
     Special();
     void setDescription(const std::string& description);
-    void afficher();
+    virtual void afficher();
     ~Special();
 };
 
