@@ -8,8 +8,7 @@ GameBoard::GameBoard(Playeur *Playeur, Collection *Collection) : m_collection{Co
 
 
 void GameBoard::envoyerCartAuCimetiere(Card carteMorte) {
-
-    m_cemetary = m_creature;
+    m_cemetary = carteMorte;
 }
 
 Card GameBoard::pickUp() {
