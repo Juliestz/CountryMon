@@ -8,7 +8,7 @@
 #include <iostream>
 #include <queue>
 #include "Card.h"
-
+#include "Creature.h"
 
 class Playeur;
 
@@ -21,7 +21,7 @@ private:
     std::queue<Card> m_deck;
     std::vector<char> m_tebElements;
     Card m_enjeu;
-    Card m_creature;
+    Creature m_creature;
     int m_PV;
     Card m_cemetary;
     Playeur *m_playeur;
@@ -40,7 +40,7 @@ public:
 
     void recoisDegats(int montantPV);
 
-    void putACard(Card cartePioche);
+    void putACard(Creature cartePioche);
 
 
 

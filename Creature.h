@@ -12,7 +12,7 @@ class Creature : public Card {
 
 private:
     int m_HP;
-    bool m_state = true;
+    bool m_state;
 
 public:
     Creature();
