@@ -5,3 +5,4 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(ecemon-T main.cpp Special.cpp Special.h Card.cpp Card.h SpeBombeAt.cpp SpeBombeAt.h)
 
+
