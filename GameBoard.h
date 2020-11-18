@@ -32,7 +32,7 @@ public:
 
     void display();
 
-    void envoyerCartAuCimetière(Card carteMorte);
+    void envoyerCartAuCimetiere(Card carteMorte);
 
     Card pickUp();
 
