@@ -3,6 +3,7 @@
 //
 
 #include "SpeBombeAt.h"
+#include "GameBoard.h"
 
 SpeBombeAt::SpeBombeAt(){
     this->setDescription("Vous lancez une bombe atomique sur la creature adverse : elle perd 2 HP."
