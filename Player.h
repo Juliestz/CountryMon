@@ -17,7 +17,8 @@ private:
 public:
     Player();
     void setPseudo();
-    void setIsAlive();
+    void afficher();
+    void notAlive();
     ~Player();
 };
 
