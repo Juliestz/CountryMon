@@ -11,7 +11,7 @@
 
 
 class Special : public Card {
-private :
+protected :
     std::string m_description;
 public:
     Special();

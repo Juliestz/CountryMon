@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Special.h"
 #include "SpeBombeAt.h"
+#include "Player.h"
 
 
 void creationDesCartes(){
@@ -13,6 +14,8 @@ void creationDesCartes(){
 
 int main() {
     creationDesCartes();
+    Player a;
+    a.setPseudo();
 
     return 0;
 }
