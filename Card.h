@@ -5,10 +5,13 @@
 #ifndef ECEMON_T_CARD_H
 #define ECEMON_T_CARD_H
 
+#include <iostream>
 
 class Card {
+protected:
+    std::string m_name;
 public:
-    //void setName(const std::string& name);
+    void setName(const std::string& name);
 };
 
 

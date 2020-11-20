@@ -4,15 +4,15 @@
 #include "Player.h"
 #include "SpeEspion.h"
 #include "SpeBoost.h"
-
+#include "SpeAllies.h"
+#include "SpeHopital.h"
 
 void creationDesCartes(){
     SpeBombeAt sixAout45;
-    //sixAout45.setName("sixAout45");
     SpeEspion bond;
-    //bond.setName("James Bond");
     SpeBoost cdm;
-    //cdm.setName("Coupe du monde");
+    SpeAllies entente;
+    SpeHopital postCovid;
 }
 
 
