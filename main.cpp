@@ -3,18 +3,18 @@
 #include "SpeBombeAt.h"
 #include "Player.h"
 #include "SpeEspion.h"
+#include "SpeBoost.h"
 
 
 void creationDesCartes(){
     SpeBombeAt sixAout45;
     //sixAout45.setName("sixAout45");
-    SpeBombeAt neufAout45;
-    //neufAout45.setName("neufAout45");
-    sixAout45.afficher();
     SpeEspion bond;
     //bond.setName("James Bond");
-
+    SpeBoost cdm;
+    //cdm.setName("Coupe du monde");
 }
+
 
 int main() {
     creationDesCartes();

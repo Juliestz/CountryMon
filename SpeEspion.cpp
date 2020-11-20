@@ -4,10 +4,13 @@
 
 #include "SpeEspion.h"
 
-SpeEspion::SpeEspion(){}
+SpeEspion::SpeEspion(){
+    this->setDescription("Vous envoyez un espion pour savoir quelle sera la prochaine carte"
+                         " tirée par le joueur adverse.");
+}
 
 void SpeEspion::fonctionSpe(){
-    //afficher le deck de l'adversaire
+    //regarde la première carte du deck du joueur adverse
 }
 
 SpeEspion::~SpeEspion(){}
