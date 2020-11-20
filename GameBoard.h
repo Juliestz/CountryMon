@@ -9,8 +9,8 @@
 #include <queue>
 #include "Card.h"
 #include "Creature.h"
+#include "Player.h"
 
-class Playeur;
 
 class Collection;
 
@@ -24,11 +24,11 @@ private:
     Creature m_creature;
     int m_PV;
     Card m_cemetary;
-    Playeur *m_playeur;
+    Player *m_playeur;
     Collection *m_collection;
 
 public:
-    GameBoard(Playeur *Playeur, Collection *Collection);
+    GameBoard(Player *Playeur, Collection *Collection);
 
     void display();
 
@@ -40,7 +40,11 @@ public:
 
     void recoisDegats(int montantPV);
 
-    void putACard(Creature cartePioche);
+    void putACard(Creature cartePiochee);
+
+    int atkDeCreature(); //a faire
+
+    void utilisationDeCarteEvent(char numDeCarte);
 
 
 

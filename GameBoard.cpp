@@ -4,7 +4,7 @@
 
 #include "GameBoard.h"
 
-GameBoard::GameBoard(Playeur *Playeur, Collection *Collection) : m_collection{Collection}, m_playeur{Playeur} {}
+GameBoard::GameBoard(Player *Playeur, Collection *Collection) : m_collection{Collection}, m_playeur{Playeur} {}
 
 
 void GameBoard::envoyerCartAuCimetiere(Card carteMorte) {
@@ -21,8 +21,8 @@ void GameBoard::display() {
     std::cout << "pas interressant a coder maintenant";
 }
 
-void GameBoard::putACard(Creature cartePioche) {
-    m_creature = cartePioche;
+void GameBoard::putACard(Creature cartePiochee) {
+    m_creature = cartePiochee;
 }
 
 void GameBoard::creatADeck(std::queue<Card> m_deck, Collection &collection) {
@@ -35,6 +35,16 @@ void GameBoard::recoisDegats(int montantDegats) {
     if (temoins != m_creature.getState()) {
         this->envoyerCartAuCimetiere(m_creature);
     }
+}
+
+int GameBoard::atkDeCreature() {
+
+
+    return 0;
+}
+
+void GameBoard::utilisationDeCarteEvent(char numDeCarte) {
+
 }
 
 
