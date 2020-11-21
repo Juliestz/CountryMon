@@ -3,7 +3,6 @@
 //
 
 #include "Game.h"
-#include "Energy.h"
 
 
 void Game::utilisationDeCarteEvent(Special *Carte, GameBoard *GB, GameBoard *M_opponent) {
@@ -47,22 +46,6 @@ void Game::utilisationDeCarteEvent(Special *Carte, GameBoard *GB, GameBoard *M_o
             GB->utilisationDeCarteEvent(Carte);
             break;
     }
-
-
-    /*Alliés : « Triple Entente »
-
-     Piocher 2 nouvelles cartes pour les jouer dans ce tour*/
-
-
-
-    /*Hopital : « PostCovid »
-
-    Créature alliée +2 PV*/
-
-
-    /*Pandémie : « Confinement »
-
-    -1 carte énergie de chaque coté*/
 }
 
 Game::Game(GameBoard *GB1, GameBoard *GB2) : m_GB1{GB1}, m_GB2{GB2} {}

@@ -12,6 +12,7 @@
 #include "Player.h"
 #include "Special.h"
 #include "Collection.h"
+#include "Energy.h"
 
 
 class GameBoard {
@@ -30,9 +31,9 @@ private:
 public:
     GameBoard(Player *Playeur, Collection *Collection);
 
-    void display();
+    void display();//a faire
 
-    void creatADeck();
+    void creatADeck();//a faire
 
     Card *pickUp();
 
