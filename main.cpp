@@ -6,6 +6,7 @@
 #include "SpeBoost.h"
 #include "SpeAllies.h"
 #include "SpeHopital.h"
+#include "SpePandemie.h"
 
 void creationDesCartes(){
     SpeBombeAt sixAout45;
@@ -13,6 +14,7 @@ void creationDesCartes(){
     SpeBoost cdm;
     SpeAllies entente;
     SpeHopital postCovid;
+    SpePandemie confinement;
 }
 
 
