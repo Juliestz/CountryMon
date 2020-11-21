@@ -7,7 +7,11 @@
 GameBoard::GameBoard(Player *Playeur, Collection *Collection, Creature *mCreature)
         : m_collection{Collection},
           m_playeur{Playeur},
-          m_creature{mCreature} {}
+          m_creature{mCreature} {
+
+
+
+}
 
 
 void GameBoard::envoyerCartAuCimetiere(Card *carteMorte) {
@@ -74,6 +78,26 @@ void GameBoard::putBack(Card *cartePiochee) {
 
 void GameBoard::putAnEnergy(char numCarte) {
     m_tabElements[numCarte] += 1;
+}
+
+void GameBoard::enleverHP(int nb) {
+    m_creature->mutHP(nb);
+}
+
+Card *GameBoard::getFirstCard() {
+    return m_deck.front();
+}
+
+
+
+bool GameBoard::destroyPermanent() {
+    if (m_permanente != nullptr) {
+        this->envoyerCartAuCimetiere(m_permanente);
+        m_permanente = nullptr;
+        return false;
+    } else {
+        return true;
+    }
 }
 
 

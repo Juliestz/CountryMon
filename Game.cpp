@@ -10,8 +10,8 @@ void Game::utilisationDeCarteEvent(Special *Carte, GameBoard *GB, GameBoard *M_o
 
     switch (Carte->getNum()) {
         case 1:
-            m_creature->mutHP(1);
-            M_opponent->m_creature->mutHP(2);
+            GB->enleverHP(1);
+            M_opponent->enleverHP(2);
 
             /* Bombe Atomique : « six Aout 45 »
 
@@ -20,14 +20,14 @@ void Game::utilisationDeCarteEvent(Special *Carte, GameBoard *GB, GameBoard *M_o
              Créature allié -1 PV*/
             break;
         case 2:
-            M_opponent->m_deck.front()->display();
+            M_opponent->getFirstCard()->display();
             /*  Espion : « James Bond »
 
               Voir la première carte du deck de l’adversaire*/
             break;
         case 4:
-            this->drawPhase(GB);
-            drawPhase(GB);
+            this->drawPhase(GB, M_opponent);
+            drawPhase(GB, M_opponent);
             break;
         case 6:
 
@@ -36,7 +36,9 @@ void Game::utilisationDeCarteEvent(Special *Carte, GameBoard *GB, GameBoard *M_o
             -1 carte énergie de chaque coté*/
             break;
         case 7:
-            M_opponent->envoyerCartAuCimetiere(m_permanente);
+            if (M_opponent->destroyPermanent()) {
+                std::cout << "il n'y avait pas de carte\n";
+            }
             /*-	Territoire : « Alsace »
 
             -1 carte permanente adverse du plateau*/
@@ -72,12 +74,12 @@ void Game::playATurn(GameBoard *GB) {
 
 //  FAIRE ATENTION AU DYNAMIQUE CASTE !!!!
 
-void Game::drawPhase(GameBoard *GB) {
+void Game::drawPhase(GameBoard *GB, GameBoard *GB2) {
     Card *carteManipulée = GB->pickUp();
 
     Special *cs = dynamic_cast<Special *>(carteManipulée);
     if (cs) {
-        this->utilisationDeCarteEvent(cs, GB);
+        this->utilisationDeCarteEvent(cs, GB, GB2);
     }
 
     Creature *cc = dynamic_cast<Creature *>(carteManipulée);

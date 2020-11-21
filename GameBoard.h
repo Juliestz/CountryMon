@@ -36,6 +36,8 @@ public:
 
     Card *pickUp();
 
+    Card* getFirstCard();
+
     void putBack(Card* cartePiochee);
 
     void putACard(Creature *cartePiochee);
@@ -44,7 +46,11 @@ public:
 
     void recoisDegats(int montantPV);
 
+    void enleverHP(int nb);
+
     void utilisationDeCarteEvent(Special *Carte);
+
+    bool destroyPermanent();
 
     void putAnEnergy(char numCarte);
 
