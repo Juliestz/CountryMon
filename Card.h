@@ -14,6 +14,7 @@ protected:
 public:
     void setName(const std::string& name);
     int getNum();
+    void display();
 };
 
 
