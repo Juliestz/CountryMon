@@ -47,7 +47,7 @@ public:
 
     void utilisationDeCarteEvent(char numDeCarte);
 
-
+//bool pile.empty()
 
 };
 
