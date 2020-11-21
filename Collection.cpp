@@ -100,7 +100,7 @@ void Collection::addCard(int type){
     }
 }
 
-void Collection::removeCard(const int type) {
+void Collection::removeCard(char numSerie) {
     bool notRemove = true;
     std::list<Card*>::iterator it;
     std::list<Card*>::iterator debut;
@@ -112,7 +112,7 @@ void Collection::removeCard(const int type) {
 
         if (notRemove){
 
-            if ((*it)->getNum() == type){
+            if ((*it)->getNum() == numSerie){
                 m_collection.erase(it);
                 notRemove = false;
 
