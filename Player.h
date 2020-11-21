@@ -12,13 +12,10 @@ class Player {
 private:
     std::string m_pseudo;
     int m_money;
-    int m_pv;
-    bool m_isAlive;
 public:
     Player();
     void setPseudo();
     void afficher();
-    void notAlive();
     ~Player();
 };
 
