@@ -15,8 +15,8 @@ protected:
 public:
     void setName(const std::string& name);
     int getNum();
-    void display();
-    void Draw(/*File *FichierFondCarte*/);
+    void display(/*File *FichierFondCarte*/);
+
     Card();
 
     ~Card();
