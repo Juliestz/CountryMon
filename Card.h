@@ -6,6 +6,7 @@
 #define ECEMON_T_CARD_H
 
 #include <iostream>
+#include <sstream>
 
 class Card {
 protected:
@@ -13,7 +14,7 @@ protected:
     char m_numDeSerie;
     // ALLEGRO_BITMAP *m_fondCarte;
 public:
-    Card(std::string name);
+    Card(std::istringstream& name, char numSerie);
 
     void setName(const std::string &name);
 

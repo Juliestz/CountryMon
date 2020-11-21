@@ -6,11 +6,11 @@
 #include <iostream>
 #include <string.h>
 
-Card::Card(std::string name) : m_name{name}{}
+Card::Card(std::istringstream& name,char numSerie) :  m_numDeSerie{numSerie}{}
 
 Card::Card() {};
 
-Card::~Card() {};
+
 
 void Card::setName(const std::string &name) {
 
@@ -28,4 +28,5 @@ void Card::display (/*File *FichierFondCarte*/) {
 char Card::getNum() {
     return m_numDeSerie;
 }
+
 

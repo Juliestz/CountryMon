@@ -10,17 +10,18 @@
 #include "Attack.h"
 
 
+
 class Creature : public Card {
 
 private:
 
     int m_HP;
-    int m_LP;
+
     bool m_available;
 
 
 public:
-    Creature(std::string name, int HP, int LP, bool available);
+    Creature(std::istream& name, std::istream& HP, bool available);
 
     virtual ~Creature() = default;
 
@@ -31,6 +32,7 @@ public:
     virtual bool getState() const;
 
     virtual int utilisation(char phase);
+    void serialize(std::ostream &os) const;
 
 };
 

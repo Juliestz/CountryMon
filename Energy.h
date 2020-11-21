@@ -7,20 +7,33 @@
 
 #include "Card.h"
 #include <string>
+#include <vector>
+#include <fstream>
 
 class Energy : public Card {
 
 protected:
 
     std::string m_description;
+    std::vector<Energy> tab_energy;
+    bool  m_OK;
 public:
     Energy();
+    Energy( std::string type, std::string description);
 
     Energy(const std::string& name, const std::string& description);
 
-    virtual ~Energy() = default;
+ ~Energy();
 
     void setDescription(const std::string &description);
+
+    bool  read(std::istream& stream);
+
+    bool IsOK() const;
+
+
+
+
 
 };
 

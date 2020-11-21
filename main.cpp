@@ -4,6 +4,9 @@
 #include "Creature.h"
 #include "Attack.h"
 #include "Collection.h"
+#include "Energy.h"
+
+#include <fstream>
 
 void creationDesCartesSpeciales(){
     Special sixAout45{"Six Aout 45", "Vous lancez une bombe atomique sur la creature adverse : elle perd 2 HP."
