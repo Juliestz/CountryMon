@@ -23,7 +23,13 @@ public:
 
     Card();
 
+    virtual int utilisation(char phase)=0;
+
     virtual ~Card() = default;
+
+    virtual bool getState() =0;
+
+
 };
 
 

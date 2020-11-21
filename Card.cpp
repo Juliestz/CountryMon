@@ -21,6 +21,7 @@ void Card::display (/*File *FichierFondCarte*/) {
     //al_draw_bitmap(m_fondCarte,0,0,0);
 }
 
-int Card::getNum() {
+char Card::getNum() {
     return m_numDeSerie;
 }
+

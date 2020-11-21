@@ -28,3 +28,8 @@ bool Creature::getState() const {
 void Creature::availableAttack() {
 
 }
+
+int Creature::utilisation(char phase) {
+
+    return 0;
+}

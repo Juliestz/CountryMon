@@ -31,7 +31,7 @@ private:
     GameBoard * M_opponent;
 
 public:
-    GameBoard(Player *Playeur, Collection *Collection, GameBoard *opponent, Creature mCreature);
+    GameBoard(Player *Playeur, Collection *Collection, GameBoard *opponent, Creature* mCreature);
 
     void display();
 

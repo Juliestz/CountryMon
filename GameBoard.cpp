@@ -4,7 +4,7 @@
 
 #include "GameBoard.h"
 
-GameBoard::GameBoard(Player *Playeur, Collection *Collection, GameBoard *opponent, Creature mCreature)
+GameBoard::GameBoard(Player *Playeur, Collection *Collection, GameBoard *opponent, Creature* mCreature)
         : m_collection{Collection},
           m_playeur{Playeur},
           M_opponent{opponent}, m_creature{mCreature} {}
@@ -33,7 +33,7 @@ void GameBoard::creatADeck(std::queue<Card> m_deck, Collection &collection) {
 }
 
 void GameBoard::recoisDegats(int montantDegats) {
-    bool temoins = *m_creature->getState();
+    bool temoins = m_creature->getState();
     m_PV -= m_creature->mutHP(montantDegats);
     if (temoins != m_creature->getState()) {
         this->envoyerCartAuCimetiere(m_creature);

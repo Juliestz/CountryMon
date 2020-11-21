@@ -30,6 +30,7 @@ public:
 
     virtual bool getState() const;
 
+    virtual int utilisation(char phase);
 
 };
 
