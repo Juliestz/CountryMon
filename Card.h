@@ -17,6 +17,8 @@ public:
 
     void setName(const std::string &name);
 
+    virtual void afficher();
+
     char getNum();
 
     void display(/*File *FichierFondCarte*/);

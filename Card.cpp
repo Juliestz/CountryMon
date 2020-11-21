@@ -16,6 +16,10 @@ void Card::setName(const std::string &name) {
 
 };
 
+void Card::afficher(){
+    std::cout<< m_name <<std::endl;
+}
+
 void Card::display (/*File *FichierFondCarte*/) {
     //m_fondCarte=al_load_bitmap(FichierFondCarte);
     //al_draw_bitmap(m_fondCarte,0,0,0);

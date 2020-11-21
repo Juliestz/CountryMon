@@ -6,7 +6,6 @@
 #define ECEMON_T_SPECIAL_H
 
 #include <iostream>
-#include <string>
 #include "Card.h"
 
 
@@ -18,7 +17,7 @@ public:
     Special(const std::string& name, const std::string& decription);
     void setDescription(const std::string& description);
     virtual void afficher();
-    virtual ~Special()=default;
+    ~Special();
 };
 
 

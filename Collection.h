@@ -5,11 +5,17 @@
 #ifndef ECEMON_T_COLLECTION_H
 #define ECEMON_T_COLLECTION_H
 
+#include <iostream>
+#include <list>
+
+class Card;
 
 class Collection {
+private:
+    std::list<Card*> m_collection;
 public:
     Collection();
-    void addCard();
+    void addCard(int type);
     void removeCard();
     Collection* getCollection();
     void display();

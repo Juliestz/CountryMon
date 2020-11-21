@@ -3,6 +3,7 @@
 //
 
 #include "Special.h"
+#include "Card.h"
 #include <iostream>
 
 Special::Special(){}
@@ -16,9 +17,10 @@ void Special::setDescription(const std::string& description){
 }
 
 
-void Special::afficher() {                               //Polymorphisqme de la fonction Afficher ???
-    //std::cout<< m_name << " :" <<std::endl;
+void Special::afficher() {
+    Card::afficher();
     std::cout<< "Description :" <<std::endl << m_description <<std::endl;
 }
+
 
 Special::~Special(){}
