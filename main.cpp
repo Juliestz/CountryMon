@@ -1,24 +1,24 @@
 #include <iostream>
 #include "Special.h"
-#include "SpeBombeAt.h"
 #include "Player.h"
-#include "SpeEspion.h"
-#include "SpeBoost.h"
-#include "SpeAllies.h"
-#include "SpeHopital.h"
-#include "SpePandemie.h"
-#include "SpeTerritoire.h"
 #include "Creature.h"
 #include "Attack.h"
 
 void creationDesCartesSpeciales(){
-    SpeBombeAt sixAout45;
-    SpeEspion bond;
-    SpeBoost cdm;
-    SpeAllies entente;
-    SpeHopital postCovid;
-    SpePandemie confinement;
-    SpeTerritoire alsace;
+    Special sixAout45{"Six Aout 45", "Vous lancez une bombe atomique sur la creature adverse : elle perd 2 HP."
+                                        " Malheureusement la deflagration est tres grande et fait perdre 1 HP a votre propre creature."};
+    Special bond{"James Bond", "Vous envoyez un espion pour savoir quelle sera la prochaine carte"
+                               " tirée par le joueur adverse."};
+    Special cdm{"Coupe du monde", "Vous avez gagné la coupe du monde! Bravo!"
+                                  "Le moral des troupes est au plus haut. La puissance de votre créature en jeu est augmentée de 1."};
+    Special entente{"Triple Entente", "Vous vous alliez avec d'autres puissances. Vous pouvez deffausser cette carte"
+                                      " et en piocher deux autre pour les jouer dans ce tour."};
+    Special hopital{"Hopital", "Votre systeme de sante se remet de la crise sanitaire mais est plus performant que jamais."
+                                    " Votre créature gagne 2 PV."};
+    Special pandemie{"Pandemie", "La crise fait rage, vous perdez beaucoup de ressources pendant que votre population "
+                                       "est en confinement. Vous et votre ennemi perdez une carte Energie mais VOUS choisissez de quel type il s'agira."};
+    Special territoire{"Territoire", "Vous faites reculer l'ennemi dans son camp, enlevez lui une carte permanante "
+                             "qui se trouve sur son plateau."};
 }
 
 void creationDesCartesCreatures(){

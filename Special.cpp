@@ -7,6 +7,10 @@
 
 Special::Special(){}
 
+Special::Special(const std::string& name, const std::string& description): m_description{description}{
+    this->setName(name);
+}
+
 void Special::setDescription(const std::string& description){
     m_description = description;
 }
