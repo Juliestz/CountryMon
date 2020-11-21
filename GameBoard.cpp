@@ -44,6 +44,48 @@ int GameBoard::atkDeCreature() {
 }
 
 void GameBoard::utilisationDeCarteEvent(char numDeCarte) {
+    switch (numDeCarte) {
+        case 1:
+            m_creature.mutHP(1);
+            /* Bombe Atomique : « six Aout 45 »
+
+             Créature adverse -2 PV
+
+             Créature allié -1 PV*/
+            break;
+        case 2:
+            /*  Espion : « James Bond »
+
+              Voir la première carte du deck de l’adversaire*/
+            break;
+        case 3:
+            /* Booster : « Coupe du monde » 
+
+             Carte qui reste sur le terrain (permanente) et augmente la puissance de la créature alliée de 1*/
+
+            break;
+        case 4:
+
+            /*Alliés : « Triple Entente »
+
+             Piocher 2 nouvelles cartes pour les jouer dans ce tour*/
+            break;
+        case 5:
+
+
+            /*Hopital : « PostCovid »
+
+            Créature alliée +2 PV*/
+
+            break;
+        case 6:
+
+            /*Pandémie : « Confinement »
+
+            -1 carte énergie de chaque coté*/
+            break;
+    }
+
 
 }
 

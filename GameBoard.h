@@ -26,6 +26,7 @@ private:
     Card m_cemetary;
     Player *m_playeur;
     Collection *m_collection;
+    GameBoard * M_opponent;
 
 public:
     GameBoard(Player *Playeur, Collection *Collection);
