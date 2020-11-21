@@ -31,13 +31,13 @@ private:
     GameBoard * M_opponent;
 
 public:
-    GameBoard(Player *Playeur, Collection *Collection, GameBoard * opponent);
+    GameBoard(Player *Playeur, Collection *Collection, GameBoard *opponent, Creature mCreature);
 
     void display();
 
     void envoyerCartAuCimetiere(Card carteMorte);
 
-    Card pickUp();
+    Card* pickUp();
 
     void creatADeck(std::queue<Card> m_deck, Collection &collection);
 

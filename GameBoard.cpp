@@ -4,17 +4,18 @@
 
 #include "GameBoard.h"
 
-GameBoard::GameBoard(Player *Playeur, Collection *Collection, GameBoard *opponent) : m_collection{Collection},
-                                                                                     m_playeur{Playeur},
-                                                                                     M_opponent{opponent} {}
+GameBoard::GameBoard(Player *Playeur, Collection *Collection, GameBoard *opponent, Creature mCreature)
+        : m_collection{Collection},
+          m_playeur{Playeur},
+          M_opponent{opponent}, m_creature{mCreature} {}
 
 
 void GameBoard::envoyerCartAuCimetiere(Card carteMorte) {
     m_cemetary = carteMorte;
 }
 
-Card GameBoard::pickUp() {
-    Card pioche = m_deck.front();
+Card* GameBoard::pickUp() {
+    Card *pioche = &m_deck.front();
     m_deck.pop();
     return pioche;
 }
