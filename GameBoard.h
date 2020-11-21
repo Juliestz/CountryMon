@@ -17,7 +17,7 @@
 class GameBoard {
 
 private:
-    std::queue<Card*> m_deck;
+    std::queue<Card *> m_deck;
     std::vector<char> m_tabElements;
     Card *m_enjeu;
     Creature *m_creature;
@@ -28,7 +28,7 @@ private:
     Collection *m_collection;
 
 public:
-    GameBoard(Player *Playeur, Collection *Collection, Creature *mCreature);
+    GameBoard(Player *Playeur, Collection *Collection);
 
     void display();
 
@@ -36,9 +36,9 @@ public:
 
     Card *pickUp();
 
-    Card* getFirstCard();
+    Card *getFirstCard();
 
-    void putBack(Card* cartePiochee);
+    void putBack(Card *cartePiochee);
 
     void putACard(Creature *cartePiochee);
 

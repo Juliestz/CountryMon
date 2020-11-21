@@ -4,12 +4,15 @@
 
 #include "GameBoard.h"
 
-GameBoard::GameBoard(Player *Playeur, Collection *Collection, Creature *mCreature)
+GameBoard::GameBoard(Player *Playeur, Collection *Collection)
         : m_collection{Collection},
-          m_playeur{Playeur},
-          m_creature{mCreature} {
-
-
+          m_playeur{Playeur} {
+    m_creature = nullptr;
+    m_enjeu = nullptr;
+    m_permanente = nullptr;
+    m_cemetary = nullptr;
+    m_PV = 20;
+    m_tabElements = {0, 0, 0, 0};
 
 }
 
@@ -87,7 +90,6 @@ void GameBoard::enleverHP(int nb) {
 Card *GameBoard::getFirstCard() {
     return m_deck.front();
 }
-
 
 
 bool GameBoard::destroyPermanent() {
