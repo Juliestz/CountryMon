@@ -10,7 +10,6 @@
 class SpeBombeAt : public Special {
 public:
     SpeBombeAt();
-    void fonctionSpe();
     ~SpeBombeAt();
 };
 

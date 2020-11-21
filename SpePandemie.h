@@ -11,7 +11,6 @@
 class SpePandemie : public Special{
 public:
     SpePandemie();
-    void fonctionSpe();
     ~SpePandemie();
 };
 

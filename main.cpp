@@ -7,8 +7,10 @@
 #include "SpeAllies.h"
 #include "SpeHopital.h"
 #include "SpePandemie.h"
+#include "SpeTerritoire.h"
 #include "Creature.h"
 #include "Attack.h"
+
 void creationDesCartesSpeciales(){
     SpeBombeAt sixAout45;
     SpeEspion bond;
@@ -16,6 +18,7 @@ void creationDesCartesSpeciales(){
     SpeAllies entente;
     SpeHopital postCovid;
     SpePandemie confinement;
+    SpeTerritoire alsace;
 }
 
 void creationDesCartesCreatures(){

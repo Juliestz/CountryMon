@@ -10,8 +10,4 @@ SpePandemie::SpePandemie(){
                          "est en confinement. Vous et votre ennemi perdez une carte Energie mais VOUS choisissez de quel type il s'agira.");
 }
 
-void SpePandemie::fonctionSpe() {
-    // -1 carte energie dans chaque camps
-}
-
 SpePandemie::~SpePandemie(){}

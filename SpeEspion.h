@@ -10,7 +10,6 @@
 class SpeEspion : public Special {
 public:
     SpeEspion();
-    void fonctionSpe();
     ~SpeEspion();
 
 };

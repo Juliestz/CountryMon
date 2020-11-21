@@ -10,8 +10,5 @@ SpeEspion::SpeEspion() {
                          " tirée par le joueur adverse.");
 }
 
-void SpeEspion::fonctionSpe() {
-    //regarde la première carte du deck du joueur adverse
-}
 
 SpeEspion::~SpeEspion() {}
