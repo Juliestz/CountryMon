@@ -4,6 +4,8 @@
 
 #include "GameBoard.h"
 
+#define NB_MAX_CARD_DECK 20
+
 GameBoard::GameBoard(Player *Playeur, Collection *Collection)
         : m_collection{Collection},
           m_playeur{Playeur} {
@@ -42,8 +44,20 @@ void GameBoard::creatADeck() {
     std::cout << "choisire les cartes du deck? (0:oui, 1:non)";
     std::cin >> choix;
     if (choix) {
-        Collection copyColl = *m_collection;
+        std::list<Card *>::iterator it=m_collection->getCardsCollection().begin();
+        std::vector<Card *> tabRepDeColl;
 
+        for (it; it!=m_collection->getCardsCollection().end(); ++it) {
+            tabRepDeColl.push_back(*it);
+        }
+
+
+        /*for (int j = 0; j < NB_MAX_CARD_DECK; ++j) {
+            m_deck.push(tabRepDeColl[rand() % tabRepDeColl.size()]);
+        }*/
+
+
+        return;
     } else {
 
         m_collection->display();
