@@ -38,6 +38,19 @@ void GameBoard::putACard(Creature *cartePiochee) {
 }
 
 void GameBoard::creatADeck() {
+    int choix;
+    std::cout << "choisire les cartes du deck? (0:oui, 1:non)";
+    std::cin >> choix;
+    if (choix) {
+        Collection copyColl = *m_collection;
+
+    } else {
+
+        m_collection->display();
+
+
+    }
+
 
 }
 

@@ -40,3 +40,7 @@ void Collection::display(){
 
 
 Collection::~Collection(){}
+
+std::list<Card *> Collection::getCardsCollection() {
+    return std::list<Card *>(m_collection);
+}
