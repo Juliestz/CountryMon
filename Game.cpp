@@ -34,7 +34,14 @@ void Game::utilisationDeCarteEvent(Special Carte, GameBoard *GB) {
 Game::Game(GameBoard *GB1, GameBoard *GB2) : m_GB1{GB1}, m_GB2{GB2} {}
 
 void Game::playATurn(GameBoard GB) {
-    GB.pickUp();
+    Card carteManipulée = GB.pickUp();
+    if (carteManipulée.getNum()<10){
+
+    }else{
+        if (carteManipulée.getNum()<20){
+
+        }else{}
+    }
 
 }
 
