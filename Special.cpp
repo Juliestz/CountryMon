@@ -6,7 +6,7 @@
 #include "Card.h"
 #include <iostream>
 
-Special::Special(){}
+Special::Special() : m_description(NULL){}
 
 Special::Special(const std::string& name, const std::string& description): Card{name}, m_description{description}{}
 

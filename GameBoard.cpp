@@ -4,7 +4,8 @@
 
 #include "GameBoard.h"
 
-#define NB_MAX_CARD_DECK 20
+#define NB_MAX_CARD_DECK 30
+#define NB_MIN_CARD_DECK 15
 
 GameBoard::GameBoard(Player *Playeur, Collection *Collection)
         : m_collection{Collection},
@@ -45,40 +46,75 @@ void GameBoard::creatADeck() {
     std::cin >> choix;
     if (choix) {
         std::list<Card *>::iterator it = m_collection->getCardsCollection().begin();
-        std::vector<Card> tabRepDeColl;
+        std::vector<Card*> tabRepDeColl;
 
+        Card carteAuDeck;
 
         for (it; it != m_collection->getCardsCollection().end(); ++it) {
-            tabRepDeColl.push_back(**it);
-        }
-
-
-        int nbRand;
-        Card carteAuDeck;
-        for (int j = 0; j < NB_MAX_CARD_DECK; ++j) {
-            nbRand = rand() % tabRepDeColl.size();
-
-            carteAuDeck = tabRepDeColl[nbRand];
-            tabRepDeColl[nbRand] = tabRepDeColl.back();
-            tabRepDeColl.pop_back();
+            carteAuDeck=**it;
 
             if (carteAuDeck.getNum() < 8) {
-                m_deck.push(new Special());
-                *m_deck.back() = carteAuDeck;
+                tabRepDeColl.push_back(new Special());
+                *tabRepDeColl.back() = **it;
 
             } else if (carteAuDeck.getNum() < 12) {
+                tabRepDeColl.push_back(new Energy());
+                *tabRepDeColl.back() = **it;
+
+            } else {
+                tabRepDeColl.push_back(new Creature());
+                *tabRepDeColl.back() = **it;
+
+            }
+        }
+
+        int nbCarteColl = tabRepDeColl.size();
+        nbCarteColl = std::min(NB_MAX_CARD_DECK, nbCarteColl);
+        nbCarteColl = std::max(NB_MIN_CARD_DECK, nbCarteColl);
+        int nbRand;
+
+        for (int j = 0; j < nbCarteColl; ++j) {
+            nbRand = rand() % tabRepDeColl.size();
+
+
+            if (tabRepDeColl[nbRand]->getNum() < 8) {
+
+                m_deck.push(new Special());
+                *m_deck.back() = *tabRepDeColl[nbRand];
+
+            } else if (tabRepDeColl[nbRand]->getNum() < 12) {
                 m_deck.push(new Energy());
-                *m_deck.back() = carteAuDeck;
+                *m_deck.back() = *tabRepDeColl[nbRand];
 
             } else {
                 m_deck.push(new Creature());
-                *m_deck.back() = carteAuDeck;
+                *m_deck.back() = *tabRepDeColl[nbRand];
+
             }
-            //m_deck.push(;
+
+            delete tabRepDeColl[nbRand];
+
+
+            if (tabRepDeColl.back()->getNum() < 8) {
+                tabRepDeColl[nbRand]=(new Special());
+
+            } else if (tabRepDeColl.back()->getNum() < 12) {
+                tabRepDeColl[nbRand]=(new Energy());
+
+            } else {
+                tabRepDeColl[nbRand]=(new Creature());
+            }
+
+            tabRepDeColl[nbRand] = tabRepDeColl.back();
+            delete tabRepDeColl.back();
+            tabRepDeColl.pop_back();
+
         }
 
+        for (auto c : tabRepDeColl){
+            delete c;
+        }
 
-        return;
     } else {
 
         m_collection->display();

@@ -22,6 +22,7 @@ public:
     Creature(std::string name, int HP, bool available);
 
     Creature();
+
     Creature(std::istream& name, std::istream& HP, bool available);
 
     virtual ~Creature() = default;
@@ -33,6 +34,7 @@ public:
     virtual bool getState() const;
 
     virtual int utilisation(char phase);
+
     void serialize(std::ostream &os) const;
 
 };
