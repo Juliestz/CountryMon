@@ -35,19 +35,24 @@ public:
 
     void display();
 
-    void envoyerCartAuCimetiere(Card *carteMorte);
+    void creatADeck();
 
     Card *pickUp();
 
-    void creatADeck();
-
-    void recoisDegats(int montantPV);
+    void putBack(Card* cartePiochee);
 
     void putACard(Creature *cartePiochee);
 
     int atkDeCreature(); //a faire
 
+    void recoisDegats(int montantPV);
+
     void utilisationDeCarteEvent(Special *Carte);
+
+    void putAnEnergy(char numCarte);
+
+    void envoyerCartAuCimetiere(Card *carteMorte);
+
 
 //bool pile.empty()
 

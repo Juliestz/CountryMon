@@ -46,12 +46,12 @@ void Game::drawPhase(GameBoard *GB) {
 
     Special *cs = dynamic_cast<Special *>(carteManipulée);
     if (cs) {
-        this->utilisationDeCarteEvent(dynamic_cast<Special *>(carteManipulée), GB);
+        this->utilisationDeCarteEvent(cs, GB);
     }
 
     Creature *cc = dynamic_cast<Creature *>(carteManipulée);
     if (cc) {
-        GB->putACard(dynamic_cast<Creature *>(carteManipulée));
+        GB->putACard(cc);
     }
 
     Energy *ce = dynamic_cast<Energy *>(carteManipulée);

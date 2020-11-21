@@ -96,6 +96,14 @@ void GameBoard::utilisationDeCarteEvent(Special *Carte) {
 
 }
 
+void GameBoard::putBack(Card *cartePiochee) {
+    m_deck.push(cartePiochee);
+}
+
+void GameBoard::putAnEnergy(char numCarte) {
+    m_tabElements[numCarte] += 1;
+}
+
 
 
 
