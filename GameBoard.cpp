@@ -4,7 +4,9 @@
 
 #include "GameBoard.h"
 
-GameBoard::GameBoard(Player *Playeur, Collection *Collection) : m_collection{Collection}, m_playeur{Playeur} {}
+GameBoard::GameBoard(Player *Playeur, Collection *Collection, GameBoard *opponent) : m_collection{Collection},
+                                                                                     m_playeur{Playeur},
+                                                                                     M_opponent{opponent} {}
 
 
 void GameBoard::envoyerCartAuCimetiere(Card carteMorte) {
@@ -38,12 +40,52 @@ void GameBoard::recoisDegats(int montantDegats) {
 }
 
 int GameBoard::atkDeCreature() {
+    int dmg;
 
-
-    return 0;
+    return dmg;
 }
 
-void GameBoard::utilisationDeCarteEvent(char numDeCarte) {
+void GameBoard::utilisationDeCarteEvent(Special Carte) {
+    switch (Carte.getNum()) {
+        case 1:
+            m_creature.mutHP(1);
+            M_opponent->m_creature.mutHP(2);
+
+            /* Bombe Atomique : « six Aout 45 »
+
+             Créature adverse -2 PV
+
+             Créature allié -1 PV*/
+            break;
+        case 2:
+            M_opponent->m_deck.front().display();
+            /*  Espion : « James Bond »
+
+              Voir la première carte du deck de l’adversaire*/
+            break;
+        case 3:
+            m_permanente = Carte;
+            /* Booster : « Coupe du monde » 
+
+             Carte qui reste sur le terrain (permanente) et augmente la puissance de la créature alliée de 1*/
+
+            break;
+        case 5:
+
+            m_creature.mutHP(-2);
+            /*Hopital : « PostCovid »
+
+            Créature alliée +2 PV*/
+
+            break;
+        case 6:
+
+            /*Pandémie : « Confinement »
+
+            -1 carte énergie de chaque coté*/
+            break;
+    }
+
 
 }
 

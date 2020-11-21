@@ -10,7 +10,7 @@ Creature::Creature(std::string name, int HP, int LP, bool available) : Card{name
 
 int Creature::mutHP(int montantDegats) {
 
-    if (m_HP - montantDegats < 0) {
+    if (m_HP - montantDegats > 0) {
         m_HP -= montantDegats;
         return 0;
     } else {

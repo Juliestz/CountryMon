@@ -10,6 +10,7 @@
 #include "Card.h"
 #include "Creature.h"
 #include "Player.h"
+#include "Special.h"
 
 
 class Collection;
@@ -22,13 +23,15 @@ private:
     std::vector<char> m_tabElements;
     Card m_enjeu;
     Creature m_creature;
+    Special m_permanente;
     int m_PV;
     Card m_cemetary;
     Player *m_playeur;
     Collection *m_collection;
+    GameBoard * M_opponent;
 
 public:
-    GameBoard(Player *Playeur, Collection *Collection);
+    GameBoard(Player *Playeur, Collection *Collection, GameBoard * opponent);
 
     void display();
 
@@ -44,9 +47,9 @@ public:
 
     int atkDeCreature(); //a faire
 
-    void utilisationDeCarteEvent(char numDeCarte);
+    void utilisationDeCarteEvent(Special Carte);
 
-
+//bool pile.empty()
 
 };
 
