@@ -4,14 +4,14 @@
 
 #include "SpeEspion.h"
 
-SpeEspion::SpeEspion(){
+SpeEspion::SpeEspion() {
     this->setName("James Bond");
     this->setDescription("Vous envoyez un espion pour savoir quelle sera la prochaine carte"
                          " tirée par le joueur adverse.");
 }
 
-void SpeEspion::fonctionSpe(){
+void SpeEspion::fonctionSpe() {
     //regarde la première carte du deck du joueur adverse
 }
 
-SpeEspion::~SpeEspion(){}
+SpeEspion::~SpeEspion() {}
