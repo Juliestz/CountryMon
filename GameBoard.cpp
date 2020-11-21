@@ -18,6 +18,7 @@ GameBoard::GameBoard(Player *Playeur, Collection *Collection)
 
 
 void GameBoard::envoyerCartAuCimetiere(Card *carteMorte) {
+    delete m_cemetary;
     m_cemetary = carteMorte;
 }
 
@@ -57,6 +58,7 @@ int GameBoard::atkDeCreature() {
 void GameBoard::utilisationDeCarteEvent(Special *Carte) {
     switch (Carte->getNum()) {
         case 3:
+            this->destroyPermanent();
             *m_permanente = *Carte;
             /* Booster : « Coupe du monde » 
 
