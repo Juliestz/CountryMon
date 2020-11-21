@@ -10,11 +10,11 @@
 class Card {
 protected:
     std::string m_name;
-    int m_numDeSerie;
+    char m_numDeSerie;
     // ALLEGRO_BITMAP *m_fondCarte;
 public:
     void setName(const std::string& name);
-    int getNum();
+    char getNum();
     void display(/*File *FichierFondCarte*/);
 
     Card();
