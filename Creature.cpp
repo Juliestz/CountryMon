@@ -5,8 +5,13 @@
 #include "Creature.h"
 
 
-Creature::Creature(std::string name, int HP, int LP, bool available) : Card{name},m_HP{HP}, m_LP{LP}, m_available{available} {}
+Creature::Creature(std::string name, int HP, bool available) : m_HP{HP}, m_available{available} {
+    Card::m_name = name;
+}
 
+Creature::Creature() : m_HP{0}, m_available{false}, m_attacks{NULL} {
+
+}
 
 int Creature::mutHP(int montantDegats) {
 
@@ -33,3 +38,5 @@ int Creature::utilisation(char phase) {
 
     return 0;
 }
+
+

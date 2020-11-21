@@ -44,17 +44,38 @@ void GameBoard::creatADeck() {
     std::cout << "choisire les cartes du deck? (0:oui, 1:non)";
     std::cin >> choix;
     if (choix) {
-        std::list<Card *>::iterator it=m_collection->getCardsCollection().begin();
-        std::vector<Card *> tabRepDeColl;
+        std::list<Card *>::iterator it = m_collection->getCardsCollection().begin();
+        std::vector<Card> tabRepDeColl;
 
-        for (it; it!=m_collection->getCardsCollection().end(); ++it) {
-            tabRepDeColl.push_back(*it);
+
+        for (it; it != m_collection->getCardsCollection().end(); ++it) {
+            tabRepDeColl.push_back(**it);
         }
 
 
-        /*for (int j = 0; j < NB_MAX_CARD_DECK; ++j) {
-            m_deck.push(tabRepDeColl[rand() % tabRepDeColl.size()]);
-        }*/
+        int nbRand;
+        Card carteAuDeck;
+        for (int j = 0; j < NB_MAX_CARD_DECK; ++j) {
+            nbRand = rand() % tabRepDeColl.size();
+
+            carteAuDeck = tabRepDeColl[nbRand];
+            tabRepDeColl[nbRand] = tabRepDeColl.back();
+            tabRepDeColl.pop_back();
+
+            if (carteAuDeck.getNum() < 8) {
+                m_deck.push(new Special());
+                *m_deck.back() = carteAuDeck;
+
+            } else if (carteAuDeck.getNum() < 12) {
+                m_deck.push(new Energy());
+                *m_deck.back() = carteAuDeck;
+
+            } else {
+                m_deck.push(new Creature());
+                *m_deck.back() = carteAuDeck;
+            }
+            //m_deck.push(;
+        }
 
 
         return;

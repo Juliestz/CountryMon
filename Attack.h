@@ -14,7 +14,7 @@ private:
     bool m_available;
     std::string m_energyNeeded;
 public:
-    Attack(std::string name, bool available, std::string energyNeeded);
+    Attack(std::string name, std::string energyNeeded, bool available);
     void isAvailable();
 
 

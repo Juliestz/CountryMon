@@ -6,8 +6,10 @@
 #include <iostream>
 #include <string.h>
 
-Attack::Attack(std::string name, bool available, std::string energyNeeded ) : m_name{name}, m_available{available}, m_energyNeeded{energyNeeded}{}
+Attack::Attack(std::string name, std::string energyNeeded, bool available ) : m_name{name}, m_available{available}, m_energyNeeded{energyNeeded}{}
 
 void Attack::isAvailable(){
 
 }
+
+

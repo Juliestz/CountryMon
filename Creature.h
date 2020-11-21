@@ -10,17 +10,18 @@
 #include "Attack.h"
 
 
-
 class Creature : public Card {
 
 private:
 
     int m_HP;
-
     bool m_available;
-
+    std::vector<Attack> m_attacks;
 
 public:
+    Creature(std::string name, int HP, bool available);
+
+    Creature();
     Creature(std::istream& name, std::istream& HP, bool available);
 
     virtual ~Creature() = default;
