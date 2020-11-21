@@ -45,8 +45,8 @@ int GameBoard::atkDeCreature() {
     return dmg;
 }
 
-void GameBoard::utilisationDeCarteEvent(char numDeCarte) {
-    switch (numDeCarte) {
+void GameBoard::utilisationDeCarteEvent(Special Carte) {
+    switch (Carte.getNum()) {
         case 1:
             m_creature.mutHP(1);
             M_opponent->m_creature.mutHP(2);
@@ -64,23 +64,15 @@ void GameBoard::utilisationDeCarteEvent(char numDeCarte) {
               Voir la première carte du deck de l’adversaire*/
             break;
         case 3:
-            m_permanente=;
+            m_permanente = Carte;
             /* Booster : « Coupe du monde » 
 
              Carte qui reste sur le terrain (permanente) et augmente la puissance de la créature alliée de 1*/
 
             break;
-        case 4:
-            this->pickUp();
-            this->pickUp();
-
-            /*Alliés : « Triple Entente »
-
-             Piocher 2 nouvelles cartes pour les jouer dans ce tour*/
-            break;
         case 5:
 
-
+            m_creature.mutHP(-2);
             /*Hopital : « PostCovid »
 
             Créature alliée +2 PV*/

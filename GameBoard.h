@@ -31,7 +31,7 @@ private:
     GameBoard * M_opponent;
 
 public:
-    GameBoard(Player *Playeur, Collection *Collection, GameBoard * opponent; );
+    GameBoard(Player *Playeur, Collection *Collection, GameBoard * opponent);
 
     void display();
 
@@ -47,7 +47,7 @@ public:
 
     int atkDeCreature(); //a faire
 
-    void utilisationDeCarteEvent(char numDeCarte);
+    void utilisationDeCarteEvent(Special Carte);
 
 //bool pile.empty()
 
