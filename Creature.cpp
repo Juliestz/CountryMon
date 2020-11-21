@@ -11,7 +11,7 @@ int Creature::mutHP(int montantDegats) {
         return 0;
     } else {
         int difference = montantDegats - m_HP;
-        m_HP = std::max(0, difference);
+        m_HP = 0;
         m_state = false;
         return difference;
     }
