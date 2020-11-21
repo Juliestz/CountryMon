@@ -19,7 +19,7 @@ class GameBoard {
 
 private:
     std::queue<Card> m_deck;
-    std::vector<char> m_tebElements;
+    std::vector<char> m_tabElements;
     Card m_enjeu;
     Creature m_creature;
     int m_PV;
