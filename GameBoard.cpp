@@ -25,10 +25,11 @@ void GameBoard::display() {
 }
 
 void GameBoard::putACard(Creature *cartePiochee) {
+    //delete *m_creature;
     m_creature = cartePiochee;
 }
 
-void GameBoard::creatADeck(std::queue<Card*> m_deck, Collection &collection) {
+void GameBoard::creatADeck() {
 
 }
 

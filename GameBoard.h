@@ -39,7 +39,7 @@ public:
 
     Card *pickUp();
 
-    void creatADeck(std::queue<Card*> m_deck, Collection &collection);
+    void creatADeck();
 
     void recoisDegats(int montantPV);
 
