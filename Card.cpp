@@ -7,3 +7,7 @@
 void Card::setName(const std::string &name) {
     m_name = name;
 }
+
+int Card::getNum() {
+    return m_numDeSerie;
+}

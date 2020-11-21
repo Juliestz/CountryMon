@@ -10,8 +10,10 @@
 class Card {
 protected:
     std::string m_name;
+    int m_numDeSerie;
 public:
     void setName(const std::string& name);
+    int getNum();
 };
 
 

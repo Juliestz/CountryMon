@@ -38,9 +38,9 @@ void GameBoard::recoisDegats(int montantDegats) {
 }
 
 int GameBoard::atkDeCreature() {
+    int dmg;
 
-
-    return 0;
+    return dmg;
 }
 
 void GameBoard::utilisationDeCarteEvent(char numDeCarte) {
