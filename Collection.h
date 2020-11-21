@@ -18,7 +18,7 @@ public:
     void addCard(int type);
     void removeCard();
     Collection* getCollection();
-    std::list<Card*> getCardsCollection(;)
+    std::list<Card*> getCardsCollection();
     void display();
     ~Collection();
 };
