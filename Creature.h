@@ -22,9 +22,9 @@ private:
 
 public:
     Creature(std::string name, int HP, int LP, bool available);
-    int mutHP(int montantDegats);
-    void availableAttack();
-    bool getState()const;
+    virtual int mutHP(int montantDegats);
+    virtual void availableAttack();
+    virtual bool getState()const;
 
 
 };

@@ -24,7 +24,7 @@ void GameBoard::display() {
     std::cout << "pas interressant a coder maintenant";
 }
 
-void GameBoard::putACard(Creature cartePiochee) {
+void GameBoard::putACard(Card* cartePiochee) {
     m_creature = cartePiochee;
 }
 
@@ -33,9 +33,9 @@ void GameBoard::creatADeck(std::queue<Card> m_deck, Collection &collection) {
 }
 
 void GameBoard::recoisDegats(int montantDegats) {
-    bool temoins = m_creature.getState();
-    m_PV -= m_creature.mutHP(montantDegats);
-    if (temoins != m_creature.getState()) {
+    bool temoins = *m_creature->getState();
+    m_PV -= m_creature->mutHP(montantDegats);
+    if (temoins != m_creature->getState()) {
         this->envoyerCartAuCimetiere(m_creature);
     }
 }
@@ -46,11 +46,11 @@ int GameBoard::atkDeCreature() {
     return dmg;
 }
 
-void GameBoard::utilisationDeCarteEvent(Special Carte) {
-    switch (Carte.getNum()) {
+void GameBoard::utilisationDeCarteEvent(Card* Carte) {
+    switch (Carte->getNum()) {
         case 1:
-            m_creature.mutHP(1);
-            M_opponent->m_creature.mutHP(2);
+            m_creature->mutHP(1);
+            M_opponent->m_creature->mutHP(2);
 
             /* Bombe Atomique : « six Aout 45 »
 

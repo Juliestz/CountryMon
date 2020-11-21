@@ -21,9 +21,9 @@ class GameBoard {
 private:
     std::queue<Card> m_deck;
     std::vector<char> m_tabElements;
-    Card m_enjeu;
-    Creature m_creature;
-    Special m_permanente;
+    Card* m_enjeu;
+    Card* m_creature;
+    Card* m_permanente;
     int m_PV;
     Card m_cemetary;
     Player *m_playeur;
@@ -43,11 +43,11 @@ public:
 
     void recoisDegats(int montantPV);
 
-    void putACard(Creature cartePiochee);
+    void putACard(Card* cartePiochee);
 
     int atkDeCreature(); //a faire
 
-    void utilisationDeCarteEvent(Special Carte);
+    void utilisationDeCarteEvent(Card* Carte);
 
 //bool pile.empty()
 

@@ -34,13 +34,20 @@ void Game::utilisationDeCarteEvent(Special Carte, GameBoard *GB) {
 Game::Game(GameBoard *GB1, GameBoard *GB2) : m_GB1{GB1}, m_GB2{GB2} {}
 
 void Game::playATurn(GameBoard GB) {
-    Card carteManipulée = GB.pickUp();
-    if (carteManipulée.getNum()<10){
 
+
+}
+
+void Game::drawPhase(GameBoard GB) {
+    Card *carteManipulée = GB.pickUp();
+    if (carteManipulée->getNum()<10){
+        GB.utilisationDeCarteEvent(carteManipulée);
     }else{
-        if (carteManipulée.getNum()<20){
-
-        }else{}
+        if (carteManipulée->getNum()<20){
+            *carteManipulée;
+        }else{
+            GB.putACard(carteManipulée) ;
+        }
     }
 
 }
