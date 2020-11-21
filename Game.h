@@ -18,13 +18,13 @@ public:
 
     void utilisationDeCarteEvent(Special *Carte, GameBoard *GB, GameBoard *M_opponent);
 
-    void playATurn(GameBoard *GB);
+    bool playATurn(GameBoard *GB,GameBoard *GB2);
 
     void drawPhase(GameBoard *GB, GameBoard *GB2);
 
     void battlePhase(GameBoard *GB);
 
-    void endPhase(GameBoard *GB);
+    bool verification(GameBoard *GB);
 
 
 };

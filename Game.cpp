@@ -12,7 +12,7 @@ void Game::utilisationDeCarteEvent(Special *Carte, GameBoard *GB, GameBoard *M_o
             GB->enleverHP(1);
             M_opponent->enleverHP(2);
 
-            /* Bombe Atomique : « six Aout 45 »
+             /*Bombe Atomique : « six Aout 45 »
 
              Créature adverse -2 PV
 
@@ -50,7 +50,9 @@ void Game::utilisationDeCarteEvent(Special *Carte, GameBoard *GB, GameBoard *M_o
 
 Game::Game(GameBoard *GB1, GameBoard *GB2) : m_GB1{GB1}, m_GB2{GB2} {}
 
-void Game::playATurn(GameBoard *GB) {
+bool Game::playATurn(GameBoard *GB,  GameBoard *GB2) {
+//le joueur 1 joue en premier
+
 
 
 }
@@ -91,7 +93,11 @@ void Game::battlePhase(GameBoard *GB) {
 
 }
 
-void Game::endPhase(GameBoard *GB) {
+bool Game::verification(GameBoard *GB)  {
+if (GB->getPV()==0){
+    return true;
+}
+
 
 }
 

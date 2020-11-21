@@ -14,15 +14,15 @@ void Player::setPseudo(){
 }
 
 void Player::afficher(){
-    if (m_isAlive){
+
         std::cout<< m_pseudo << " :" <<std::endl;
         std::cout<< "Points de vie :" << m_pv <<std::endl;
         std::cout<< "Argent :" << m_money <<std::endl;
-    }
-    else{
+
         std::cout<< m_pseudo << " est mort." <<std::endl;
-    }
+
 }
 
 
 Player::~Player(){}
+

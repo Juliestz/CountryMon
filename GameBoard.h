@@ -57,6 +57,9 @@ public:
 
     void envoyerCartAuCimetiere(Card *carteMorte);
 
+    int getPV();
+
+
 
 //bool pile.empty()
 

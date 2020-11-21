@@ -15,12 +15,14 @@ private:
     std::string m_pseudo;
     int m_money;
     Collection m_collection;
+
 public:
     Player();
     void setPseudo();
     void afficher();
     Collection* getCollection();
     ~Player();
+    void deathPlayer();
 };
 
 

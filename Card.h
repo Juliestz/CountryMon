@@ -14,7 +14,7 @@ protected:
     char m_numDeSerie;
     // ALLEGRO_BITMAP *m_fondCarte;
 public:
-    Card(std::istringstream& name, char numSerie);
+    Card(std::string& name, char numSerie);
 
     void setName(const std::string &name);
 

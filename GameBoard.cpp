@@ -152,6 +152,12 @@ bool GameBoard::destroyPermanent() {
     }
 }
 
+int GameBoard::getPV() {
+    return m_PV;
+}
+
+
+}
 
 
 

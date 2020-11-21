@@ -38,5 +38,3 @@ int Creature::utilisation(char phase) {
 
     return 0;
 }
-
-
