@@ -11,9 +11,7 @@
 #include "Creature.h"
 #include "Player.h"
 #include "Special.h"
-
-
-class Collection;
+#include "Collection.h"
 
 
 class GameBoard {

@@ -11,7 +11,7 @@ public:
     Collection();
     void addCard();
     void removeCard();
-    Collection getCollection();
+    Collection* getCollection();
     void display();
     ~Collection();
 };
