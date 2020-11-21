@@ -5,7 +5,6 @@
 #ifndef ECEMON_T_CARD_H
 #define ECEMON_T_CARD_H
 
-#include <string>
 #include <iostream>
 
 class Card {
@@ -14,17 +13,13 @@ protected:
     int m_numDeSerie;
     // ALLEGRO_BITMAP *m_fondCarte;
 public:
-    void setName(const std::string &name);
-
+    void setName(const std::string& name);
+    int getNum();
+    void display();
     void Draw(/*File *FichierFondCarte*/);
-
     Card();
 
     ~Card();
-
-    int getNum();
-
-
 };
 
 

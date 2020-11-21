@@ -29,7 +29,7 @@ private:
     GameBoard * M_opponent;
 
 public:
-    GameBoard(Player *Playeur, Collection *Collection);
+    GameBoard(Player *Playeur, Collection *Collection, GameBoard * opponent; );
 
     void display();
 
