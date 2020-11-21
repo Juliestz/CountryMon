@@ -64,12 +64,15 @@ void GameBoard::utilisationDeCarteEvent(char numDeCarte) {
               Voir la première carte du deck de l’adversaire*/
             break;
         case 3:
+            m_permanente=;
             /* Booster : « Coupe du monde » 
 
              Carte qui reste sur le terrain (permanente) et augmente la puissance de la créature alliée de 1*/
 
             break;
         case 4:
+            this->pickUp();
+            this->pickUp();
 
             /*Alliés : « Triple Entente »
 

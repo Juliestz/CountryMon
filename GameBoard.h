@@ -10,6 +10,7 @@
 #include "Card.h"
 #include "Creature.h"
 #include "Player.h"
+#include "Special.h"
 
 
 class Collection;
@@ -22,6 +23,7 @@ private:
     std::vector<char> m_tabElements;
     Card m_enjeu;
     Creature m_creature;
+    Special m_permanente;
     int m_PV;
     Card m_cemetary;
     Player *m_playeur;
