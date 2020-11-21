@@ -9,5 +9,3 @@ Energy::Energy() {}
 void Energy::setDescription(const std::string &description) {
     m_description = description;
 }
-
-Energy::~Energy() {}

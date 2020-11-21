@@ -17,7 +17,7 @@ public:
     Special();
     void setDescription(const std::string& description);
     virtual void afficher();
-    ~Special();
+    virtual ~Special()=default;
 };
 
 

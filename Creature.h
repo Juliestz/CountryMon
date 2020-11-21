@@ -10,7 +10,6 @@
 #include "Attack.h"
 
 
-
 class Creature : public Card {
 
 private:
@@ -22,9 +21,14 @@ private:
 
 public:
     Creature(std::string name, int HP, int LP, bool available);
+
+    virtual ~Creature() = default;
+
     virtual int mutHP(int montantDegats);
+
     virtual void availableAttack();
-    virtual bool getState()const;
+
+    virtual bool getState() const;
 
 
 };

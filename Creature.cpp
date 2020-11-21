@@ -24,3 +24,7 @@ int Creature::mutHP(int montantDegats) {
 bool Creature::getState() const {
     return m_available;
 }
+
+void Creature::availableAttack() {
+
+}
