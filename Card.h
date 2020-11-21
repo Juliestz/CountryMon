@@ -11,6 +11,7 @@ class Card {
 protected:
     std::string m_name;
 public:
+    Card(std::string name);
     void setName(const std::string& name);
 };
 

@@ -6,18 +6,23 @@
 #define ECEMON_T_CREATURE_H
 
 #include "Card.h"
+#include <vector>
+#include "Attack.h"
+
 
 
 class Creature : public Card {
 
 private:
     int m_HP;
-    bool m_state;
+    int m_LP;
+    bool m_available;
+
 
 public:
-    Creature();
-
+    Creature(std::string name, int HP, int LP, bool available);
     int mutHP(int montantDegats);
+    void availableAttack();
     bool getState()const;
 
 
