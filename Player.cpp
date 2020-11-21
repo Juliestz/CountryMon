@@ -6,8 +6,6 @@
 
 Player::Player(){
     m_money = 50;
-    m_pv = 3;
-    m_isAlive = true;
 }
 
 void Player::setPseudo(){
@@ -26,8 +24,5 @@ void Player::afficher(){
     }
 }
 
-void Player::notAlive(){
-    m_isAlive = false;
-}
 
 Player::~Player(){}
