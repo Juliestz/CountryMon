@@ -6,7 +6,7 @@
 #include <iostream>
 #include <string.h>
 
-Card::Card(std::istringstream& name,char numSerie) :  m_numDeSerie{numSerie}{}
+Card::Card(std::string& name, char numSerie) : m_name{name}, m_numDeSerie{numSerie}{}
 
 Card::Card() {};
 

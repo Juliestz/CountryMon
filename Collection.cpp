@@ -98,9 +98,28 @@ void Collection::addCard(int type){
 
         }
     }
-
 }
 
+void Collection::removeCard(const int type) {
+    bool notRemove = true;
+    std::list<Card*>::iterator it;
+    std::list<Card*>::iterator debut;
+    std::list<Card*>::iterator fin;
+    debut = m_collection.begin();
+    fin = m_collection.end();
+
+    for (it = debut; it!=fin; ++it){
+
+        if (notRemove){
+
+            if ((*it)->getNum() == type){
+                m_collection.erase(it);
+                notRemove = false;
+
+            }
+        }
+    }
+}
 
 void Collection::display(){
     std::list<Card*>::iterator it;

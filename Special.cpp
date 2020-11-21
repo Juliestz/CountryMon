@@ -8,7 +8,7 @@
 
 Special::Special() : m_description(NULL){}
 
-Special::Special(const std::string& name, const std::string& description): Card{name}, m_description{description}{}
+Special::Special(const std::string& name, const std::string& description): m_description{description}{}
 
 
 void Special::setDescription(const std::string& description){
