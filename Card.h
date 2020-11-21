@@ -27,9 +27,6 @@ public:
 
     virtual ~Card() = default;
 
-    virtual bool getState() =0;
-
-
 };
 
 

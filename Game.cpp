@@ -3,10 +3,11 @@
 //
 
 #include "Game.h"
+#include "Energy.h"
 
 
-void Game::utilisationDeCarteEvent(Special Carte, GameBoard *GB) {
-    if (Carte.getNum() < 4 || Carte.getNum() > 4) {
+void Game::utilisationDeCarteEvent(Special *Carte, GameBoard *GB) {
+    if (Carte->getNum() < 4 || Carte->getNum() > 4) {
         GB->utilisationDeCarteEvent(Carte);
     } else {
         GB->pickUp();
@@ -33,22 +34,48 @@ void Game::utilisationDeCarteEvent(Special Carte, GameBoard *GB) {
 
 Game::Game(GameBoard *GB1, GameBoard *GB2) : m_GB1{GB1}, m_GB2{GB2} {}
 
-void Game::playATurn(GameBoard GB) {
+void Game::playATurn(GameBoard *GB) {
 
 
 }
 
-void Game::drawPhase(GameBoard GB) {
-    Card *carteManipulée = GB.pickUp();
-    if (carteManipulée->getNum()<10){
-        GB.utilisationDeCarteEvent(carteManipulée);
-    }else{
-        if (carteManipulée->getNum()<20){
-            *carteManipulée;
-        }else{
-            GB.putACard(carteManipulée) ;
-        }
+//  FAIRE ATENTION AU DYNAMIQUE CASTE !!!!
+
+void Game::drawPhase(GameBoard *GB) {
+    Card *carteManipulée = GB->pickUp();
+
+    Special *cs = dynamic_cast<Special *>(carteManipulée);
+    if (cs) {
+        this->utilisationDeCarteEvent(dynamic_cast<Special *>(carteManipulée), GB);
     }
+
+    Creature *cc = dynamic_cast<Creature *>(carteManipulée);
+    if (cc) {
+        GB->putACard(dynamic_cast<Creature *>(carteManipulée));
+    }
+
+    Energy *ce = dynamic_cast<Energy *>(carteManipulée);
+    if (ce) {
+
+    }
+    /*
+    if (carteManipulée->getNum() < 10) {
+        GB.utilisationDeCarteEvent(dynamic_cast<Special *>(carteManipulée));
+    } else {
+        if (carteManipulée->getNum() < 20) {
+            *carteManipulée;
+        } else {
+            GB.putACard(dynamic_cast<Creature *>(carteManipulée));
+        }
+    }*/
+
+}
+
+void Game::battlePhase(GameBoard *GB) {
+
+}
+
+void Game::endPhase(GameBoard *GB) {
 
 }
 

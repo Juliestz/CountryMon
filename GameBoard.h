@@ -19,35 +19,35 @@ class Collection;
 class GameBoard {
 
 private:
-    std::queue<Card> m_deck;
+    std::queue<Card*> m_deck;
     std::vector<char> m_tabElements;
-    Card* m_enjeu;
-    Card* m_creature;
-    Card* m_permanente;
+    Card *m_enjeu;
+    Creature *m_creature;
+    Special *m_permanente;
     int m_PV;
-    Card m_cemetary;
+    Card *m_cemetary;
     Player *m_playeur;
     Collection *m_collection;
-    GameBoard * M_opponent;
+    GameBoard *M_opponent;
 
 public:
-    GameBoard(Player *Playeur, Collection *Collection, GameBoard *opponent, Creature* mCreature);
+    GameBoard(Player *Playeur, Collection *Collection, GameBoard *opponent, Creature *mCreature);
 
     void display();
 
-    void envoyerCartAuCimetiere(Card carteMorte);
+    void envoyerCartAuCimetiere(Card *carteMorte);
 
-    Card* pickUp();
+    Card *pickUp();
 
-    void creatADeck(std::queue<Card> m_deck, Collection &collection);
+    void creatADeck(std::queue<Card*> m_deck, Collection &collection);
 
     void recoisDegats(int montantPV);
 
-    void putACard(Card* cartePiochee);
+    void putACard(Creature *cartePiochee);
 
     int atkDeCreature(); //a faire
 
-    void utilisationDeCarteEvent(Card* Carte);
+    void utilisationDeCarteEvent(Special *Carte);
 
 //bool pile.empty()
 

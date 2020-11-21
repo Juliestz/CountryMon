@@ -16,15 +16,15 @@ private:
 public:
     Game(GameBoard *GB1, GameBoard *GB2);
 
-    void utilisationDeCarteEvent(Special Carte, GameBoard *GB);
+    void utilisationDeCarteEvent(Special* Carte, GameBoard *GB);
 
-    void playATurn(GameBoard GB);
+    void playATurn(GameBoard *GB);
 
-    void drawPhase(GameBoard GB);
+    void drawPhase(GameBoard *GB);
 
-    void battlePhase(GameBoard GB);
+    void battlePhase(GameBoard *GB);
 
-    void endPhase(GameBoard GB);
+    void endPhase(GameBoard* GB);
 
 
 };
