@@ -15,8 +15,8 @@ protected :
 public:
     Special();
     Special(const std::string& name, const std::string& decription);
-    void setDescription(const std::string& description);
-    virtual void afficher();
+    virtual void setDescription(const std::string& description);
+    virtual void afficher() const;
     ~Special();
 };
 

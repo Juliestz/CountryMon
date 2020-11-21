@@ -17,15 +17,13 @@ public:
 
     void setName(const std::string &name);
 
-    virtual void afficher();
+    virtual void afficher() const;
 
     char getNum();
 
     void display(/*File *FichierFondCarte*/);
 
     Card();
-
-    virtual int utilisation(char phase)=0;
 
     virtual ~Card() = default;
 

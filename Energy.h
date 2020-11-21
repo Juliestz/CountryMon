@@ -16,6 +16,8 @@ protected:
 public:
     Energy();
 
+    Energy(const std::string& name, const std::string& description);
+
     virtual ~Energy() = default;
 
     void setDescription(const std::string &description);

@@ -16,7 +16,7 @@ void Card::setName(const std::string &name) {
 
 };
 
-void Card::afficher(){
+void Card::afficher() const{
     std::cout<< m_name <<std::endl;
 }
 
