@@ -16,7 +16,7 @@ private:
 public:
     Game(GameBoard *GB1, GameBoard *GB2);
 
-    void utilisationDeCarteEvent(Special* Carte, GameBoard *GB);
+    void utilisationDeCarteEvent(Special* Carte, GameBoard *GB, GameBoard *M_opponent);
 
     void playATurn(GameBoard *GB);
 

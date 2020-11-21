@@ -6,14 +6,45 @@
 #include "Energy.h"
 
 
-void Game::utilisationDeCarteEvent(Special *Carte, GameBoard *GB) {
-    if (Carte->getNum() < 4 || Carte->getNum() > 4) {
-        GB->utilisationDeCarteEvent(Carte);
-    } else {
-        GB->pickUp();
-        GB->pickUp();
-    }
+void Game::utilisationDeCarteEvent(Special *Carte, GameBoard *GB, GameBoard *M_opponent) {
 
+    switch (Carte->getNum()) {
+        case 1:
+            m_creature->mutHP(1);
+            M_opponent->m_creature->mutHP(2);
+
+            /* Bombe Atomique : « six Aout 45 »
+
+             Créature adverse -2 PV
+
+             Créature allié -1 PV*/
+            break;
+        case 2:
+            M_opponent->m_deck.front()->display();
+            /*  Espion : « James Bond »
+
+              Voir la première carte du deck de l’adversaire*/
+            break;
+        case 4:
+            this->drawPhase(GB);
+            drawPhase(GB);
+            break;
+        case 6:
+
+            /*Pandémie : « Confinement »
+
+            -1 carte énergie de chaque coté*/
+            break;
+        case 7:
+            M_opponent->envoyerCartAuCimetiere(m_permanente);
+            /*-	Territoire : « Alsace »
+
+            -1 carte permanente adverse du plateau*/
+            break;
+        default:
+            GB->utilisationDeCarteEvent(Carte);
+            break;
+    }
 
 
     /*Alliés : « Triple Entente »
