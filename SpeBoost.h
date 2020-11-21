@@ -10,7 +10,6 @@
 class SpeBoost : public Special {
 public:
     SpeBoost();
-    void fonctionSpe();
     ~SpeBoost();
 };
 

@@ -11,7 +11,6 @@
 class SpeAllies : public Special {
 public:
     SpeAllies();
-    void fonctionSpe();
     ~SpeAllies();
 };
 

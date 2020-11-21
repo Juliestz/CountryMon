@@ -84,6 +84,11 @@ void GameBoard::utilisationDeCarteEvent(Special Carte) {
 
             -1 carte énergie de chaque coté*/
             break;
+        case 7:
+            /*-	Territoire : « Alsace »
+
+            -1 carte permanente adverse du plateau*/
+             break;
     }
 
 

@@ -10,8 +10,5 @@ SpeHopital::SpeHopital(){
                          " Votre créature gagne 2 PV.");
 }
 
-void SpeHopital::fonctionSpe() {
-    //vie de la créature +2
-}
 
 SpeHopital::~SpeHopital(){}

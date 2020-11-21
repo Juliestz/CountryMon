@@ -11,7 +11,6 @@
 class SpeHopital : public Special{
 public:
     SpeHopital();
-    void fonctionSpe();
     ~SpeHopital();
 };
 

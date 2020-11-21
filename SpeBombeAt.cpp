@@ -11,9 +11,5 @@ SpeBombeAt::SpeBombeAt(){
                          " Malheureusement la deflagration est tres grande et fait perdre 1 HP a votre propre creature.");
 }
 
-void SpeBombeAt::fonctionSpe() {
-    //La créature enemie perd 2 HP
-    //La créature du joueur perd 1 HP
-}
 
 SpeBombeAt::~SpeBombeAt(){}

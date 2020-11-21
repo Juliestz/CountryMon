@@ -10,8 +10,4 @@ SpeAllies::SpeAllies(){
                          " et en piocher deux autre dans ce tour.");
 }
 
-void SpeAllies::fonctionSpe() {
-    //piocher deux cartes dans le deck à la suite
-}
-
 SpeAllies::~SpeAllies(){}
