@@ -103,7 +103,7 @@ void acheterUnPack(Player joueur, int i) {
     } else {
         std::cout
                 << "vous n'avez pas achete de carte, "
-                   "\n vous aurez de nouveau la possibilité d'agrandir votre collection"
+                   "\n vous aurez de nouveau la possibilite d'agrandir votre collection"
                    " \navant votre prochain match. "
                 << std::endl;
     }

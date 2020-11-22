@@ -109,7 +109,7 @@ bool isEmpty(GameBoard *GB) {
     return GB->isEmpty();
 }
 
-
+/*
 void Game::playTheGame() {
 
     m_GB1->creatADeck();
@@ -131,7 +131,7 @@ void Game::playTheGame() {
 
 
 }
-
+*/
 
 
 
