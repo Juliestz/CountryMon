@@ -32,11 +32,7 @@ Card *GameBoard::pickUp() {
 }
 
 bool GameBoard::isEmpty() {
-    if (m_deck.empty()) {
-        return true;
-    } else {
-        return false;
-    }
+    return !m_deck.empty();
 }
 
 void GameBoard::display() {

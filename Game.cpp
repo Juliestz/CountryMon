@@ -52,37 +52,37 @@ Game::Game(GameBoard *GB1, GameBoard *GB2) : m_GB1{GB1}, m_GB2{GB2} {}
 
 bool Game::playATurn(GameBoard *GB, GameBoard *GB2) {
 //le joueur 1 joue en premier
-
     this->drawPhase(GB, GB2);
     this->battlePhase(GB);//attaque...
-    this->verification(GB2);//on vérifie que l'autre joueur ne soit pas mort.
-    if (verification(GB2)) {//si la vérification est vraie donc le joueur 2 à été tué pendant la battlePhase
-        return false;//donc on retourne false et dans le main ça mettra fin à la partie
-    } else {
-        return true;//sinon on continue la partie et c'est au tour du joueur 2
-    }
+    //this->verification(GB2);//on vérifie que l'autre joueur ne soit pas mort.
+    return !this->verification(GB2);
 }
 
 //  FAIRE ATENTION AU DYNAMIQUE CASTE !!!!
 
 void Game::drawPhase(GameBoard *GB, GameBoard *GB2) {
-
-
     Card *carteManipulee = GB->pickUp();
+    int choix;
 
-    Special *cs = dynamic_cast<Special *>(carteManipulee);
-    if (cs) {
-        this->utilisationDeCarteEvent(cs, GB, GB2);
-    }
+    std::cout << "voulez vous utiliser cette carte (oui:1, non:0):\n";
+    std::cin >> choix;
+    if (choix) {
+        Special *cs = dynamic_cast<Special *>(carteManipulee);
+        if (cs) {
+            this->utilisationDeCarteEvent(cs, GB, GB2);
+        }
 
-    Creature *cc = dynamic_cast<Creature *>(carteManipulee);
-    if (cc) {
-        GB->putACard(cc);
-    }
+        Creature *cc = dynamic_cast<Creature *>(carteManipulee);
+        if (cc) {
+            GB->putACard(cc);
+        }
 
-    Energy *ce = dynamic_cast<Energy *>(carteManipulee);
-    if (ce) {
-        GB->putAnEnergy(ce->getNum());
+        Energy *ce = dynamic_cast<Energy *>(carteManipulee);
+        if (ce) {
+            GB->putAnEnergy(ce->getNum());
+        }
+    } else {
+        GB->putBack(carteManipulee);
     }
     /*
     if (carteManipulee->getNum() < 10) {
@@ -102,22 +102,33 @@ void Game::battlePhase(GameBoard *GB) {
 }
 
 bool Game::verification(GameBoard *GB) {
-    if (GB->getPV() == 0) {//si les PV sont nulles alors la vérification devient vraie.
-        return true;
-    } else
-        return false;
+    return GB->getPV() == 0;
 }
 
 bool isEmpty(GameBoard *GB) {
-    if (GB->isEmpty()) {
-        return true;
-    } else {
-        return false;
-    }
+    return GB->isEmpty();
 }
 
 
 void Game::playTheGame() {
+
+    m_GB1->creatADeck();
+    m_GB2->creatADeck();
+    char perdant = 1;
+    bool finPartie = true;
+    m_GB2->getCarteEnjeux();
+    m_GB1->getCarteEnjeux();
+
+    do {
+        finPartie = playATurn(m_GB1, m_GB2);
+        if (finPartie && isEmpty(m_GB2)) {
+            finPartie = playATurn(m_GB2, m_GB1);
+        } else {
+            perdant = 2;
+        }
+
+    } while (finPartie && isEmpty(m_GB1));
+
 
 }
 
