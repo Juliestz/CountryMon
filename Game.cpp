@@ -115,20 +115,29 @@ void Game::playTheGame() {
     m_GB1->creatADeck();
     m_GB2->creatADeck();
     char perdant = 1;
-    bool finPartie = true;
+    bool partieContinue = true;
     m_GB2->getCarteEnjeux();
     m_GB1->getCarteEnjeux();
 
     do {
-        finPartie = playATurn(m_GB1, m_GB2);
-        if (finPartie && isEmpty(m_GB2)) {
-            finPartie = playATurn(m_GB2, m_GB1);
+        partieContinue = playATurn(m_GB1, m_GB2);
+        if (partieContinue && isEmpty(m_GB2)) {
+            partieContinue = playATurn(m_GB2, m_GB1);
         } else {
             perdant = 2;
         }
 
-    } while (finPartie && isEmpty(m_GB1));
+    } while (partieContinue && isEmpty(m_GB1));
 
+    if (perdant == 1) {
+        m_GB2->addCardToColl(m_GB1->removeCardToColl());
+
+    } else if (perdant == 2) {
+        m_GB1->addCardToColl(m_GB2->removeCardToColl());
+
+    } else {
+        std::cout << "problemme de perdant";
+    }
 
 }
 */

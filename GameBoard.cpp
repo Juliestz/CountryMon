@@ -247,6 +247,15 @@ void GameBoard::getCarteEnjeux() {
     m_enjeu = this->pickUp();
 }
 
+int GameBoard::removeCardToColl() {
+    m_collection->removeCard(m_enjeu->getNum());
+    return m_enjeu->getNum();
+}
+
+void GameBoard::addCardToColl(int type) {
+    m_collection->addCard(type);
+}
+
 
 
 

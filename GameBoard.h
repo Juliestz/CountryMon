@@ -63,6 +63,9 @@ public:
 
     void getCarteEnjeux();
 
+    void addCardToColl(int type);
+
+    int removeCardToColl();
 
 };
 
