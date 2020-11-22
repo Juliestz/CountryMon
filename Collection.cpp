@@ -19,12 +19,12 @@ void Collection::addCard(int type){
 
             case 2 :
                 m_collection.push_back(new Special{"James Bond", 2, "Vous envoyez un espion pour savoir quelle sera la prochaine carte"
-                                                                " tirée par le joueur adverse."});
+                                                                " tiree par le joueur adverse."});
                 break;
 
             case 3 :
-                m_collection.push_back(new Special{"Coupe du monde", 3, "Vous avez gagné la coupe du monde! Bravo!"
-                                                                     "Le moral des troupes est au plus haut. La puissance de votre créature en jeu est augmentée de 1."});
+                m_collection.push_back(new Special{"Coupe du monde", 3, "Vous avez gagne la coupe du monde! Bravo!"
+                                                                     "Le moral des troupes est au plus haut. La puissance de votre creature en jeu est augmentee de 1."});
                 break;
 
             case 4 :
@@ -34,7 +34,7 @@ void Collection::addCard(int type){
 
             case 5 :
                 m_collection.push_back(new Special{"Hopital", 5, "Votre systeme de sante se remet de la crise sanitaire mais est plus performant que jamais."
-                                                              " Votre créature gagne 2 PV."});
+                                                              " Votre creature gagne 2 PV."});
                 break;
 
             case 6 :
@@ -49,7 +49,7 @@ void Collection::addCard(int type){
 
                 //Energy
             case 8 :
-                m_collection.push_back(new Energy{"Politique", 8, "blabla"});
+                m_collection.push_back(new Energy{"Politique", 8});
                 break;
 
             case 9 :

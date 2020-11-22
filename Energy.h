@@ -19,9 +19,8 @@ protected:
     bool  m_OK;
 public:
     Energy();
-    Energy(std::string type, std::string description);
 
-    Energy(std::string name, char numSerie, std::string description);
+    Energy(std::string name, char numSerie);
 
     virtual void afficher() const;
 

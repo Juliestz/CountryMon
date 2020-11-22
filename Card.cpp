@@ -11,7 +11,6 @@ Card::Card(std::string& name, char numSerie) : m_name{name}, m_numDeSerie{numSer
 Card::Card() {};
 
 
-
 void Card::setName(const std::string &name) {
 
 };

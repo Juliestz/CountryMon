@@ -6,14 +6,21 @@
 
 Energy::Energy() {}
 
-Energy::Energy(std::string name, char numSerie, std::string description) : Card::Card{name, numSerie},
-                                                                           m_description{description} {}
+
+Energy::Energy(std::string name, char numSerie): Card::Card{name, numSerie}{}
+
+
+void Energy::afficher() const{
+    int num = m_numDeSerie;
+
+    Card::afficher();
+    std::cout<< num <<std::endl;
+}
 
 void Energy::setDescription(const std::string &description) {
     m_description = description;
 }
 
-Energy::~Energy() {}
 
 bool Energy::read(std::istream &stream) {
     m_OK = false;
@@ -24,11 +31,5 @@ bool Energy::IsOK() const {
     return m_OK;
 }
 
-Energy::Energy(std::string type, std::string description) : m_description{description} {
-    this->m_name;
-}
 
-void Energy::afficher() const {
-    Card::afficher();
-    std::cout << m_numDeSerie << std::endl;
-}
+Energy::~Energy() {}
