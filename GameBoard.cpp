@@ -44,29 +44,31 @@ void GameBoard::creatADeck() {
     int choix;
     std::cout << "choisire les cartes du deck? (0:oui, 1:non)";
     std::cin >> choix;
-    if (choix) {
-        std::list<Card *>::iterator it = m_collection->getCardsCollection().begin();
-        std::vector<Card*> tabRepDeColl;
 
-        Card carteAuDeck;
+    std::list<Card *>::iterator it = m_collection->getCardsCollection().begin();
+    std::vector<Card*> tabRepDeColl;
 
-        for (it; it != m_collection->getCardsCollection().end(); ++it) {
-            carteAuDeck=**it;
+    Card carteAuDeck;
 
-            if (carteAuDeck.getNum() < 8) {
-                tabRepDeColl.push_back(new Special());
-                *tabRepDeColl.back() = **it;
+    for (it; it != m_collection->getCardsCollection().end(); ++it) {
+        carteAuDeck=**it;
 
-            } else if (carteAuDeck.getNum() < 12) {
-                tabRepDeColl.push_back(new Energy());
-                *tabRepDeColl.back() = **it;
+        if (carteAuDeck.getNum() < 8) {
+            tabRepDeColl.push_back(new Special());
+            *tabRepDeColl.back() = **it;
 
-            } else {
-                tabRepDeColl.push_back(new Creature());
-                *tabRepDeColl.back() = **it;
+        } else if (carteAuDeck.getNum() < 12) {
+            tabRepDeColl.push_back(new Energy());
+            *tabRepDeColl.back() = **it;
 
-            }
+        } else {
+            tabRepDeColl.push_back(new Creature());
+            *tabRepDeColl.back() = **it;
+
         }
+    }
+
+    if (choix) {
 
         int nbCarteColl = tabRepDeColl.size();
         nbCarteColl = std::min(NB_MAX_CARD_DECK, nbCarteColl);
@@ -111,9 +113,6 @@ void GameBoard::creatADeck() {
 
         }
 
-        for (auto c : tabRepDeColl){
-            delete c;
-        }
 
     } else {
 
@@ -122,6 +121,9 @@ void GameBoard::creatADeck() {
 
     }
 
+    for (auto c : tabRepDeColl){
+        delete c;
+    }
 
 }
 
@@ -193,7 +195,6 @@ int GameBoard::getPV() {
 }
 
 
-}
 
 
 
