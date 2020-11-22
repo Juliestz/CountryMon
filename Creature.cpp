@@ -9,7 +9,7 @@ Creature::Creature(std::string name, int HP, bool available) : m_HP{HP}, m_avail
     Card::m_name = name;
 }
 
-Creature::Creature() : m_HP{0}, m_available{false}, m_attacks{NULL} {
+Creature::Creature() : m_HP{0}, m_available{false}, m_attacks{0} {
 
 }
 
@@ -37,4 +37,8 @@ void Creature::availableAttack() {
 int Creature::utilisation(char phase) {
 
     return 0;
+}
+
+Creature::Creature(std::istream &name, std::istream &HP, bool available) {
+
 }
