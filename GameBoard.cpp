@@ -239,6 +239,10 @@ int GameBoard::getPV() {
     return m_PV;
 }
 
+void GameBoard::getCarteEnjeux() {
+    m_enjeu = this->pickUp();
+}
+
 
 
 

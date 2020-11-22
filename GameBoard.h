@@ -33,7 +33,7 @@ public:
 
     void display();//a faire
 
-    void creatADeck();//a faire
+    void creatADeck();
 
     Card *pickUp();
 
@@ -59,9 +59,9 @@ public:
 
     int getPV();
 
+    void getCarteEnjeux();
 
 
-//bool pile.empty()
 
 };
 
