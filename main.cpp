@@ -71,6 +71,7 @@ void initialisationDuJoueur(Player joueur, int i) {
         std::cin >> j;
         std::string nomFichier = fichier + j + extension;
 
+        std::cout<< nomFichier <<std::endl;
 
         joueur.createCollection("joueur1.txt");//recréation de la collection du joueur depuis la sauvegarde
 
@@ -80,6 +81,7 @@ void initialisationDuJoueur(Player joueur, int i) {
         std::cout << "Joueur  qu'elle est votre nom de guerre ?" <<
                   std::endl;
         joueur.setPseudo();
+        //creerMaPremiereCollection(joueur);
 
         std::cout << "Une collection de depart vous est attribue" <<
                   std::endl;
@@ -161,7 +163,7 @@ int main() {
             << "avant que  la partie commence vous avez la possibilte d'agrandir votre collection en achetant des cartes. 1/oui   2/non?"
             << std::endl;
     std::cin >> i;
-    acheterUnPack(joueur1, i);
+    acheterUnPack(joueur2, i);
 
 
 
