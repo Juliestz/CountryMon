@@ -79,7 +79,7 @@ void Game::drawPhase(GameBoard *GB, GameBoard *GB2) {
 
     Energy *ce = dynamic_cast<Energy *>(carteManipulee);
     if (ce) {
-
+        GB->putAnEnergy(ce->getNum());
     }
     /*
     if (carteManipulee->getNum() < 10) {
@@ -103,6 +103,10 @@ bool Game::verification(GameBoard *GB) {
         return true;
     } else
         return false;
+
+}
+
+void Game::playTheGame() {
 
 }
 

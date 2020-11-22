@@ -26,6 +26,8 @@ public:
 
     bool verification(GameBoard *GB);
 
+    void playTheGame();
+
 
 };
 

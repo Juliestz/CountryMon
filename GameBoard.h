@@ -45,15 +45,15 @@ public:
 
     int atkDeCreature(); //a faire
 
-    void recoisDegats(int montantPV);
+    void recoisDegats(const int& montantPV);
 
-    void enleverHP(int nb);
+    void enleverHP(const int& nb);
 
     void utilisationDeCarteEvent(Special *Carte);
 
     bool destroyPermanent();
 
-    void putAnEnergy(char numCarte);
+    void putAnEnergy( const char& numCarte);
 
     void envoyerCartAuCimetiere(Card *carteMorte);
 

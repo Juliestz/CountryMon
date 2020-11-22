@@ -77,7 +77,7 @@ void GameBoard::creatADeck() {
         int nbRand;
 
         for (int j = 0; j < nbCarteColl; ++j) {
-            nbRand = rand() % tabRepDeColl.size();
+            nbRand = std::rand() % tabRepDeColl.size();
 
 
             if (tabRepDeColl[nbRand]->getNum() < 8) {
@@ -172,7 +172,7 @@ void GameBoard::creatADeck() {
 
 }
 
-void GameBoard::recoisDegats(int montantDegats) {
+void GameBoard::recoisDegats(const int& montantDegats) {
     bool temoins = m_creature->getState();
     m_PV -= m_creature->mutHP(montantDegats);
     if (temoins != m_creature->getState()) {
@@ -212,11 +212,11 @@ void GameBoard::putBack(Card *cartePiochee) {
     m_deck.push(cartePiochee);
 }
 
-void GameBoard::putAnEnergy(char numCarte) {
-    m_tabElements[numCarte] += 1;
+void GameBoard::putAnEnergy(const char& numCarte) {
+    m_tabElements[numCarte-7] += 1;
 }
 
-void GameBoard::enleverHP(int nb) {
+void GameBoard::enleverHP(const int& nb) {
     m_creature->mutHP(nb);
 }
 
