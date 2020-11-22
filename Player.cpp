@@ -56,6 +56,8 @@ void Player::saveCollection(std::string nameDoc) {
     std::list<Card*>::iterator it;
     std::list<Card*>::iterator debut;
     std::list<Card*>::iterator fin;
+    debut = liste.begin();
+    fin = liste.end();
 
     for (it = debut ; it != fin ; ++it) {
         type = (**it).getNum();
