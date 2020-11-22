@@ -13,7 +13,7 @@ class Special : public Card {
 protected :
     std::string m_description;
 public:
-    //Special();
+    Special();
     Special(std::string name, char numSerie, std::string decription);
     virtual void setDescription(const std::string& description);
     virtual void afficher() const;
