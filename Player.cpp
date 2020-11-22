@@ -22,6 +22,7 @@ void Player::afficher(){
 void Player::saveCollection(std::string nameDoc) {
 
     int taille;
+    int type;
     std::ofstream player{nameDoc};
 
     std::list<Card*> collec;
@@ -42,6 +43,7 @@ void Player::saveCollection(std::string nameDoc) {
 
         player<< type <<std::endl;
     }
+
 
 
 }
