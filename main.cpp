@@ -57,21 +57,22 @@ void initialisationDuJoueur(Player joueur, int i) {
             case 1:
                 lectureDoc("player1.txt");
 
-                joueur.setPseudo();
-                //recréation de la collection joueur
+                joueur.setPseudo();// on récupère le pseudo enregistré dans la sauvegarde
+                joueur.createCollection("player1.txt");//recréation de la collection du joueur depuis la sauvegarde
                 break;
             case 2:
                 lectureDoc("player2.txt");
 
                 joueur.setPseudo();
-                //recréation de la collection joueur
+                joueur.createCollection("player2.txt");//recréation de la collection du joueur depuis la sauvegarde
                 break;
         }
     } else {
         std::cout << "Joueur 1 qu'elle est votre nom de guerre ?" << std::endl;
         joueur.setPseudo();
         std::cout << "Une collection de départ vous est attribué" << std::endl;
-        joueur.getCollection();//en attendant la fonction de création définitive.
+        joueur.createCollection("base");//en attendant la fonction de création définitive.
+        ///le nom du fichier n'est pas correct, il faut penser à le changer quand le fichier contenant la collection basique sera créé///
     }
 
 
@@ -101,7 +102,10 @@ int main() {
     std::cout << " Joueur 1 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
     std::cin >> i;
     initialisationDuJoueur(joueur1,i);
+    std::cout << "avant que  la partie commence vous avez la possibilté d'agrandir votre collection en achetant des cartes. 1/oui   2/non?" << std::endl;
+
     std::cout << " Joueur 2 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
+    std::cin >> i;
     initialisationDuJoueur(joueur2,i);
 
 
