@@ -28,14 +28,14 @@ void creationDesCartesSpeciales() {
 }
 
 void creationDesCartesCreatures() {
-    Creature{"FRANCE", 7, 1};
-    Creature{"USA", 7, 1};
-    Creature{"RUSSIA", 7, 1};
-    Creature{"CHINA", 7, 1};
-    Creature{"NORTH KOREA", 7, 1};
-    Creature{"DUTSCHLAND", 7, 1};
-    Creature{"IRAN", 7, 1};
-    Creature{"JAPAN", 7, 1};
+    Creature{"FRANCE", 12, 7, 1};
+    Creature{"USA", 13,7, 1};
+    Creature{"RUSSIA", 14, 7, 1};
+    Creature{"CHINA", 15, 7, 1};
+    Creature{"NORTH KOREA", 16, 7, 1};
+    Creature{"DUTSCHLAND", 17, 7, 1};
+    Creature{"IRAN", 18, 7, 1};
+    Creature{"JAPAN", 19, 7, 1};
 }
 
 void creerMaPremiereCollection(Player joueur) {
@@ -47,7 +47,7 @@ void creerMaPremiereCollection(Player joueur) {
     player << 1 << std::endl;
     player << 2 << std::endl;
     player << 3 << std::endl;
-    player << 4 << std::endl;
+    player << 18 << std::endl;
     player << 8 << std::endl;
 
 }
@@ -118,6 +118,12 @@ int main() {
     joueur1.createCollection("MaPremiereCollection.txt");
 
     joueur1.afficher();
+
+    joueur1.addCardToMyCollection();
+    joueur1.afficher();
+
+    joueur1.saveCollection("Joueur1.txt");
+
 
 
 /*
