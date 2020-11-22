@@ -8,39 +8,42 @@
 
 #include <fstream>
 
-void creationDesCartesSpeciales(){
-    Special sixAout45{"Six Aout 45", 1, "Vous lancez une bombe atomique sur la creature adverse : elle perd 2 HP. Malheureusement la deflagration est tres grande et fait perdre 1 HP a votre propre creature."};
+void creationDesCartesSpeciales() {
+    Special sixAout45{"Six Aout 45", 1,
+                      "Vous lancez une bombe atomique sur la creature adverse : elle perd 2 HP. Malheureusement la deflagration est tres grande et fait perdre 1 HP a votre propre creature."};
     Special bond{"James Bond", 2, "Vous envoyez un espion pour savoir quelle sera la prochaine carte"
-                               " tirée par le joueur adverse."};
+                                  " tirée par le joueur adverse."};
     Special cdm{"Coupe du monde", 3, "Vous avez gagné la coupe du monde! Bravo!"
-                                  "Le moral des troupes est au plus haut. La puissance de votre créature en jeu est augmentée de 1."};
+                                     "Le moral des troupes est au plus haut. La puissance de votre créature en jeu est augmentée de 1."};
     Special entente{"Triple Entente", 4, "Vous vous alliez avec d'autres puissances. Vous pouvez deffausser cette carte"
-                                      " et en piocher deux autre pour les jouer dans ce tour."};
-    Special hopital{"Hopital", 5, "Votre systeme de sante se remet de la crise sanitaire mais est plus performant que jamais."
-                                    " Votre créature gagne 2 PV."};
-    Special pandemie{"Pandemie", 6, "La crise fait rage, vous perdez beaucoup de ressources pendant que votre population "
-                                       "est en confinement. Vous et votre ennemi perdez une carte Energie mais VOUS choisissez de quel type il s'agira."};
+                                         " et en piocher deux autre pour les jouer dans ce tour."};
+    Special hopital{"Hopital", 5,
+                    "Votre systeme de sante se remet de la crise sanitaire mais est plus performant que jamais."
+                    " Votre créature gagne 2 PV."};
+    Special pandemie{"Pandemie", 6,
+                     "La crise fait rage, vous perdez beaucoup de ressources pendant que votre population "
+                     "est en confinement. Vous et votre ennemi perdez une carte Energie mais VOUS choisissez de quel type il s'agira."};
     Special territoire{"Territoire", 7, "Vous faites reculer l'ennemi dans son camp, enlevez lui une carte permanante "
-                             "qui se trouve sur son plateau."};
+                                        "qui se trouve sur son plateau."};
 }
 
-void creationDesCartesCreatures(){
-    Creature {"FRANCE",7,8,1};
-    Creature {"USA",7,8,1};
-    Creature {"RUSSIA",7,8,1};
-    Creature {"CHINA",7,8,1};
-    Creature {"NORTH KOREA",7,8,1};
-    Creature {"DUTSCHLAND",7,8,1};
-    Creature {"IRAN",7,8,1};
-    Creature {"JAPAN",7,8,1};
+void creationDesCartesCreatures() {
+    Creature{"FRANCE", 7, 8, 1};
+    Creature{"USA", 7, 8, 1};
+    Creature{"RUSSIA", 7, 8, 1};
+    Creature{"CHINA", 7, 8, 1};
+    Creature{"NORTH KOREA", 7, 8, 1};
+    Creature{"DUTSCHLAND", 7, 8, 1};
+    Creature{"IRAN", 7, 8, 1};
+    Creature{"JAPAN", 7, 8, 1};
 }
 
-void ecritureDoc(std::string nameDoc){
+void ecritureDoc(std::string nameDoc) {
     std::ofstream player{nameDoc};
 
 }
 
-void lectureDoc(std::string nameDoc){
+void lectureDoc(std::string nameDoc) {
     std::ifstream player{nameDoc};
 
 }
@@ -49,15 +52,56 @@ void lectureDoc(std::string nameDoc){
 int main() {
     creationDesCartesSpeciales();
     creationDesCartesCreatures();
-    Player a;
-    a.setPseudo();
+
+    Player joueur1;
+    Player joueur2;
 
     Collection c;
     c.addCard(1);
     c.display();
 
     ecritureDoc("player1.txt");
-    lectureDoc("player1.txt");
+    std::cout << "Bienvenue dans countryMon, préparez vous à vivre des combats intenses!!!!" << std::endl;
+
+
+    std::ifstream file_input_player{"file_save_player"};// on lit le fichierr avec le nombre de joueur sauvegardé
+    int n = 0;
+    file_input_player >> n;
+    std::cout << "il y a : " << n << "joueur sauvegardé" << std::endl;
+    std::cout << " Joueur 1 voulez-vous vous connecter 1/oui   2/non?" << std::endl;
+    int i = 0;
+    std::cin >> i;
+    if (i == 1) {
+        std::cout << " quel compte souhaitez vous utiliser ?" << std::endl;
+        int j = 0;
+        std::cin >> j;
+        switch (j) {
+            case 1:
+                lectureDoc("player1.txt");
+
+                joueur1.setPseudo();
+                //recréation de la collection joueur
+                break;
+            case 2:
+                lectureDoc("player2.txt");
+
+                joueur1.setPseudo();
+                //recréation de la collection joueur
+                break;
+        }
+    } else {
+std::cout << "Joueur 1 qu'elle est votre nom de guerre ?"<<std::endl;
+        joueur1.setPseudo();
+    }
+
+
+
+
+
+
+
+    ///ne pas oublier les delete
+
 
     return 0;
 }
