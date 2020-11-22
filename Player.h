@@ -8,8 +8,11 @@
 #include <iostream>
 #include <string>
 #include "Collection.h"
+#include "Card.h"
 
 class Collection;
+
+class Card;
 
 class Player {
 private:

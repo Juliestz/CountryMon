@@ -21,7 +21,19 @@ std::string Player::getPseudo(){
 }
 
 void Player::afficher(){
-    //faire l'affichage
+
+    std::cout<< m_pseudo <<std::endl;
+
+
+    std::list<Card*>::iterator it;
+    std::list<Card*>::iterator debut;
+    std::list<Card*>::iterator fin;
+    debut = m_collection.getCardsCollection().begin();
+    fin = m_collection.getCardsCollection().end();
+
+    for (it = debut ; it != fin ; ++it) {
+        (**it).afficher();
+    }
 }
 
 void Player::saveCollection(std::string nameDoc) {
@@ -66,6 +78,9 @@ void Player::createCollection(std::string nameDoc){
     player.close();
 }
 
+/*Collection* Player::getCollection(){
+    return m_collection.getCollection();
+}*/
 
 void Player::addCardToMyCollection(){
 
