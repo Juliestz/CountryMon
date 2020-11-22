@@ -20,6 +20,7 @@ private:
 public:
     Player();
     void setPseudo();
+    std::string getPseudo();
     void afficher();
     void saveCollection(std::string nameDoc);
     void createCollection(std::string nameDoc);

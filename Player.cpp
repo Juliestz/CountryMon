@@ -16,6 +16,10 @@ void Player::setPseudo(){
     std::cin>> m_pseudo;
 }
 
+std::string Player::getPseudo(){
+    return m_pseudo;
+}
+
 void Player::afficher(){
     //faire l'affichage
 }

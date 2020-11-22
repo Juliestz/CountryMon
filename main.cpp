@@ -28,14 +28,28 @@ void creationDesCartesSpeciales() {
 }
 
 void creationDesCartesCreatures() {
-    Creature{"FRANCE", 7, 8, 1};
-    Creature{"USA", 7, 8, 1};
-    Creature{"RUSSIA", 7, 8, 1};
-    Creature{"CHINA", 7, 8, 1};
-    Creature{"NORTH KOREA", 7, 8, 1};
-    Creature{"DUTSCHLAND", 7, 8, 1};
-    Creature{"IRAN", 7, 8, 1};
-    Creature{"JAPAN", 7, 8, 1};
+    Creature{"FRANCE", 7,  1};
+    Creature{"USA", 7,  1};
+    Creature{"RUSSIA", 7,  1};
+    Creature{"CHINA", 7,  1};
+    Creature{"NORTH KOREA", 7, 1};
+    Creature{"DUTSCHLAND", 7, 1};
+    Creature{"IRAN", 7, 1};
+    Creature{"JAPAN", 7, 1};
+}
+
+void creerMaPremiereCollection(Player joueur){
+    std::ofstream player{"MaPremiereCollection.txt"};
+
+    player<< 5 <<std::endl;
+    player<< joueur.getPseudo() <<std::endl;
+
+    player<< 1 <<std::endl;
+    player<< 2 <<std::endl;
+    player<< 3 <<std::endl;
+    player<< 4 <<std::endl;
+    player<< 5 <<std::endl;
+
 }
 
 void ecritureDoc(std::string nameDoc) {
@@ -80,6 +94,17 @@ void initialisationDuJoueur(Player joueur, int i) {
 
 
 int main() {
+
+    Player joueur1;
+    joueur1.setPseudo();
+
+    creerMaPremiereCollection(joueur1);
+    joueur1.createCollection("MaPremiereCollection.txt");
+
+
+
+
+    /*
     int i = 0;
     creationDesCartesSpeciales();
     creationDesCartesCreatures();
@@ -108,6 +133,7 @@ int main() {
     std::cin >> i;
     initialisationDuJoueur(joueur2,i);
 
+     */
 
 
 

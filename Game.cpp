@@ -65,30 +65,30 @@ bool Game::playATurn(GameBoard *GB, GameBoard *GB2) {
 //  FAIRE ATENTION AU DYNAMIQUE CASTE !!!!
 
 void Game::drawPhase(GameBoard *GB, GameBoard *GB2) {
-    Card *carteManipulée = GB->pickUp();
+    Card *carteManipulee = GB->pickUp();
 
-    Special *cs = dynamic_cast<Special *>(carteManipulée);
+    Special *cs = dynamic_cast<Special *>(carteManipulee);
     if (cs) {
         this->utilisationDeCarteEvent(cs, GB, GB2);
     }
 
-    Creature *cc = dynamic_cast<Creature *>(carteManipulée);
+    Creature *cc = dynamic_cast<Creature *>(carteManipulee);
     if (cc) {
         GB->putACard(cc);
     }
 
-    Energy *ce = dynamic_cast<Energy *>(carteManipulée);
+    Energy *ce = dynamic_cast<Energy *>(carteManipulee);
     if (ce) {
 
     }
     /*
-    if (carteManipulée->getNum() < 10) {
-        GB.utilisationDeCarteEvent(dynamic_cast<Special *>(carteManipulée));
+    if (carteManipulee->getNum() < 10) {
+        GB.utilisationDeCarteEvent(dynamic_cast<Special *>(carteManipulee));
     } else {
-        if (carteManipulée->getNum() < 20) {
-            *carteManipulée;
+        if (carteManipulee->getNum() < 20) {
+            *carteManipulee;
         } else {
-            GB.putACard(dynamic_cast<Creature *>(carteManipulée));
+            GB.putACard(dynamic_cast<Creature *>(carteManipulee));
         }
     }*/
 

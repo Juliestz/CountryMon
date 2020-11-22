@@ -9,6 +9,7 @@
 
 
 void allegro_shut_down(ALLEGRO_DISPLAY *display, ALLEGRO_EVENT_QUEUE *queue) {
+   /*
     al_destroy_display(display);
     al_destroy_event_queue(queue);
     al_uninstall_audio();
@@ -19,5 +20,5 @@ void allegro_shut_down(ALLEGRO_DISPLAY *display, ALLEGRO_EVENT_QUEUE *queue) {
     al_uninstall_keyboard();
     al_shutdown_primitives_addon();
     al_uninstall_system();
-
+*/
 }
