@@ -104,7 +104,7 @@ int main() {
 
 
 
-    /*
+
     int i = 0;
     creationDesCartesSpeciales();
     creationDesCartesCreatures();
@@ -130,6 +130,8 @@ int main() {
     std::cout
             << "avant que  la partie commence vous avez la possibilté d'agrandir votre collection en achetant des cartes. 1/oui   2/non?"
             << std::endl;
+
+    joueur1.getCollection();
     joueur1.addCardToMyCollection();
 
 
@@ -137,7 +139,7 @@ int main() {
     std::cin >> i;
     initialisationDuJoueur(joueur2, i);
 
-     */
+
 
 
 
