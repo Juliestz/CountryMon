@@ -13,37 +13,37 @@ void Collection::addCard(int type){
         switch (type){
                 //Specials
             case 1 :
-                m_collection.push_back(new Special{"Six Aout 45", "Vous lancez une bombe atomique sur la creature adverse : elle perd 2 HP."
+                m_collection.push_back(new Special{"Six Aout 45", 1, "Vous lancez une bombe atomique sur la creature adverse : elle perd 2 HP."
                                                                   " Malheureusement la deflagration est tres grande et fait perdre 1 HP a votre propre creature."});
                 break;
 
             case 2 :
-                m_collection.push_back(new Special{"James Bond", "Vous envoyez un espion pour savoir quelle sera la prochaine carte"
+                m_collection.push_back(new Special{"James Bond", 2, "Vous envoyez un espion pour savoir quelle sera la prochaine carte"
                                                                 " tirée par le joueur adverse."});
                 break;
 
             case 3 :
-                m_collection.push_back(new Special{"Coupe du monde", "Vous avez gagné la coupe du monde! Bravo!"
+                m_collection.push_back(new Special{"Coupe du monde", 3, "Vous avez gagné la coupe du monde! Bravo!"
                                                                      "Le moral des troupes est au plus haut. La puissance de votre créature en jeu est augmentée de 1."});
                 break;
 
             case 4 :
-                m_collection.push_back(new Special{"Triple Entente", "Vous vous alliez avec d'autres puissances. Vous pouvez deffausser cette carte"
+                m_collection.push_back(new Special{"Triple Entente", 4, "Vous vous alliez avec d'autres puissances. Vous pouvez deffausser cette carte"
                                                                      " et en piocher deux autre pour les jouer dans ce tour."});
                 break;
 
             case 5 :
-                m_collection.push_back(new Special{"Hopital", "Votre systeme de sante se remet de la crise sanitaire mais est plus performant que jamais."
+                m_collection.push_back(new Special{"Hopital", 5, "Votre systeme de sante se remet de la crise sanitaire mais est plus performant que jamais."
                                                               " Votre créature gagne 2 PV."});
                 break;
 
             case 6 :
-                m_collection.push_back(new Special{"Pandemie", "La crise fait rage, vous perdez beaucoup de ressources pendant que votre population "
+                m_collection.push_back(new Special{"Pandemie", 6, "La crise fait rage, vous perdez beaucoup de ressources pendant que votre population "
                                                                "est en confinement. Vous et votre ennemi perdez une carte Energie mais VOUS choisissez de quel type il s'agira."});
                 break;
 
             case 7 :
-                m_collection.push_back(new Special{"Territoire","Vous faites reculer l'ennemi dans son camp, enlevez lui une carte permanante "
+                m_collection.push_back(new Special{"Territoire", 7,"Vous faites reculer l'ennemi dans son camp, enlevez lui une carte permanante "
                                                    "qui se trouve sur son plateau."});
                 break;
 

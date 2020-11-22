@@ -5,6 +5,7 @@
 #include <fstream>
 #include "Player.h"
 #include "Collection.h"
+#include "Card.h"
 
 Player::Player(){
     m_money = 50;
@@ -25,27 +26,21 @@ void Player::saveCollection(std::string nameDoc) {
     int type;
     std::ofstream player{nameDoc};
 
-    std::list<Card*> collec;
-    collec = m_collection.getCardsCollection();
-    taille = collec.size();
+    taille = m_collection.getCardsCollection().size();
 
-
-    player<< taille <<std::endl:
+    player<< taille <<std::endl;
     player<< m_pseudo <<std::endl;
 
-
     std::list<Card*>::iterator it;
-    std::list<Card*>::iterator debut;
-    std::list<Card*>::iterator fin;
-    debut = collec.begin();
-    fin = collec.end();
-    for (it = debut; it!=fin; ++it){
+    Card carteAuDeck;
 
+    for (it = m_collection.getCardsCollection().begin() ; it != m_collection.getCardsCollection().end(); ++it) {
+        carteAuDeck = **it;
+        type = carteAuDeck.getNum();
         player<< type <<std::endl;
     }
 
-
-
+    player.close();
 }
 
 void Player::createCollection(std::string nameDoc){
