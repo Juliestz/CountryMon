@@ -126,14 +126,19 @@ int main() {
     std::cout << "il y a : " << n << "joueur sauvegardé" << std::endl;
     std::cout << " Joueur 1 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
     std::cin >> i;
-    initialisationDuJoueur(joueur1,i);
-    std::cout << "avant que  la partie commence vous avez la possibilté d'agrandir votre collection en achetant des cartes. 1/oui   2/non?" << std::endl;
+    initialisationDuJoueur(joueur1, i);
+    std::cout
+            << "avant que  la partie commence vous avez la possibilté d'agrandir votre collection en achetant des cartes. 1/oui   2/non?"
+            << std::endl;
+    joueur1.addCardToMyCollection();
+
 
     std::cout << " Joueur 2 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
     std::cin >> i;
-    initialisationDuJoueur(joueur2,i);
+    initialisationDuJoueur(joueur2, i);
 
      */
+
 
 
 

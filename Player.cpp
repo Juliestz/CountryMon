@@ -65,6 +65,13 @@ void Player::createCollection(std::string nameDoc){
 
     player.close();
 }
+void addCardToMyCollection(){
+
+    for (int i=0;i>3; ++i){
+        int nRand = rand()%19 +1 ;
+        collection.addCard(nRand);
+    }
+}
 
 
 Player::~Player(){}

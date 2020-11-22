@@ -24,6 +24,7 @@ public:
     void afficher();
     void saveCollection(std::string nameDoc);
     void createCollection(std::string nameDoc);
+    void addCardToMyCollection(Collection collection);
     Collection* getCollection();
     ~Player();
     void deathPlayer();
