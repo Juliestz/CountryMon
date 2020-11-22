@@ -48,7 +48,7 @@ void creerMaPremiereCollection(Player joueur) {
     player << 2 << std::endl;
     player << 3 << std::endl;
     player << 4 << std::endl;
-    player << 5 << std::endl;
+    player << 8 << std::endl;
 
 }
 
@@ -108,23 +108,24 @@ void acheterUnPack(Player joueur, int i) {
 
 
 int main() {
-/*
-    Player();
+
+    Player joueur1;
+    Player joueur2;
+
     joueur1.setPseudo();
 
     creerMaPremiereCollection(joueur1);
-    joueur1.createCollection("MaPremiereCollection.txt");*/
+    joueur1.createCollection("MaPremiereCollection.txt");
+
+    joueur1.afficher();
 
 
-
-
-
+/*
     int i = 0;
     creationDesCartesSpeciales();
     creationDesCartesCreatures();
 
-    Player joueur1;
-    Player joueur2;
+
 
 
     ecritureDoc("player1.txt");
@@ -152,7 +153,7 @@ int main() {
     std::cin>>i;
     acheterUnPack(joueur1,i);
 
-
+*/
 
 
 

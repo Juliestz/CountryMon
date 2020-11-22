@@ -49,7 +49,7 @@ void Collection::addCard(int type){
 
                 //Energy
             case 8 :
-                m_collection.push_back(new Energy{});
+                m_collection.push_back(new Energy{"Politique", 8, "blabla"});
                 break;
 
             case 9 :

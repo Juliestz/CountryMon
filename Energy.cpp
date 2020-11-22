@@ -25,3 +25,8 @@ bool Energy::IsOK() const {
 Energy::Energy( std::string type, std::string description):m_description{description}{
     this->m_name;
 }
+
+void Energy::afficher() const {
+    Card::afficher();
+    std::cout<< m_numDeSerie <<std::endl;
+}

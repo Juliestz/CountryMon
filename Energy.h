@@ -23,6 +23,8 @@ public:
 
     Energy(std::string name, char numSerie, std::string description);
 
+    virtual void afficher() const;
+
     ~Energy();
 
     void setDescription(const std::string &description);

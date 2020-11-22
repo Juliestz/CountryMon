@@ -24,12 +24,15 @@ void Player::afficher(){
 
     std::cout<< m_pseudo <<std::endl;
 
-
+    std::list<Card*> liste;
     std::list<Card*>::iterator it;
     std::list<Card*>::iterator debut;
     std::list<Card*>::iterator fin;
-    debut = m_collection.getCardsCollection().begin();
-    fin = m_collection.getCardsCollection().end();
+
+    liste.merge(m_collection.getCardsCollection()); //transfere d'une liste à une autre
+
+    debut = liste.begin();
+    fin = liste.end();
 
     for (it = debut ; it != fin ; ++it) {
         (**it).afficher();
