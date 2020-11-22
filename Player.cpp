@@ -45,17 +45,20 @@ void Player::saveCollection(std::string nameDoc) {
     int type;
     std::ofstream player{nameDoc};
 
-    taille = m_collection.getCardsCollection().size();
+    std::list<Card*> liste;
+    liste.merge(m_collection.getCardsCollection());
+
+    taille = liste.size();
 
     player<< taille <<std::endl;
     player<< m_pseudo <<std::endl;
 
     std::list<Card*>::iterator it;
-    Card carteAuDeck;
+    std::list<Card*>::iterator debut;
+    std::list<Card*>::iterator fin;
 
-    for (it = m_collection.getCardsCollection().begin() ; it != m_collection.getCardsCollection().end(); ++it) {
-        carteAuDeck = **it;
-        type = carteAuDeck.getNum();
+    for (it = debut ; it != fin ; ++it) {
+        type = (**it).getNum();
         player<< type <<std::endl;
     }
 

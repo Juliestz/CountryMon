@@ -39,7 +39,7 @@ void creationDesCartesCreatures() {
 }
 
 void creerMaPremiereCollection(Player joueur) {
-    std::ofstream player{"MaPremiereCollection.txt"};
+    std::ofstream player{"../MaPremiereCollection.txt"};
 
     player << 5 << std::endl;
     player << joueur.getPseudo() << std::endl;
@@ -72,10 +72,7 @@ void initialisationDuJoueur(Player joueur, int i) {
         std::string nomFichier = fichier + j + extension;
 
 
-
-
-        joueur.createCollection("../joueur1");//recréation de la collection du joueur depuis la sauvegarde
-
+        joueur.createCollection("../joueur1.txt");//recréation de la collection du joueur depuis la sauvegarde
 
 
     }
@@ -84,11 +81,12 @@ void initialisationDuJoueur(Player joueur, int i) {
                   std::endl;
         joueur.setPseudo();
         creerMaPremiereCollection(joueur);
-        std::cout << "Une collection de départ vous est attribué" <<
+        std::cout << "Une collection de depart vous est attribue" <<
                   std::endl;
-        joueur.createCollection("MaPremiereCollection.txt");
-        joueur.saveCollection("../joueur2");
-///le nom du fichier n'est pas correct, il faut penser à le changer quand le fichier contenant la collection basique sera créé///
+        joueur.createCollection("../MaPremiereCollection.txt");
+        joueur.afficher();
+        joueur.saveCollection("../joueur1.txt");
+
     }
 }
 
@@ -100,11 +98,11 @@ void initialisationDuJoueur(Player joueur, int i) {
 void acheterUnPack(Player joueur, int i) {
     if (i == 1) {
         joueur.addCardToMyCollection();
-        std::cout << "félicitations, vous avez acheté un pack hors de prix !!!" << std::endl;
+        std::cout << "felicitations, vous avez achete un pack hors de prix !!!" << std::endl;
 
     } else {
         std::cout
-                << "vous n'avez pas acheté de carte, "
+                << "vous n'avez pas achete de carte, "
                    "\n vous aurez de nouveau la possibilité d'agrandir votre collection"
                    " \navant votre prochain match. "
                 << std::endl;
@@ -114,20 +112,23 @@ void acheterUnPack(Player joueur, int i) {
 
 int main() {
 
+
     Player joueur1;
     Player joueur2;
 
-    /*joueur1.setPseudo();
+    /*
+    joueur1.setPseudo();
 
+    creerMaPremiereCollection(joueur1);
+    joueur1.createCollection("MaPremiereCollection.txt");
 
-
-
+    joueur1.afficher();
 
     joueur1.addCardToMyCollection();
-    joueur1.afficher();*/
+    joueur1.afficher();
 
-
-
+    joueur1.saveCollection("Joueur1.txt");
+    */
 
 
     int i = 0;
@@ -142,7 +143,7 @@ int main() {
     std::ifstream file_input_player{"file_save_player"};// on lit le fichier avec le nombre de joueur sauvegardé
     int n = 0;
     file_input_player >> n;
-    std::cout << "il y a : " << n << "joueur sauvegarde" << std::endl;
+    std::cout << "il y a : " << n << " joueur sauvegarde" << std::endl;
     std::cout << " Joueur 1 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
     std::cin >> i;
     initialisationDuJoueur(joueur1, i);
