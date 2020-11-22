@@ -53,47 +53,47 @@ void Collection::addCard(int type){
                 break;
 
             case 9 :
-                m_collection.push_back(new Energy{});
+                m_collection.push_back(new Energy{"Militaire", 9});
                 break;
 
             case 10 :
-                m_collection.push_back(new Energy{});
+                m_collection.push_back(new Energy{"Scientifique", 10});
                 break;
 
             case 11 :
-                m_collection.push_back(new Energy{});
+                m_collection.push_back(new Energy{"Ressource", 11});
                 break;
 
                 //Creatures
             case 12 :
-                m_collection.push_back(new Creature{});
+                m_collection.push_back(new Creature{"FRANCE", 12, 7, 1});
                 break;
 
             case 13 :
-                m_collection.push_back(new Creature{});
+                m_collection.push_back(new Creature{"USA", 13, 7, 1});
                 break;
 
             case 14 :
-                m_collection.push_back(new Creature{});
+                m_collection.push_back(new Creature{"RUSSIA", 14, 7, 1});
                 break;
 
             case 15 :
-                m_collection.push_back(new Creature{});
+                m_collection.push_back(new Creature{"CHINA", 15, 7, 1});
                 break;
 
             case 16 :
-                m_collection.push_back(new Creature{});
+                m_collection.push_back(new Creature{"NORTH KOREA", 16, 7, 1});
                 break;
 
             case 17 :
-                m_collection.push_back(new Creature{});
+                m_collection.push_back(new Creature{"DUTSCHLAND", 17, 7, 1});
                 break;
 
             case 18 :
-                m_collection.push_back(new Creature{});
+                m_collection.push_back(new Creature{"IRAN", 18, 7, 1});
                 break;
             case 19 :
-                m_collection.push_back(new Creature{});
+                m_collection.push_back(new Creature{"JAPAN", 19, 7, 1});
                 break;
         }
 }

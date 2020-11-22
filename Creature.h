@@ -19,9 +19,9 @@ private:
     std::vector<Attack> m_attacks;
 
 public:
-    Creature(std::string name, int HP, bool available);
-
     Creature();
+
+    Creature(std::string name, char numSerie, int HP, bool available);
 
     Creature(std::istream& name, std::istream& HP, bool available);
 

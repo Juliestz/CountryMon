@@ -5,9 +5,8 @@
 #include "Creature.h"
 
 
-Creature::Creature(std::string name, int HP, bool available) : m_HP{HP}, m_available{available} {
-    Card::m_name = name;
-}
+Creature::Creature(std::string name, char numSerie, int HP, bool available) : Card::Card{name, numSerie}, m_HP{HP}, m_available{available} {}
+
 
 Creature::Creature() : m_HP{0}, m_available{false}, m_attacks{0} {
 
@@ -39,6 +38,3 @@ int Creature::utilisation(char phase) {
     return 0;
 }
 
-Creature::Creature(std::istream &name, std::istream &HP, bool available) {
-
-}
