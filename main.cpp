@@ -62,7 +62,7 @@ void lectureDoc(std::string nameDoc) {
 
 }
 
-void initialisationDuJoueur(Player joueur, int i) {
+void initialisationDuJoueur(Player joueur, int i,int n) {
     if (i == 1) {
         std::cout << " quel compte souhaitez vous utiliser ?" << std::endl;
         std::string fichier = "player";
@@ -73,11 +73,16 @@ void initialisationDuJoueur(Player joueur, int i) {
 
         std::cout<< nomFichier <<std::endl;
 
-        joueur.createCollection("joueur1.txt");//recréation de la collection du joueur depuis la sauvegarde
+        joueur.createCollection(nomFichier);//recréation de la collection du joueur depuis la sauvegarde
 
 
     }
     else {
+        std::string fichier = "player";
+        std::string extension = ".txt";
+        std::string n;
+        std::cin >> n;
+        std::string nomFichierNew = fichier + n + extension;
         std::cout << "Joueur  qu'elle est votre nom de guerre ?" <<
                   std::endl;
         joueur.setPseudo();
@@ -87,7 +92,7 @@ void initialisationDuJoueur(Player joueur, int i) {
                   std::endl;
         joueur.createCollection("MaPremiereCollection.txt");
         joueur.afficher();
-        joueur.saveCollection("joueur1.txt");
+        joueur.saveCollection(nomFichierNew);
 
     }
 }
@@ -148,7 +153,7 @@ int main() {
     std::cout << "il y a : " << n << " joueur sauvegarde" << std::endl;
     std::cout << " Joueur 1 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
     std::cin >> i;
-    initialisationDuJoueur(joueur1, i);
+    initialisationDuJoueur(joueur1, i,n);
     joueur1.afficher();
     std::cout
             << "avant que  la partie commence vous avez la possibilte d'agrandir votre collection en achetant des cartes. 1/oui   2/non?"
@@ -158,7 +163,7 @@ int main() {
     joueur1.afficher();
     std::cout << " Joueur 2 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
     std::cin >> i;
-    initialisationDuJoueur(joueur2, i);
+    initialisationDuJoueur(joueur2, i,n);
     std::cout
             << "avant que  la partie commence vous avez la possibilte d'agrandir votre collection en achetant des cartes. 1/oui   2/non?"
             << std::endl;
