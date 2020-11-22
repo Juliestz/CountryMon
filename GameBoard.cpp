@@ -42,16 +42,17 @@ void GameBoard::putACard(Creature *cartePiochee) {
 
 void GameBoard::creatADeck() {
     int choix;
+    int choix2;
     std::cout << "choisire les cartes du deck? (0:oui, 1:non)";
     std::cin >> choix;
 
     std::list<Card *>::iterator it = m_collection->getCardsCollection().begin();
-    std::vector<Card*> tabRepDeColl;
+    std::vector<Card *> tabRepDeColl;
 
     Card carteAuDeck;
 
     for (it; it != m_collection->getCardsCollection().end(); ++it) {
-        carteAuDeck=**it;
+        carteAuDeck = **it;
 
         if (carteAuDeck.getNum() < 8) {
             tabRepDeColl.push_back(new Special());
@@ -98,13 +99,13 @@ void GameBoard::creatADeck() {
 
 
             if (tabRepDeColl.back()->getNum() < 8) {
-                tabRepDeColl[nbRand]=(new Special());
+                tabRepDeColl[nbRand] = (new Special());
 
             } else if (tabRepDeColl.back()->getNum() < 12) {
-                tabRepDeColl[nbRand]=(new Energy());
+                tabRepDeColl[nbRand] = (new Energy());
 
             } else {
-                tabRepDeColl[nbRand]=(new Creature());
+                tabRepDeColl[nbRand] = (new Creature());
             }
 
             tabRepDeColl[nbRand] = tabRepDeColl.back();
@@ -116,12 +117,56 @@ void GameBoard::creatADeck() {
 
     } else {
 
-        m_collection->display();
+        do {
+            //AFFICHER tabRepDeColl
 
+            std::cout << std::endl << "choisisser une carte à ajouter au deck et mettez 0 quand vous avez fini :";
+            std::cin >> choix2;
+
+            if (choix2 > 0 && choix2 < tabRepDeColl.size() && m_deck.size() < NB_MAX_CARD_DECK) {
+                choix2--;
+
+                if (tabRepDeColl[choix2]->getNum() < 8) {
+
+                    m_deck.push(new Special());
+                    *m_deck.back() = *tabRepDeColl[choix2];
+
+                } else if (tabRepDeColl[choix2]->getNum() < 12) {
+                    m_deck.push(new Energy());
+                    *m_deck.back() = *tabRepDeColl[choix2];
+
+                } else {
+                    m_deck.push(new Creature());
+                    *m_deck.back() = *tabRepDeColl[choix2];
+
+                }
+
+                delete tabRepDeColl[choix2];
+
+                if (tabRepDeColl.back()->getNum() < 8) {
+                    tabRepDeColl[choix2] = (new Special());
+
+                } else if (tabRepDeColl.back()->getNum() < 12) {
+                    tabRepDeColl[choix2] = (new Energy());
+
+                } else {
+                    tabRepDeColl[choix2] = (new Creature());
+                }
+
+                tabRepDeColl[choix2] = tabRepDeColl.back();
+                delete tabRepDeColl.back();
+                tabRepDeColl.pop_back();
+
+            } else if (m_deck.size() < NB_MIN_CARD_DECK) {
+                std::cout << "vous devez rajouter des cartes au deck";
+            }
+
+
+        } while (m_deck.size() < NB_MAX_CARD_DECK && m_deck.size() > NB_MIN_CARD_DECK && choix == 0);
 
     }
 
-    for (auto c : tabRepDeColl){
+    for (auto c : tabRepDeColl) {
         delete c;
     }
 
