@@ -52,17 +52,42 @@ void creerMaPremiereCollection(Player joueur) {
 
 }
 
-void ecritureDoc(std::string nameDoc) {
-    std::ofstream player{nameDoc};
+
+std::string fonctionNum(int n){
+    std::string var;
+    switch(n){
+        case 0 :
+            var = '1';
+            break;
+        case 1 :
+            var = '2';
+            break;
+        case 2 :
+            var = '3';
+            break;
+        case 3 :
+            var = '4';
+            break;
+        case 4 :
+            var = '5';
+            break;
+    }
+    return var;
+}
+
+void ecritureDoc(std::string nameDoc, int n) {
+    std::ofstream file_input_player{nameDoc};
 
 }
 
-void lectureDoc(std::string nameDoc) {
-    std::ifstream player{nameDoc};
-
+int lectureDoc(std::string nameDoc) {
+    int n = 0;
+    std::ifstream file_input_player{nameDoc};
+    file_input_player >> n;
+    return n;
 }
 
-void initialisationDuJoueur(Player joueur, int i,int n) {
+void initialisationDuJoueur(Player joueur, int i, int n) {
     if (i == 1) {
         std::cout << " quel compte souhaitez vous utiliser ?" << std::endl;
         std::string fichier = "player";
@@ -80,20 +105,22 @@ void initialisationDuJoueur(Player joueur, int i,int n) {
     else {
         std::string fichier = "player";
         std::string extension = ".txt";
-        std::string n;
-        std::cin >> n;
-        std::string nomFichierNew = fichier + n + extension;
+        std::string numero;
+        numero = fonctionNum(n);
+        std::string nomFichier = fichier + numero + extension;
+        std::cout<< nomFichier;
         std::cout << "Joueur  qu'elle est votre nom de guerre ?" <<
                   std::endl;
         joueur.setPseudo();
-        //creerMaPremiereCollection(joueur);
 
         std::cout << "Une collection de depart vous est attribue" <<
                   std::endl;
         joueur.createCollection("MaPremiereCollection.txt");
         joueur.afficher();
-        joueur.saveCollection(nomFichierNew);
+        joueur.saveCollection(nomFichier);
 
+        n += 1;
+        ecritureDoc("file_save_player", n);
     }
 }
 
@@ -147,13 +174,14 @@ int main() {
     std::cout << "Bienvenue dans CountryMon, preparez vous a vivre des combats intenses!!!!" << std::endl;
 
 
-    std::ifstream file_input_player{"file_save_player"};// on lit le fichier avec le nombre de joueur sauvegardé
+
     int n = 0;
-    file_input_player >> n;
+    n = lectureDoc("file_save_player");// on lit le fichier avec le nombre de joueur sauvegardé
+
     std::cout << "il y a : " << n << " joueur sauvegarde" << std::endl;
     std::cout << " Joueur 1 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
     std::cin >> i;
-    initialisationDuJoueur(joueur1, i,n);
+    initialisationDuJoueur(joueur1, i, n);
     joueur1.afficher();
     std::cout
             << "avant que  la partie commence vous avez la possibilte d'agrandir votre collection en achetant des cartes. 1/oui   2/non?"
@@ -161,6 +189,7 @@ int main() {
     std::cin >> i;
     acheterUnPack(joueur1, i);
     joueur1.afficher();
+
     std::cout << " Joueur 2 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
     std::cin >> i;
     initialisationDuJoueur(joueur2, i,n);
