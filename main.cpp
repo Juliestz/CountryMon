@@ -48,8 +48,38 @@ void lectureDoc(std::string nameDoc) {
 
 }
 
+void initialisationDuJoueur(Player joueur, int i) {
+    if (i == 1) {
+        std::cout << " quel compte souhaitez vous utiliser ?" << std::endl;
+        int j = 0;
+        std::cin >> j;
+        switch (j) {
+            case 1:
+                lectureDoc("player1.txt");
+
+                joueur.setPseudo();
+                //recréation de la collection joueur
+                break;
+            case 2:
+                lectureDoc("player2.txt");
+
+                joueur.setPseudo();
+                //recréation de la collection joueur
+                break;
+        }
+    } else {
+        std::cout << "Joueur 1 qu'elle est votre nom de guerre ?" << std::endl;
+        joueur.setPseudo();
+        std::cout << "Une collection de départ vous est attribué" << std::endl;
+        joueur.getCollection();//en attendant la fonction de création définitive.
+    }
+
+
+}
+
 
 int main() {
+    int i = 0;
     creationDesCartesSpeciales();
     creationDesCartesCreatures();
 
@@ -64,35 +94,15 @@ int main() {
     std::cout << "Bienvenue dans countryMon, préparez vous à vivre des combats intenses!!!!" << std::endl;
 
 
-    std::ifstream file_input_player{"file_save_player"};// on lit le fichierr avec le nombre de joueur sauvegardé
+    std::ifstream file_input_player{"file_save_player"};// on lit le fichier avec le nombre de joueur sauvegardé
     int n = 0;
     file_input_player >> n;
     std::cout << "il y a : " << n << "joueur sauvegardé" << std::endl;
-    std::cout << " Joueur 1 voulez-vous vous connecter 1/oui   2/non?" << std::endl;
-    int i = 0;
+    std::cout << " Joueur 1 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
     std::cin >> i;
-    if (i == 1) {
-        std::cout << " quel compte souhaitez vous utiliser ?" << std::endl;
-        int j = 0;
-        std::cin >> j;
-        switch (j) {
-            case 1:
-                lectureDoc("player1.txt");
-
-                joueur1.setPseudo();
-                //recréation de la collection joueur
-                break;
-            case 2:
-                lectureDoc("player2.txt");
-
-                joueur1.setPseudo();
-                //recréation de la collection joueur
-                break;
-        }
-    } else {
-std::cout << "Joueur 1 qu'elle est votre nom de guerre ?"<<std::endl;
-        joueur1.setPseudo();
-    }
+    initialisationDuJoueur(joueur1,i);
+    std::cout << " Joueur 2 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
+    initialisationDuJoueur(joueur2,i);
 
 
 
@@ -100,7 +110,16 @@ std::cout << "Joueur 1 qu'elle est votre nom de guerre ?"<<std::endl;
 
 
 
-    ///ne pas oublier les delete
+
+
+
+
+
+
+
+
+
+///ne pas oublier les delete
 
 
     return 0;
