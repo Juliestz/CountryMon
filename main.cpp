@@ -28,27 +28,27 @@ void creationDesCartesSpeciales() {
 }
 
 void creationDesCartesCreatures() {
-    Creature{"FRANCE", 7,  1};
-    Creature{"USA", 7,  1};
-    Creature{"RUSSIA", 7,  1};
-    Creature{"CHINA", 7,  1};
+    Creature{"FRANCE", 7, 1};
+    Creature{"USA", 7, 1};
+    Creature{"RUSSIA", 7, 1};
+    Creature{"CHINA", 7, 1};
     Creature{"NORTH KOREA", 7, 1};
     Creature{"DUTSCHLAND", 7, 1};
     Creature{"IRAN", 7, 1};
     Creature{"JAPAN", 7, 1};
 }
 
-void creerMaPremiereCollection(Player joueur){
+void creerMaPremiereCollection(Player joueur) {
     std::ofstream player{"MaPremiereCollection.txt"};
 
-    player<< 5 <<std::endl;
-    player<< joueur.getPseudo() <<std::endl;
+    player << 5 << std::endl;
+    player << joueur.getPseudo() << std::endl;
 
-    player<< 1 <<std::endl;
-    player<< 2 <<std::endl;
-    player<< 3 <<std::endl;
-    player<< 4 <<std::endl;
-    player<< 5 <<std::endl;
+    player << 1 << std::endl;
+    player << 2 << std::endl;
+    player << 3 << std::endl;
+    player << 4 << std::endl;
+    player << 5 << std::endl;
 
 }
 
@@ -92,14 +92,28 @@ void initialisationDuJoueur(Player joueur, int i) {
 
 }
 
+void acheterUnPack(Player joueur, int i) {
+    if (i == 1) {
+        joueur.addCardToMyCollection();
+        std::cout << "félicitations, vous avez acheté un pack hors de prix !!!" << std::endl;
+
+    } else {
+        std::cout
+                << "vous n'avez pas acheté de carte, "
+                   "\n vous aurez de nouveau la possibilité d'agrandir votre collection"
+                   " \navant votre prochain match. "
+                << std::endl;
+    }
+}
+
 
 int main() {
-
-    Player joueur1;
+/*
+    Player();
     joueur1.setPseudo();
 
     creerMaPremiereCollection(joueur1);
-    joueur1.createCollection("MaPremiereCollection.txt");
+    joueur1.createCollection("MaPremiereCollection.txt");*/
 
 
 
@@ -112,9 +126,6 @@ int main() {
     Player joueur1;
     Player joueur2;
 
-    Collection c;
-    c.addCard(1);
-    c.display();
 
     ecritureDoc("player1.txt");
     std::cout << "Bienvenue dans countryMon, préparez vous à vivre des combats intenses!!!!" << std::endl;
@@ -130,14 +141,16 @@ int main() {
     std::cout
             << "avant que  la partie commence vous avez la possibilté d'agrandir votre collection en achetant des cartes. 1/oui   2/non?"
             << std::endl;
-
-    joueur1.getCollection();
-    joueur1.addCardToMyCollection();
-
-
+    std::cin>>i;
+    acheterUnPack(joueur1,i);
     std::cout << " Joueur 2 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
     std::cin >> i;
     initialisationDuJoueur(joueur2, i);
+    std::cout
+            << "avant que  la partie commence vous avez la possibilté d'agrandir votre collection en achetant des cartes. 1/oui   2/non?"
+            << std::endl;
+    std::cin>>i;
+    acheterUnPack(joueur1,i);
 
 
 

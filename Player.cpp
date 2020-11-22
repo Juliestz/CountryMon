@@ -72,6 +72,7 @@ void Player::addCardToMyCollection(){
     for (int i=0;i<3; ++i){
         int nRand = rand()%19 +1 ;
         m_collection.addCard(nRand);
+        m_money-=5;
     }
 }
 
