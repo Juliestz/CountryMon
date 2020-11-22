@@ -257,17 +257,15 @@ void GameBoard::addCardToColl(int type) {
 }
 
 GameBoard::~GameBoard() {
+    while (!m_deck.empty()) {
+        delete m_deck.front();
+        m_deck.pop();
 
-    //std::list<Card *>::iterator it =;
+    }
 
-
-    //for (auto it : m_deck) {
-
-    //}
-
-
-
-
+    delete m_cemetary;
+    delete m_creature;
+    delete m_permanente;
 }
 
 
