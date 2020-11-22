@@ -31,6 +31,14 @@ Card *GameBoard::pickUp() {
     return pioche;
 }
 
+bool GameBoard::isEmpty() {
+    if (m_deck.empty()) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 void GameBoard::display() {
     std::cout << "pas interressant a coder maintenant";
 }
@@ -172,7 +180,7 @@ void GameBoard::creatADeck() {
 
 }
 
-void GameBoard::recoisDegats(const int& montantDegats) {
+void GameBoard::recoisDegats(const int &montantDegats) {
     bool temoins = m_creature->getState();
     m_PV -= m_creature->mutHP(montantDegats);
     if (temoins != m_creature->getState()) {
@@ -212,11 +220,11 @@ void GameBoard::putBack(Card *cartePiochee) {
     m_deck.push(cartePiochee);
 }
 
-void GameBoard::putAnEnergy(const char& numCarte) {
-    m_tabElements[numCarte-7] += 1;
+void GameBoard::putAnEnergy(const char &numCarte) {
+    m_tabElements[numCarte - 7] += 1;
 }
 
-void GameBoard::enleverHP(const int& nb) {
+void GameBoard::enleverHP(const int &nb) {
     m_creature->mutHP(nb);
 }
 

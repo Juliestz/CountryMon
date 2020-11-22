@@ -103,8 +103,18 @@ bool Game::verification(GameBoard *GB) {
         return true;
     } else
         return false;
-
 }
+bool isEmpty(GameBoard *GB){
+    if(GB->isEmpty()){
+        return false;
+    }
+    else{
+        return true;
+    }
+}
+
+
+
 
 void Game::playTheGame() {
 

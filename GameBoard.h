@@ -35,6 +35,8 @@ public:
 
     void creatADeck();
 
+    bool isEmpty();
+
     Card *pickUp();
 
     Card *getFirstCard();
@@ -45,22 +47,21 @@ public:
 
     int atkDeCreature(); //a faire
 
-    void recoisDegats(const int& montantPV);
+    void recoisDegats(const int &montantPV);
 
-    void enleverHP(const int& nb);
+    void enleverHP(const int &nb);
 
     void utilisationDeCarteEvent(Special *Carte);
 
     bool destroyPermanent();
 
-    void putAnEnergy( const char& numCarte);
+    void putAnEnergy(const char &numCarte);
 
     void envoyerCartAuCimetiere(Card *carteMorte);
 
     int getPV();
 
     void getCarteEnjeux();
-
 
 
 };

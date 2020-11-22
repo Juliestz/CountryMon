@@ -20,13 +20,18 @@ public:
 
     bool playATurn(GameBoard *GB,GameBoard *GB2);
 
+    bool verification(GameBoard *GB);
+
+    bool isEmpty(GameBoard *GB);
+
     void drawPhase(GameBoard *GB, GameBoard *GB2);
 
     void battlePhase(GameBoard *GB);
 
-    bool verification(GameBoard *GB);
+
 
     void playTheGame();
+
 
 
 };
