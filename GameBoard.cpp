@@ -32,11 +32,7 @@ Card *GameBoard::pickUp() {
 }
 
 bool GameBoard::isEmpty() {
-    if (m_deck.empty()) {
-        return true;
-    } else {
-        return false;
-    }
+    return !m_deck.empty();
 }
 
 void GameBoard::display() {
@@ -249,6 +245,27 @@ int GameBoard::getPV() {
 
 void GameBoard::getCarteEnjeux() {
     m_enjeu = this->pickUp();
+}
+
+int GameBoard::removeCardToColl() {
+    m_collection->removeCard(m_enjeu->getNum());
+    return m_enjeu->getNum();
+}
+
+void GameBoard::addCardToColl(int type) {
+    m_collection->addCard(type);
+}
+
+GameBoard::~GameBoard() {
+    while (!m_deck.empty()) {
+        delete m_deck.front();
+        m_deck.pop();
+
+    }
+
+    delete m_cemetary;
+    delete m_creature;
+    delete m_permanente;
 }
 
 

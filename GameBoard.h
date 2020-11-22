@@ -31,6 +31,8 @@ private:
 public:
     GameBoard(Player *Playeur, Collection *Collection);
 
+    ~GameBoard();
+
     void display();//a faire
 
     void creatADeck();
@@ -63,6 +65,9 @@ public:
 
     void getCarteEnjeux();
 
+    void addCardToColl(int type);
+
+    int removeCardToColl();
 
 };
 
