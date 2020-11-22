@@ -77,7 +77,7 @@ std::string fonctionNum(int n){
 
 void ecritureDoc(std::string nameDoc, int n) {
     std::ofstream file_input_player{nameDoc};
-
+    file_input_player << n;
 }
 
 int lectureDoc(std::string nameDoc) {
@@ -189,6 +189,9 @@ int main() {
     std::cin >> i;
     acheterUnPack(joueur1, i);
     joueur1.afficher();
+
+    n = lectureDoc("file_save_player");
+    std::cout << "il y a : " << n << " joueur sauvegarde" << std::endl;
 
     std::cout << " Joueur 2 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
     std::cin >> i;
