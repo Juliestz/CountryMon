@@ -65,32 +65,36 @@ void lectureDoc(std::string nameDoc) {
 void initialisationDuJoueur(Player joueur, int i) {
     if (i == 1) {
         std::cout << " quel compte souhaitez vous utiliser ?" << std::endl;
-        int j = 0;
+        std::string fichier = "player";
+        std::string extension = ".txt";
+        std::string j;
         std::cin >> j;
-        switch (j) {
-            case 1:
-                lectureDoc("player1.txt");
+        std::string nomFichier = fichier + j + extension;
 
-                joueur.setPseudo();// on récupère le pseudo enregistré dans la sauvegarde
-                joueur.createCollection("player1.txt");//recréation de la collection du joueur depuis la sauvegarde
-                break;
-            case 2:
-                lectureDoc("player2.txt");
+        lectureDoc(nomFichier);
 
-                joueur.setPseudo();
-                joueur.createCollection("player2.txt");//recréation de la collection du joueur depuis la sauvegarde
-                break;
-        }
-    } else {
-        std::cout << "Joueur 1 qu'elle est votre nom de guerre ?" << std::endl;
-        joueur.setPseudo();
-        std::cout << "Une collection de départ vous est attribué" << std::endl;
-        joueur.createCollection("base");//en attendant la fonction de création définitive.
-        ///le nom du fichier n'est pas correct, il faut penser à le changer quand le fichier contenant la collection basique sera créé///
+        joueur.setPseudo();// on récupère le pseudo enregistré dans la sauvegarde
+        joueur.createCollection(nomFichier);//recréation de la collection du joueur depuis la sauvegarde
+
+
+
     }
+    else {
+        std::cout << "Joueur 1 qu'elle est votre nom de guerre ?" <<
+                  std::endl;
+        joueur.setPseudo();
 
-
+        std::cout << "Une collection de départ vous est attribué" <<
+                  std::endl;
+        joueur.createCollection("base");//en attendant la fonction de création définitive.
+///le nom du fichier n'est pas correct, il faut penser à le changer quand le fichier contenant la collection basique sera créé///
+    }
 }
+
+
+
+
+
 
 void acheterUnPack(Player joueur, int i) {
     if (i == 1) {
@@ -126,12 +130,9 @@ int main() {
 
 
 
-/*
     int i = 0;
     creationDesCartesSpeciales();
     creationDesCartesCreatures();
-
-
 
 
     ecritureDoc("player1.txt");
@@ -148,18 +149,18 @@ int main() {
     std::cout
             << "avant que  la partie commence vous avez la possibilte d'agrandir votre collection en achetant des cartes. 1/oui   2/non?"
             << std::endl;
-    std::cin>>i;
-    acheterUnPack(joueur1,i);
+    std::cin >> i;
+    acheterUnPack(joueur1, i);
     std::cout << " Joueur 2 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
     std::cin >> i;
     initialisationDuJoueur(joueur2, i);
     std::cout
             << "avant que  la partie commence vous avez la possibilte d'agrandir votre collection en achetant des cartes. 1/oui   2/non?"
             << std::endl;
-    std::cin>>i;
-    acheterUnPack(joueur1,i);
+    std::cin >> i;
+    acheterUnPack(joueur1, i);
 
-*/
+
 
 
 
