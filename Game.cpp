@@ -52,6 +52,7 @@ Game::Game(GameBoard *GB1, GameBoard *GB2) : m_GB1{GB1}, m_GB2{GB2} {}
 
 bool Game::playATurn(GameBoard *GB, GameBoard *GB2) {
 //le joueur 1 joue en premier
+
     this->drawPhase(GB, GB2);
     this->battlePhase(GB);//attaque...
     this->verification(GB2);//on vérifie que l'autre joueur ne soit pas mort.
@@ -65,6 +66,8 @@ bool Game::playATurn(GameBoard *GB, GameBoard *GB2) {
 //  FAIRE ATENTION AU DYNAMIQUE CASTE !!!!
 
 void Game::drawPhase(GameBoard *GB, GameBoard *GB2) {
+
+
     Card *carteManipulee = GB->pickUp();
 
     Special *cs = dynamic_cast<Special *>(carteManipulee);
@@ -104,16 +107,14 @@ bool Game::verification(GameBoard *GB) {
     } else
         return false;
 }
-bool isEmpty(GameBoard *GB){
-    if(GB->isEmpty()){
+
+bool isEmpty(GameBoard *GB) {
+    if (GB->isEmpty()) {
+        return true;
+    } else {
         return false;
     }
-    else{
-        return true;
-    }
 }
-
-
 
 
 void Game::playTheGame() {
