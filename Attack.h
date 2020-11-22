@@ -6,17 +6,20 @@
 #define ECEMON_T_ATTACK_H
 #include <string.h>
 #include <iostream>
+#include "energy.h"
+#include "GameBoard.h"
+#include "Creature.h"
 
 
 class Attack {
 private:
     std::string m_name;
-    bool m_available;
-    std::string m_energyNeeded;
+    bool m_available = 0;
+    std::vector<char> m_energyNeeded;
+    int m_degats;
 public:
-    Attack();
-    Attack(std::string name, std::string energyNeeded, bool available);
-    void isAvailable();
+    Attack(std::string name, std::vector<char> energyNeeded,int degats, bool available);
+    bool attackAvailable(std::vector<char> elements);
 
 
 };

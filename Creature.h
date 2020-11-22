@@ -16,7 +16,7 @@ private:
 
     int m_HP;
     bool m_available;
-    std::vector<Attack> m_attacks;
+    std::vector<Attack*> m_attacks;
 
 public:
     Creature();
@@ -25,11 +25,11 @@ public:
 
     Creature(std::istream& name, std::istream& HP, bool available);
 
+    void newAttack(std::string name, std::vector<char> energyNeeded,int degats, bool available);
+
     virtual ~Creature() = default;
 
     virtual int mutHP(int montantDegats);
-
-    virtual void availableAttack();
 
     virtual bool getState() const;
 

@@ -12,6 +12,7 @@ Creature::Creature() : m_HP{0}, m_available{false}, m_attacks{0} {
 
 }
 
+
 int Creature::mutHP(int montantDegats) {
 
     if (m_HP - montantDegats > 0) {
@@ -29,12 +30,15 @@ bool Creature::getState() const {
     return m_available;
 }
 
-void Creature::availableAttack() {
 
-}
 
 int Creature::utilisation(char phase) {
 
     return 0;
+}
+
+void Creature::newAttack(std::string name, std::vector<char> energyNeeded,int degats, bool available ) {
+    m_attacks.push_back(new Attack(name, energyNeeded, degats, available));
+
 }
 

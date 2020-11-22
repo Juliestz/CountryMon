@@ -28,15 +28,46 @@ void creationDesCartesSpeciales() {
 }
 
 void creationDesCartesCreatures() {
-    Creature{"FRANCE", 12, 7, 1};
-    Creature{"USA", 13,7, 1};
-    Creature{"RUSSIA", 14, 7, 1};
-    Creature{"CHINA", 15, 7, 1};
-    Creature{"NORTH KOREA", 16, 7, 1};
-    Creature{"DUTSCHLAND", 17, 7, 1};
-    Creature{"IRAN", 18, 7, 1};
-    Creature{"JAPAN", 19, 7, 1};
-}
+    Creature France {"FRANCE", 12, 7, 1};
+    Creature USA{"USA", 13,7, 1};
+    Creature Russia{"RUSSIA", 14, 7, 1};
+    Creature China{"CHINA", 15, 7, 1};
+    Creature NorthKorea{"NORTH KOREA", 16, 7, 1};
+    Creature Germany{"GERMANY", 17, 7, 1};
+    Creature Iran{"IRAN", 18, 7, 1};
+    Creature Japan{"JAPAN", 19, 7, 1};
+
+
+    // initialisation des attaques propres à chaque créatures
+
+
+     France.newAttack("L'effroyable en eaux profondes",{2,1,0,0},2,0);
+     France.newAttack("Constellation de satellites", {1,0,2,1},3,0);
+
+     USA.newAttack("Otan",{2,0,1,1},3,0);
+     USA.newAttack("Bombe a hydrogen",{0,1,2,1},2,0);
+
+     Russia.newAttack("KGB",{1,2,0,1},2,0);
+     Russia.newAttack("Armee rouge",{1,1,1,1},3,0);
+
+     China.newAttack("Invasion a la tibetaine",{1,1,1,1},2,0);
+     China.newAttack("Piratage numerique",{0,1,2,1},5,0);
+
+     NorthKorea.newAttack("Invasion mondiale",{0,2,1,1},2,0);
+     NorthKorea.newAttack("Missile nucleaire",{1,1,2,1},5,0);
+
+     Germany.newAttack("3ieme Reich",{1,1,2,0},3,0);
+     Germany.newAttack("Luftwaffe",{0,1,1,1},2,0);
+
+     Iran.newAttack("Crise du petrole",{2,0,0,1},3,0);
+     Iran.newAttack("Bouclier spatiale",{0,1,1,2},2,0);
+
+     Japan.newAttack("Sous-marin nucleaire",{1,1,1,1},2,0);
+     Japan.newAttack("Attaque DDOS",{0,1,2,1},3,0);
+
+
+
+
 
 void creerMaPremiereCollection(Player joueur) {
     std::ofstream player{"MaPremiereCollection.txt"};
@@ -96,7 +127,7 @@ void initialisationDuJoueur(Player joueur, int i) {
 
 
 
-void acheterUnPack(Player joueur, int i) {
+void acheterUnPack(Player joueur, int i){
     if (i == 1) {
         joueur.addCardToMyCollection();
         std::cout << "félicitations, vous avez acheté un pack hors de prix !!!" << std::endl;
@@ -111,7 +142,7 @@ void acheterUnPack(Player joueur, int i) {
 }
 
 
-int main() {
+int main(){
 
     Player joueur1;
     Player joueur2;
