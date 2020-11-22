@@ -15,7 +15,7 @@ private:
     std::list<Card*> m_collection;
 public:
     Collection();
-    void addCard(int type);
+    void addCard(int numSerie);
     void removeCard(char numSerie);
     Collection* getCollection();
     std::list<Card*> getCardsCollection();

@@ -9,8 +9,7 @@
 #include <fstream>
 
 void creationDesCartesSpeciales(){
-    Special sixAout45{"Six Aout 45", "Vous lancez une bombe atomique sur la creature adverse : elle perd 2 HP."
-                                        " Malheureusement la deflagration est tres grande et fait perdre 1 HP a votre propre creature."};
+    Special sixAout45{"Six Aout 45", '1', "Vous lancez une bombe atomique sur la creature adverse : elle perd 2 HP. Malheureusement la deflagration est tres grande et fait perdre 1 HP a votre propre creature."};
     Special bond{"James Bond", "Vous envoyez un espion pour savoir quelle sera la prochaine carte"
                                " tirée par le joueur adverse."};
     Special cdm{"Coupe du monde", "Vous avez gagné la coupe du monde! Bravo!"
