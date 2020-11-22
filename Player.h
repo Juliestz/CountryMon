@@ -9,6 +9,7 @@
 #include <string>
 #include "Collection.h"
 
+class Collection;
 
 class Player {
 private:
@@ -20,6 +21,8 @@ public:
     Player();
     void setPseudo();
     void afficher();
+    void saveCollection(std::string nameDoc);
+    void createCollection(std::string nameDoc);
     Collection* getCollection();
     ~Player();
     void deathPlayer();
