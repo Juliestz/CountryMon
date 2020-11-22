@@ -71,22 +71,23 @@ void initialisationDuJoueur(Player joueur, int i) {
         std::cin >> j;
         std::string nomFichier = fichier + j + extension;
 
-        lectureDoc(nomFichier);
 
-        joueur.setPseudo();// on récupère le pseudo enregistré dans la sauvegarde
-        joueur.createCollection(nomFichier);//recréation de la collection du joueur depuis la sauvegarde
+
+
+        joueur.createCollection("../joueur1");//recréation de la collection du joueur depuis la sauvegarde
 
 
 
     }
     else {
-        std::cout << "Joueur 1 qu'elle est votre nom de guerre ?" <<
+        std::cout << "Joueur  qu'elle est votre nom de guerre ?" <<
                   std::endl;
         joueur.setPseudo();
-
+        creerMaPremiereCollection(joueur);
         std::cout << "Une collection de départ vous est attribué" <<
                   std::endl;
-        joueur.createCollection("base");//en attendant la fonction de création définitive.
+        joueur.createCollection("MaPremiereCollection.txt");
+        joueur.saveCollection("../joueur2");
 ///le nom du fichier n'est pas correct, il faut penser à le changer quand le fichier contenant la collection basique sera créé///
     }
 }
@@ -116,17 +117,16 @@ int main() {
     Player joueur1;
     Player joueur2;
 
-    joueur1.setPseudo();
+    /*joueur1.setPseudo();
 
-    creerMaPremiereCollection(joueur1);
-    joueur1.createCollection("MaPremiereCollection.txt");
 
-    joueur1.afficher();
+
+
 
     joueur1.addCardToMyCollection();
-    joueur1.afficher();
+    joueur1.afficher();*/
 
-    joueur1.saveCollection("Joueur1.txt");
+
 
 
 
@@ -135,7 +135,7 @@ int main() {
     creationDesCartesCreatures();
 
 
-    ecritureDoc("player1.txt");
+
     std::cout << "Bienvenue dans CountryMon, preparez vous a vivre des combats intenses!!!!" << std::endl;
 
 
@@ -146,11 +146,13 @@ int main() {
     std::cout << " Joueur 1 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
     std::cin >> i;
     initialisationDuJoueur(joueur1, i);
+    joueur1.afficher();
     std::cout
             << "avant que  la partie commence vous avez la possibilte d'agrandir votre collection en achetant des cartes. 1/oui   2/non?"
             << std::endl;
     std::cin >> i;
     acheterUnPack(joueur1, i);
+    joueur1.afficher();
     std::cout << " Joueur 2 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
     std::cin >> i;
     initialisationDuJoueur(joueur2, i);
