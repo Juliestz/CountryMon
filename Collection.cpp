@@ -95,9 +95,7 @@ void Collection::addCard(int type){
             case 19 :
                 m_collection.push_back(new Creature{});
                 break;
-
         }
-    }
 }
 
 void Collection::removeCard(char numSerie) {
