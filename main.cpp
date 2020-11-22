@@ -116,9 +116,6 @@ int main() {
     joueur1.createCollection("MaPremiereCollection.txt");*/
 
 
-    joueur1.afficher();
-
-
 
 
 
