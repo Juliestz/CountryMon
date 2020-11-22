@@ -31,6 +31,8 @@ private:
 public:
     GameBoard(Player *Playeur, Collection *Collection);
 
+    ~GameBoard();
+
     void display();//a faire
 
     void creatADeck();

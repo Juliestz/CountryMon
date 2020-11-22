@@ -256,6 +256,20 @@ void GameBoard::addCardToColl(int type) {
     m_collection->addCard(type);
 }
 
+GameBoard::~GameBoard() {
+
+    //std::list<Card *>::iterator it =;
+
+
+    //for (auto it : m_deck) {
+
+    //}
+
+
+
+
+}
+
 
 
 
