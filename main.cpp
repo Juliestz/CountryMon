@@ -128,18 +128,18 @@ int main() {
 
 
     ecritureDoc("player1.txt");
-    std::cout << "Bienvenue dans countryMon, préparez vous à vivre des combats intenses!!!!" << std::endl;
+    std::cout << "Bienvenue dans CountryMon, preparez vous a vivre des combats intenses!!!!" << std::endl;
 
 
     std::ifstream file_input_player{"file_save_player"};// on lit le fichier avec le nombre de joueur sauvegardé
     int n = 0;
     file_input_player >> n;
-    std::cout << "il y a : " << n << "joueur sauvegardé" << std::endl;
+    std::cout << "il y a : " << n << "joueur sauvegarde" << std::endl;
     std::cout << " Joueur 1 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
     std::cin >> i;
     initialisationDuJoueur(joueur1, i);
     std::cout
-            << "avant que  la partie commence vous avez la possibilté d'agrandir votre collection en achetant des cartes. 1/oui   2/non?"
+            << "avant que  la partie commence vous avez la possibilte d'agrandir votre collection en achetant des cartes. 1/oui   2/non?"
             << std::endl;
     std::cin>>i;
     acheterUnPack(joueur1,i);
@@ -147,7 +147,7 @@ int main() {
     std::cin >> i;
     initialisationDuJoueur(joueur2, i);
     std::cout
-            << "avant que  la partie commence vous avez la possibilté d'agrandir votre collection en achetant des cartes. 1/oui   2/non?"
+            << "avant que  la partie commence vous avez la possibilte d'agrandir votre collection en achetant des cartes. 1/oui   2/non?"
             << std::endl;
     std::cin>>i;
     acheterUnPack(joueur1,i);
