@@ -101,12 +101,6 @@ std::string fonctionNum(int n){
         case 8 :
             var = '9';
             break;
-        case 9 :
-            var = '10';
-            break;
-        case 10 :
-            var = '11';
-            break;
     }
     return var;
 }
@@ -180,7 +174,6 @@ void initialisationDuJoueur(Player joueur, int i, int n) {
         std::cout << "Une collection de depart vous est attribue" <<
                   std::endl;
         joueur.createCollection("../MaPremiereCollection.txt");
-
         joueur.afficher();
         joueur.saveCollection(nomFichier);
 
