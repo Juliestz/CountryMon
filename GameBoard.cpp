@@ -41,11 +41,31 @@ bool GameBoard::isEmpty() {
 void GameBoard::displayL1() {
     std::cout << "pas interressant a coder maintenant";
     int taille;
-    if (m_cemetary != nullptr){
-        std::cout << m_cemetary.
-    }else{
+    if (m_cemetary != nullptr) {
+        std::cout << m_cemetary->getName();
+        taille = m_cemetary->getName().size();
+    } else {
         std::cout << "cimetiere";
+        taille = 9;
     }
+
+    if (m_creature != nullptr && m_creature->getState()) {
+        for (int i = 0; i < 60 - (taille + m_creature->getName().size() / 2); ++i) {
+            std::cout << " ";
+        }
+        std::cout << m_creature->getName();
+
+    } else {
+        for (int i = 0; i < 60 - (taille + 10); ++i) {
+            std::cout << " ";
+        }
+        std::cout << "pas de creature posee";
+    }
+
+    if (m_permanente != nullptr){
+
+    }
+
 
 
 }
