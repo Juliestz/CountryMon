@@ -109,3 +109,7 @@ void Player::addCardToMyCollection(){
 
 
 Player::~Player(){}
+
+Collection *Player::getCollection() {
+    return &m_collectionj;
+}

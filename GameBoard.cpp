@@ -5,7 +5,8 @@
 #include "GameBoard.h"
 #include <ctime>
 #include <cstdio>
-
+#include <cstdlib>
+#include <ctime>
 
 #define NB_CARD_DECK 20
 
@@ -117,25 +118,25 @@ void GameBoard::creatADeck() {
     std::cout << "choisire les cartes du deck? (0:oui, 1:non)";
     std::cin >> choix;
 
-    std::list<Card *>::iterator it = m_collection->getCardsCollection().begin();
+
     std::vector<Card *> tabRepDeColl;
 
     Card carteAuDeck;
 
-    for (it; it != m_collection->getCardsCollection().end(); ++it) {
-        carteAuDeck = **it;
+    for (auto it : tabRepDeColl) {
+        carteAuDeck = *it;
 
         if (carteAuDeck.getNum() < 8) {
             tabRepDeColl.push_back(new Special());
-            *tabRepDeColl.back() = **it;
+            *tabRepDeColl.back() = *it;
 
         } else if (carteAuDeck.getNum() < 12) {
             tabRepDeColl.push_back(new Energy());
-            *tabRepDeColl.back() = **it;
+            *tabRepDeColl.back() = *it;
 
         } else {
             tabRepDeColl.push_back(new Creature());
-            *tabRepDeColl.back() = **it;
+            *tabRepDeColl.back() = *it;
 
         }
     }
@@ -143,7 +144,7 @@ void GameBoard::creatADeck() {
 
     if (choix) {
 
-
+        srand((unsigned int) time(0));
         for (int j = 0; j < NB_CARD_DECK; ++j) {
             nbRand = rand() % tabRepDeColl.size();
 
