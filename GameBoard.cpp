@@ -94,6 +94,15 @@ void GameBoard::displayL1() {
 
 void GameBoard::displayL2() {
 
+    std::cout << "\n\n\nEnergies :\n";
+    std::cout << "     Politique : " << m_tabElements[0] << "   Militaire : " << m_tabElements[1];
+    std::cout << "\n     Scientifique : " << m_tabElements[2] << "   Militaire : " << m_tabElements[3];
+
+    for (int i = 0; i < 70; ++i) {
+        std::cout << " ";
+    }
+
+    std::cout << "DECK";
 }
 
 void GameBoard::putACard(Creature *cartePiochee) {
@@ -182,10 +191,10 @@ void GameBoard::creatADeck() {
         std::vector<Card *> tabRepDeDeck;
         do {
             //AFFICHER tabRepDeColl
-            std::cout<<"\n\n\n\n\n\n\n\n\n\n"<<std::endl;
-                for(int i =0; i<tabRepDeColl.size();++i){
-                    std::cout<<i+1<< "carte :"<< tabRepDeColl[i]->getName()<<std::endl;
-                }
+            std::cout << "\n\n\n\n\n\n\n\n\n\n" << std::endl;
+            for (int i = 0; i < tabRepDeColl.size(); ++i) {
+                std::cout << i + 1 << "carte :" << tabRepDeColl[i]->getName() << std::endl;
+            }
 
             std::cout << std::endl << "choisisser une carte à ajouter au deck et mettez 0 quand vous avez fini :";
             std::cin >> choix2;
