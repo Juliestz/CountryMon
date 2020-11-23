@@ -52,7 +52,7 @@ void GameBoard::creatADeck() {
     int choix2;
     std::cout << "choisire les cartes du deck? (0:oui, 1:non)";
     std::cin >> choix;
-    srand(time(NULL));
+
     std::list<Card *>::iterator it = m_collection->getCardsCollection().begin();
     std::vector<Card *> tabRepDeColl;
 
