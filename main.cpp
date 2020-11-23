@@ -6,7 +6,9 @@
 #include "Collection.h"
 #include "Energy.h"
 #include "GameBoard.h"
+#include "Game.h"
 #include <fstream>
+#include "Init_ALLEGRO.h"
 
 void creationDesCartesSpeciales() {
     Special sixAout45{"Six Aout 45", 1,
@@ -194,12 +196,12 @@ void initialisationDuJoueur(Player *joueur, int i, int n) {
 
 
 int main() {
-  /*  ///initialisation des données nécessaire à ALLEGRO
-    int mousePosX = 0;
-    int mousePosY = 0;
-    int isEnd = 0;
-    int screenW = 0, screenH = 0;
-    int w, h = 0; // dimension bitmap*/
+    /*  ///initialisation des données nécessaire à ALLEGRO
+      int mousePosX = 0;
+      int mousePosY = 0;
+      int isEnd = 0;
+      int screenW = 0, screenH = 0;
+      int w, h = 0; // dimension bitmap*/
     /*******************************************************************************************
       *                               déclaration ALLEGRO                                        *
        ******************************************************************************************/
@@ -252,6 +254,11 @@ int main() {
 
     Player joueur1;
     Player joueur2;
+
+    new GameBoard(&joueur1,joueur1.getCollection());
+
+
+
 
 /*
     ALLEGRO_DISPLAY *display;
@@ -308,6 +315,21 @@ int main() {
     std::cin >> i;
     initialisationDuJoueur(&joueur2, i,n);
 
+
+/*
+    while (!isEnd) {
+        al_wait_for_event(queue, &event);
+        if (event.keyboard.keycode == ALLEGRO_KEY_ESCAPE) {
+            //le joueur passe son tour.
+        }
+        for (int j = 0; j < 3; ++j) //3 par default car normalement il n'y a que 3 zone qui ont des actions.
+        {
+            if (event.mouse.x >= posZone[i].x && event.mouse.x <= posZone[i].x + 90 &&
+                event.mouse.y >= posZone[i].y && event.mouse.y <= posZone[i].y + 65) {
+
+            }
+        }
+    }*/
 
 
 
