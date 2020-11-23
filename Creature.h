@@ -10,10 +10,10 @@
 #include <vector>
 #include "Attack.h"
 
-
+class Attack;
 class Creature : public Card {
 
-protected:
+private:
     int m_HP;
     bool m_available;
     std::vector<Attack*> m_attacks;
@@ -24,6 +24,8 @@ public:
     Creature(std::string name, char numSerie, int HP, bool available);
 
     //Creature(std::istream& name, std::istream& HP, bool available);
+
+    std::vector<Attack*> getAttaque();
 
     void newAttack(std::string name, std::vector<char> energyNeeded,int degats, bool available);
 

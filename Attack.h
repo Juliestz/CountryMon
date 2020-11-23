@@ -4,10 +4,11 @@
 
 #ifndef ECEMON_T_ATTACK_H
 #define ECEMON_T_ATTACK_H
+
 #include <string>
 #include <iostream>
 #include "Energy.h"
-#include "GameBoard.h"
+
 #include "Creature.h"
 
 
@@ -18,7 +19,8 @@ private:
     std::vector<char> m_energyNeeded;
     int m_degats;
 public:
-    Attack(std::string name, std::vector<char> energyNeeded,int degats, bool available);
+    Attack(std::string name, std::vector<char> energyNeeded, int degats, bool available);
+
     bool attackAvailable(std::vector<char> elements);
 
 

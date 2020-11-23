@@ -42,3 +42,7 @@ void Creature::newAttack(std::string name, std::vector<char> energyNeeded,int de
 
 }
 
+std::vector<Attack*> Creature::getAttaque(){
+    return std::vector<Attack*>(m_attacks);
+}
+

@@ -82,6 +82,8 @@ void creerMaPremiereCollection(Player joueur) {
 
 }
 
+void ecritureDoc(std::string nameDoc) {
+    std::ofstream player{nameDoc};}
 
 std::string fonctionNum(int n){
     std::string var;
@@ -105,6 +107,7 @@ std::string fonctionNum(int n){
     return var;
 }
 
+
 void ecritureDoc(std::string nameDoc, int n) {
     std::ofstream file_input_player{nameDoc};
     file_input_player << n;
@@ -123,7 +126,7 @@ void initialisationDuJoueur(Player joueur, int i, int n) {
         std::string fichier = "player";
         std::string extension = ".txt";
         std::string j;
-        std::cin >> j;
+
         std::string nomFichier = fichier + j + extension;
 
         std::cout<< nomFichier <<std::endl;
