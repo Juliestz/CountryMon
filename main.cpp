@@ -1,5 +1,4 @@
 #include <iostream>
-#include <allegro5/allegro.h>
 #include "Special.h"
 #include "Player.h"
 #include "Creature.h"
@@ -7,8 +6,8 @@
 #include "Collection.h"
 #include "Energy.h"
 #include "GameBoard.h"
-#include <allegro5/allegro.h>
 #include <fstream>
+#include "Init_ALLEGRO.h"
 
 void creationDesCartesSpeciales() {
     Special sixAout45{"Six Aout 45", 1,
@@ -70,10 +69,9 @@ void creationDesCartesCreatures() {
 }
 
 
-
-std::string fonctionNum(int n){
+std::string fonctionNum(int n) {
     std::string var;
-    switch(n){
+    switch (n) {
         case 0 :
             var = '1';
             break;
@@ -123,7 +121,7 @@ int lectureDoc(std::string nameDoc) {
 }
 
 
-void acheterUnPack(Player joueur, int i){
+void acheterUnPack(Player joueur, int i) {
     if (i == 1) {
         joueur.addCardToMyCollection();
         std::cout << "felicitations, vous avez achete un pack hors de prix !!!" << std::endl;
@@ -145,7 +143,7 @@ void initialisationDuJoueur(Player joueur, int i, int n) {
         std::string fichier = "../player";
         std::string extension = ".txt";
         std::string j;
-        std::cin>> j;
+        std::cin >> j;
         std::string nomFichier = fichier + j + extension;
 
         joueur.createCollection(nomFichier);//recréation de la collection du joueur depuis la sauvegarde
@@ -159,8 +157,7 @@ void initialisationDuJoueur(Player joueur, int i, int n) {
         joueur.afficher();
         joueur.saveCollection(nomFichier);
 
-    }
-    else {
+    } else {
 
         std::string fichier = "../player";
         std::string extension = ".txt";
@@ -192,8 +189,61 @@ void initialisationDuJoueur(Player joueur, int i, int n) {
 }
 
 
+int main() {
+  /*  ///initialisation des données nécessaire à ALLEGRO
+    int mousePosX = 0;
+    int mousePosY = 0;
+    int isEnd = 0;
+    int screenW = 0, screenH = 0;
+    int w, h = 0; // dimension bitmap*/
+    /*******************************************************************************************
+      *                               déclaration ALLEGRO                                        *
+       ******************************************************************************************/
+/*
+    ALLEGRO_DISPLAY *display = NULL;
 
-int main(){
+    ALLEGRO_BITMAP  *nomBitmaps = NULL;
+
+    ALLEGRO_EVENT_QUEUE *queue = NULL;
+    ALLEGRO_EVENT  event = {0};
+
+    ALLEGRO_TIMER  *timer = NULL;
+
+    ALLEGRO_MOUSE_STATE mouse_state;
+    ALLEGRO_MOUSE_CURSOR *cursor;
+
+    ALLEGRO_COLOR blanc;
+
+
+    assert(al_init());
+    assert(al_install_mouse());
+    assert(al_install_keyboard());
+    assert(al_init_image_addon());
+    assert(al_init_primitives_addon());
+    al_init_font_addon();
+    assert(al_init_ttf_addon());
+    //création
+    // timer
+    // texte
+    //couleur Blanc et noir
+    blanc = al_map_rgb(255, 255, 255);
+
+    screenW = al_get_display_width(display);
+    screenH = al_get_display_height(display);
+    //chargement des images
+
+    //registre evenements
+    al_register_event_source(queue, al_get_display_event_source(display));
+    al_register_event_source(queue, al_get_keyboard_event_source());
+    al_register_event_source(queue, al_get_mouse_event_source());
+    al_register_event_source(queue, al_get_timer_event_source(timer));*/
+    /*******************************************************************************************
+      *                              fin déclaration ALLEGRO                                    *
+       ******************************************************************************************/
+    /*******************************************************************************************
+      *                             chargement des images nécesaire au jeu                      *
+       ******************************************************************************************/
+
 
 
     Player joueur1;
@@ -233,16 +283,14 @@ int main(){
     std::cout << "il y a : " << n << " joueur sauvegarde" << std::endl;
     std::cout << " Joueur 1 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
     std::cin >> i;
-    if (i == 1){
-        if (n != 0){
+    if (i == 1) {
+        if (n != 0) {
             initialisationDuJoueur(joueur1, i, n);
-        }
-        else{
-            std::cout<< "Il n'y a pas encore de compte, vous devez en creer un." <<std::endl;
+        } else {
+            std::cout << "Il n'y a pas encore de compte, vous devez en creer un." << std::endl;
             initialisationDuJoueur(joueur1, 2, n);
         }
-    }
-    else{
+    } else {
         initialisationDuJoueur(joueur1, i, n);
     }
 
@@ -252,7 +300,7 @@ int main(){
 
     std::cout << " Joueur 2 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
     std::cin >> i;
-    initialisationDuJoueur(joueur2, i,n);
+    initialisationDuJoueur(joueur2, i, n);
 
 
 
@@ -270,6 +318,7 @@ int main(){
 
 
 ///ne pas oublier les delete
+///destruction des bitmaps
 
 
     return 0;
