@@ -163,7 +163,7 @@ void GameBoard::creatADeck() {
             //AFFICHER tabRepDeColl
             std::cout<<"\n\n\n\n\n\n\n\n\n\n"<<std::endl;
                 for(int i =0; i<tabRepDeColl.size();++i){
-                    std::cout<<"carte :"<< tabRepDeColl[i]->getName()<<"numéro :"<<tabRepDeColl[i]->getNum()<<std::endl;
+                    std::cout<<i+1<< "carte :"<< tabRepDeColl[i]->getName()<<std::endl;
                 }
 
             std::cout << std::endl << "choisisser une carte à ajouter au deck et mettez 0 quand vous avez fini :";
