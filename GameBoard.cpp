@@ -43,7 +43,7 @@ void GameBoard::display() {
 }
 
 void GameBoard::putACard(Creature *cartePiochee) {
-    //delete *m_creature;
+    this->envoyerCartAuCimetiere(m_creature);
     m_creature = cartePiochee;
 }
 
@@ -123,7 +123,7 @@ void GameBoard::creatADeck() {
 
 
     } else {
-        std::vector<Card*> tabRepDeDeck;
+        std::vector<Card *> tabRepDeDeck;
         do {
             //AFFICHER tabRepDeColl
 
@@ -231,6 +231,7 @@ void GameBoard::recoisDegats(const int &montantDegats) {
     m_PV -= m_creature->mutHP(montantDegats);
     if (temoins != m_creature->getState()) {
         this->envoyerCartAuCimetiere(m_creature);
+        m_creature = nullptr;
     }
 }
 
@@ -244,7 +245,7 @@ void GameBoard::utilisationDeCarteEvent(Special *Carte) {
     switch (Carte->getNum()) {
         case 3:
             this->destroyPermanent();
-            *m_permanente = *Carte;
+            m_permanente = Carte;
             /* Booster : « Coupe du monde » 
 
              Carte qui reste sur le terrain (permanente) et augmente la puissance de la créature alliée de 1*/
@@ -271,13 +272,17 @@ void GameBoard::putAnEnergy(const char &numCarte) {
 }
 
 void GameBoard::enleverHP(const int &nb) {
+    bool temoins = m_creature->getState();
     m_creature->mutHP(nb);
+    if (temoins != m_creature->getState()) {
+        this->envoyerCartAuCimetiere(m_creature);
+        m_creature = nullptr;
+    }
 }
 
 Card *GameBoard::getFirstCard() {
     return m_deck.front();
 }
-
 
 bool GameBoard::destroyPermanent() {
     if (m_permanente != nullptr) {
