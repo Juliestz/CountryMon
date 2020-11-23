@@ -12,7 +12,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f28dbab4-0461-43cc-adcd-85ebf49a57b4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ecemon-T.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ecemon-T.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +105,7 @@
       <workItem from="1606030407449" duration="31965000" />
       <workItem from="1606077724708" duration="519000" />
       <workItem from="1606115110060" duration="12997000" />
-      <workItem from="1606130582232" duration="11870000" />
+      <workItem from="1606130582232" duration="12803000" />
     </task>
     <task id="LOCAL-00001" summary="Special">
       <created>1605558186850</created>
@@ -430,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606149753789</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="sauvegarde">
+      <created>1606150550205</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1606150550205</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,10 +470,10 @@
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
     <state x="-1110" y="285" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606063970033" />
-    <state x="-1332" y="34" key="CommitChangelistDialog2" timestamp="1606149752995">
+    <state x="-1332" y="34" key="CommitChangelistDialog2" timestamp="1606150549494">
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
-    <state x="-1332" y="34" key="CommitChangelistDialog2/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606149752995" />
+    <state x="-1332" y="34" key="CommitChangelistDialog2/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606150549494" />
     <state x="265" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1605979833362" />
     <state x="140" y="31" key="DiffContextDialog" timestamp="1605967722296">
       <screen x="0" y="0" width="1280" height="680" />
@@ -471,25 +484,25 @@
     </state>
     <state x="-655" y="175" key="FileChooserDialogImpl/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606130315670" />
     <state x="781" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1605983016519" />
-    <state width="1637" height="271" key="GridCell.Tab.0.bottom" timestamp="1606149279256">
+    <state width="1637" height="271" key="GridCell.Tab.0.bottom" timestamp="1606151253655">
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
-    <state width="1637" height="271" key="GridCell.Tab.0.bottom/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606149279256" />
+    <state width="1637" height="271" key="GridCell.Tab.0.bottom/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606151253655" />
     <state width="1637" height="336" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1606130551141" />
-    <state width="1637" height="271" key="GridCell.Tab.0.center" timestamp="1606149279256">
+    <state width="1637" height="271" key="GridCell.Tab.0.center" timestamp="1606151253655">
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
-    <state width="1637" height="271" key="GridCell.Tab.0.center/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606149279256" />
+    <state width="1637" height="271" key="GridCell.Tab.0.center/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606151253655" />
     <state width="1637" height="336" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1606130551141" />
-    <state width="1637" height="271" key="GridCell.Tab.0.left" timestamp="1606149279256">
+    <state width="1637" height="271" key="GridCell.Tab.0.left" timestamp="1606151253655">
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
-    <state width="1637" height="271" key="GridCell.Tab.0.left/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606149279256" />
+    <state width="1637" height="271" key="GridCell.Tab.0.left/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606151253655" />
     <state width="1637" height="336" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1606130551141" />
-    <state width="1637" height="271" key="GridCell.Tab.0.right" timestamp="1606149279256">
+    <state width="1637" height="271" key="GridCell.Tab.0.right" timestamp="1606151253655">
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
-    <state width="1637" height="271" key="GridCell.Tab.0.right/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606149279256" />
+    <state width="1637" height="271" key="GridCell.Tab.0.right/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606151253655" />
     <state width="1637" height="336" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1606130551141" />
     <state width="1637" height="336" key="GridCell.Tab.1.bottom" timestamp="1606142133636">
       <screen x="-1680" y="34" width="1680" height="1010" />
@@ -523,10 +536,10 @@
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606032531128" />
-    <state x="-1374" y="126" key="Vcs.Push.Dialog.v2" timestamp="1606149756284">
+    <state x="-1374" y="126" key="Vcs.Push.Dialog.v2" timestamp="1606150552001">
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
-    <state x="-1374" y="126" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606149756284" />
+    <state x="-1374" y="126" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606150552001" />
     <state x="233" y="62" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1605979836102" />
     <state x="-1588" y="126" width="1496" height="826" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1606142095814">
       <screen x="-1680" y="34" width="1680" height="1010" />

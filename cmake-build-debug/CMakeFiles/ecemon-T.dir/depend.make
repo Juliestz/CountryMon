@@ -68,7 +68,9 @@ CMakeFiles/ecemon-T.dir/main.cpp.obj: ../Card.h
 CMakeFiles/ecemon-T.dir/main.cpp.obj: ../Collection.h
 CMakeFiles/ecemon-T.dir/main.cpp.obj: ../Creature.h
 CMakeFiles/ecemon-T.dir/main.cpp.obj: ../Energy.h
+CMakeFiles/ecemon-T.dir/main.cpp.obj: ../Game.h
 CMakeFiles/ecemon-T.dir/main.cpp.obj: ../GameBoard.h
+CMakeFiles/ecemon-T.dir/main.cpp.obj: ../Init_ALLEGRO.h
 CMakeFiles/ecemon-T.dir/main.cpp.obj: ../Player.h
 CMakeFiles/ecemon-T.dir/main.cpp.obj: ../Special.h
 CMakeFiles/ecemon-T.dir/main.cpp.obj: ../main.cpp

@@ -69,7 +69,9 @@ CMakeFiles/ecemon-T.dir/main.cpp.obj
  C:/Users/Julie/CLionProjects/ecemon-T/Collection.h
  C:/Users/Julie/CLionProjects/ecemon-T/Creature.h
  C:/Users/Julie/CLionProjects/ecemon-T/Energy.h
+ C:/Users/Julie/CLionProjects/ecemon-T/Game.h
  C:/Users/Julie/CLionProjects/ecemon-T/GameBoard.h
+ C:/Users/Julie/CLionProjects/ecemon-T/Init_ALLEGRO.h
  C:/Users/Julie/CLionProjects/ecemon-T/Player.h
  C:/Users/Julie/CLionProjects/ecemon-T/Special.h
  C:/Users/Julie/CLionProjects/ecemon-T/main.cpp

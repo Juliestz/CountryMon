@@ -255,7 +255,7 @@ int main() {
     Player joueur1;
     Player joueur2;
 
-    new GameBoard(&joueur1,joueur1.getCollection());
+    //new GameBoard(&joueur1,joueur1.getCollection());
 
 
 

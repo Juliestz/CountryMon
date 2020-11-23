@@ -46,6 +46,10 @@ vector
 fstream
 -
 
+C:/Users/Julie/CLionProjects/ecemon-T/Game.h
+GameBoard.h
+C:/Users/Julie/CLionProjects/ecemon-T/GameBoard.h
+
 C:/Users/Julie/CLionProjects/ecemon-T/GameBoard.h
 iostream
 -
@@ -64,18 +68,24 @@ C:/Users/Julie/CLionProjects/ecemon-T/Collection.h
 Energy.h
 C:/Users/Julie/CLionProjects/ecemon-T/Energy.h
 
-C:/Users/Julie/CLionProjects/ecemon-T/Player.cpp
-fstream
+C:/Users/Julie/CLionProjects/ecemon-T/Init_ALLEGRO.h
+allegro5/allegro.h
 -
-Player.h
-C:/Users/Julie/CLionProjects/ecemon-T/Player.h
-Collection.h
-C:/Users/Julie/CLionProjects/ecemon-T/Collection.h
-Card.h
-C:/Users/Julie/CLionProjects/ecemon-T/Card.h
-cstdlib
+allegro5/allegro_color.h
 -
-ctime
+allegro5/allegro_image.h
+-
+allegro5/allegro_font.h
+-
+allegro5/allegro_ttf.h
+-
+allegro5/allegro_primitives.h
+-
+allegro5/bitmap.h
+-
+allegro5/allegro_audio.h
+-
+allegro5/allegro_acodec.h
 -
 
 C:/Users/Julie/CLionProjects/ecemon-T/Player.h
@@ -97,8 +107,6 @@ C:/Users/Julie/CLionProjects/ecemon-T/Card.h
 C:/Users/Julie/CLionProjects/ecemon-T/main.cpp
 iostream
 -
-allegro5/allegro.h
--
 Special.h
 C:/Users/Julie/CLionProjects/ecemon-T/Special.h
 Player.h
@@ -113,8 +121,10 @@ Energy.h
 C:/Users/Julie/CLionProjects/ecemon-T/Energy.h
 GameBoard.h
 C:/Users/Julie/CLionProjects/ecemon-T/GameBoard.h
-allegro5/allegro.h
--
+Game.h
+C:/Users/Julie/CLionProjects/ecemon-T/Game.h
 fstream
 -
+Init_ALLEGRO.h
+C:/Users/Julie/CLionProjects/ecemon-T/Init_ALLEGRO.h
 
