@@ -70,22 +70,6 @@ void creationDesCartesCreatures() {
 }
 
 
-void creerMaPremiereCollection(Player joueur) {
-    std::ofstream player{"../MaPremiereCollection.txt"};
-
-    player << 5 << std::endl;
-    player << joueur.getPseudo() << std::endl;
-
-    player << 1 << std::endl;
-    player << 2 << std::endl;
-    player << 3 << std::endl;
-    player << 18 << std::endl;
-    player << 8 << std::endl;
-
-}
-
-void ecritureDoc(std::string nameDoc) {
-    std::ofstream player{nameDoc};}
 
 std::string fonctionNum(int n){
     std::string var;
@@ -105,6 +89,24 @@ std::string fonctionNum(int n){
         case 4 :
             var = '5';
             break;
+        case 5 :
+            var = '6';
+            break;
+        case 6 :
+            var = '7';
+            break;
+        case 7 :
+            var = '8';
+            break;
+        case 8 :
+            var = '9';
+            break;
+        case 9 :
+            var = '10';
+            break;
+        case 10 :
+            var = '11';
+            break;
     }
     return var;
 }
@@ -113,12 +115,16 @@ std::string fonctionNum(int n){
 void ecritureDoc(std::string nameDoc, int n) {
     std::ofstream file_input_player{nameDoc};
     file_input_player << n;
+
+    file_input_player.close();
 }
 
 int lectureDoc(std::string nameDoc) {
     int n = 0;
     std::ifstream file_input_player{nameDoc};
     file_input_player >> n;
+
+    file_input_player.close();
     return n;
 }
 
@@ -156,6 +162,7 @@ void initialisationDuJoueur(Player joueur, int i, int n) {
                 << std::endl;
         std::cin >> k;
         acheterUnPack(joueur, k);
+        joueur.afficher();
         joueur.saveCollection(nomFichier);
 
     }
@@ -185,10 +192,10 @@ void initialisationDuJoueur(Player joueur, int i, int n) {
                 << std::endl;
         std::cin >> k;
         acheterUnPack(joueur, k);
+        joueur.afficher();
         joueur.saveCollection(nomFichier);
 
     }
-
 }
 
 
@@ -199,13 +206,13 @@ int main(){
     Player joueur1;
     Player joueur2;
 
-
+/*
     ALLEGRO_DISPLAY *display;
     assert(al_init());
     display = al_create_display(1280, 752);
     assert(display);
 
-    /*
+
     joueur1.setPseudo();
 
     creerMaPremiereCollection(joueur1);
@@ -233,13 +240,19 @@ int main(){
     std::cout << "il y a : " << n << " joueur sauvegarde" << std::endl;
     std::cout << " Joueur 1 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
     std::cin >> i;
-    if (n != 0){
-        initialisationDuJoueur(joueur1, i, n);
+    if (i == 1){
+        if (n != 0){
+            initialisationDuJoueur(joueur1, i, n);
+        }
+        else{
+            std::cout<< "Il n'y a pas encore de compte, vous devez en creer un." <<std::endl;
+            initialisationDuJoueur(joueur1, 2, n);
+        }
     }
     else{
-        std::cout<< "Il n'y a pas encore de compte, vous devez en creer un." <<std::endl;
-        initialisationDuJoueur(joueur1, 2, n);
+        initialisationDuJoueur(joueur1, i, n);
     }
+
 
     n = lectureDoc("../file_save_player");
     std::cout << "il y a : " << n << " joueur sauvegarde" << std::endl;

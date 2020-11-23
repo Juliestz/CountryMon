@@ -6,6 +6,8 @@
 #include "Player.h"
 #include "Collection.h"
 #include "Card.h"
+#include<cstdlib>
+#include <ctime>
 
 Player::Player(){
     m_money = 50;
@@ -29,7 +31,7 @@ void Player::afficher(){
     std::list<Card*>::iterator debut;
     std::list<Card*>::iterator fin;
 
-    liste.merge(m_collection.getCardsCollection()); //transfere d'une liste à une autre
+    liste.merge(m_collectionj.getCardsCollection()); //transfere d'une liste à une autre
 
     debut = liste.begin();
     fin = liste.end();
@@ -46,7 +48,7 @@ void Player::saveCollection(std::string nameDoc) {
     std::ofstream player{nameDoc};
 
     std::list<Card*> liste;
-    liste.merge(m_collection.getCardsCollection());
+    liste.merge(m_collectionj.getCardsCollection());
 
     taille = liste.size();
 
@@ -78,7 +80,7 @@ void Player::createCollection(std::string nameDoc){
 
     for (int i = 0; i < taille; i++){
         player>> type;
-        m_collection.addCard(type);
+        m_collectionj.addCard(type);
     }
 
     player.close();
@@ -90,9 +92,12 @@ void Player::createCollection(std::string nameDoc){
 
 void Player::addCardToMyCollection(){
 
+    srand((unsigned int) time(0));
+
     for (int i=0;i<3; ++i){
         int nRand = rand()%19 +1 ;
-        m_collection.addCard(nRand);
+        std::cout<< nRand <<std::endl;
+        m_collectionj.addCard(nRand);
         m_money-=5;
     }
 }

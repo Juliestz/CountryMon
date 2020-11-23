@@ -18,7 +18,7 @@ class Player {
 private:
     std::string m_pseudo;
     int m_money;
-    Collection m_collection;
+    Collection m_collectionj;
 
 public:
     Player();
