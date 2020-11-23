@@ -46,3 +46,7 @@ std::vector<Attack*> Creature::getAttaque(){
     return std::vector<Attack*>(m_attacks);
 }
 
+int Creature::getHP() {
+    return m_HP;
+}
+

@@ -50,24 +50,45 @@ void GameBoard::displayL1() {
     }
 
     if (m_creature != nullptr && m_creature->getState()) {
-        for (int i = 0; i < 60 - (taille + m_creature->getName().size() / 2); ++i) {
+        taille = 60 - (taille + m_creature->getName().size() / 2);
+        for (int i = 0; i < taille; ++i) {
             std::cout << " ";
         }
         std::cout << m_creature->getName();
 
     } else {
-        for (int i = 0; i < 60 - (taille + 10); ++i) {
+        taille = 60 - (taille + 10);
+        for (int i = 0; i < taille; ++i) {
             std::cout << " ";
         }
         std::cout << "pas de creature posee";
     }
 
-    if (m_permanente != nullptr){
+    if (m_permanente != nullptr) {
 
+        taille = 120 - (taille + m_permanente->getName().size());
+        for (int i = 0; i < taille; ++i) {
+            std::cout << " ";
+        }
+
+        std::cout << m_permanente->getName();
+
+    } else {
+        taille = 120 - (taille + 23);
+        for (int i = 0; i < taille; ++i) {
+            std::cout << " ";
+        }
+        std::cout << "pas de carte permanente";
     }
 
 
-
+    std::cout << std::endl;
+    if (m_creature != nullptr && m_creature->getState()) {
+        for (int i = 0; i < taille; ++i) {
+            std::cout << " ";
+        }
+        std::cout << "PV : " << m_creature->getHP();
+    }
 }
 
 

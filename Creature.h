@@ -25,7 +25,7 @@ public:
 
     //Creature(std::istream& name, std::istream& HP, bool available);
 
-    std::vector<Attack*> getAttaque();
+    virtual std::vector<Attack*> getAttaque();
 
     void newAttack(std::string name, std::vector<char> energyNeeded,int degats, bool available);
 
@@ -34,6 +34,8 @@ public:
     virtual int mutHP(int montantDegats);
 
     virtual bool getState() const;
+
+    virtual int getHP();
 
     virtual int utilisation(char phase);
 
