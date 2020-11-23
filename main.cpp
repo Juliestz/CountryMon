@@ -257,8 +257,7 @@ int main() {
 
     //new GameBoard(&joueur1,joueur1.getCollection());
 
-    Game *jeu =new Game(new GameBoard(&joueur2, joueur1.getCollection()),new GameBoard(&joueur2,joueur2.getCollection())) ;
-    jeu->playTheGame();
+
 
 
 /*
@@ -316,6 +315,8 @@ int main() {
     std::cin >> i;
     initialisationDuJoueur(&joueur2, i,n);
 
+    Game *jeu =new Game(new GameBoard(&joueur2, joueur1.getCollection()),new GameBoard(&joueur2,joueur2.getCollection())) ;
+    jeu->playTheGame();
 
 /*
     while (!isEnd) {
