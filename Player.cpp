@@ -51,7 +51,6 @@ void Player::saveCollection(std::string nameDoc) {
     taille = liste.size();
 
     player<< taille <<std::endl;
-    player<< m_pseudo <<std::endl;
 
     std::list<Card*>::iterator it;
     std::list<Card*>::iterator debut;
@@ -73,10 +72,9 @@ void Player::createCollection(std::string nameDoc){
 
     int taille;
     std::string pseudo;
-    int type;
+    int type = 0;
 
     player>> taille;
-    player>> pseudo;
 
     for (int i = 0; i < taille; i++){
         player>> type;

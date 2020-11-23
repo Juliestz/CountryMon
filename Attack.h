@@ -8,7 +8,6 @@
 #include <string>
 #include <iostream>
 #include "Energy.h"
-
 #include "Creature.h"
 
 
@@ -23,6 +22,7 @@ public:
 
     bool attackAvailable(std::vector<char> elements);
 
+    ~Attack();
 
 };
 

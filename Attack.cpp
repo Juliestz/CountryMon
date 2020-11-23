@@ -4,7 +4,7 @@
 
 #include "Attack.h"
 #include <iostream>
-#include <string.h>
+#include <string>
 
 
 Attack::Attack(std::string name, std::vector<char> energyNeeded,int degats, bool available ) : m_name{name}, m_energyNeeded{energyNeeded},m_degats{degats}, m_available{available}{}
@@ -17,5 +17,5 @@ bool Attack::attackAvailable(std::vector<char> elements) {
     return m_available;
 }
 
-
+Attack::~Attack() {}
 

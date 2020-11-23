@@ -37,7 +37,7 @@ public:
 
     virtual int utilisation(char phase);
 
-    void serialize(std::ostream &os) const;
+    //void serialize(std::ostream &os) const;
 
 };
 
