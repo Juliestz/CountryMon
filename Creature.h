@@ -10,7 +10,7 @@
 #include <vector>
 #include "Attack.h"
 
-class Attack;
+
 class Creature : public Card {
 
 private:
