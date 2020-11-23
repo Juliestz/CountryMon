@@ -121,14 +121,22 @@ void Game::playTheGame() {
 
 
     for (int i = 0; i < 5; ++i) {
+        this->dislay(m_GB1, m_GB2);
         this->drawPhase(m_GB1, m_GB2);
+
+        this->dislay(m_GB2, m_GB1);
         this->drawPhase(m_GB2, m_GB1);
     }
 
     do {
+
+        this->dislay(m_GB1, m_GB2);
         partieContinue = playATurn(m_GB1, m_GB2);
+
         if (partieContinue && isEmpty(m_GB2)) {
+            this->dislay(m_GB2, m_GB1);
             partieContinue = playATurn(m_GB2, m_GB1);
+
         } else {
             perdant = 2;
         }
@@ -145,6 +153,16 @@ void Game::playTheGame() {
         std::cout << "problemme de perdant";
     }
 
+}
+
+void Game::dislay(GameBoard *GB, GameBoard *GB2) {
+    std::cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
+
+    GB2->displayL2();
+    GB2->displayL1();
+    std::cout << "\n\n                 BATTLEFIELD\n\n";
+    GB->displayL1();
+    GB->displayL2();
 }
 
 

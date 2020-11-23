@@ -38,7 +38,6 @@ bool GameBoard::isEmpty() {
 }
 
 void GameBoard::displayL1() {
-    std::cout << "pas interressant a coder maintenant";
     int taille;
     if (m_cemetary != nullptr) {
         std::cout << m_cemetary->getName();
@@ -93,15 +92,16 @@ void GameBoard::displayL1() {
 
 void GameBoard::displayL2() {
 
-    std::cout << "\n\n\nEnergies :\n";
+    std::cout << "\n\nEnergies :\n";
     std::cout << "     Politique : " << m_tabElements[0] << "   Militaire : " << m_tabElements[1];
-    std::cout << "\n     Scientifique : " << m_tabElements[2] << "   Militaire : " << m_tabElements[3];
 
-    for (int i = 0; i < 70; ++i) {
+    for (int i = 0; i < 50; ++i) {
         std::cout << " ";
     }
-
     std::cout << "DECK";
+
+    std::cout << "\n     Scientifique : " << m_tabElements[2] << "   Militaire : " << m_tabElements[3];
+
 }
 
 void GameBoard::putACard(Creature *cartePiochee) {

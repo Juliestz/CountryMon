@@ -18,7 +18,7 @@ public:
 
     void utilisationDeCarteEvent(Special *Carte, GameBoard *GB, GameBoard *M_opponent);
 
-    bool playATurn(GameBoard *GB,GameBoard *GB2);
+    bool playATurn(GameBoard *GB, GameBoard *GB2);
 
     bool verification(GameBoard *GB);
 
@@ -28,10 +28,9 @@ public:
 
     void battlePhase(GameBoard *GB);
 
+    void dislay(GameBoard *GB, GameBoard *GB2);
 
-
-   void playTheGame();
-
+    void playTheGame();
 
 
 };
