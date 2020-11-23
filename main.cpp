@@ -139,6 +139,7 @@ void acheterUnPack(Player *joueur, int i){
 
 
 void initialisationDuJoueur(Player *joueur, int i, int n) {
+    std::string name;
     int k = 0;
     if (i == 1) {
         std::cout << " quel compte souhaitez vous utiliser ?" << std::endl;
@@ -148,6 +149,7 @@ void initialisationDuJoueur(Player *joueur, int i, int n) {
         std::cin>> j;
         std::string nomFichier = fichier + j + extension;
 
+        joueur->getInfo(nomFichier);
         joueur->createCollection(nomFichier);//recréation de la collection du joueur depuis la sauvegarde
         joueur->afficher();
 
@@ -169,8 +171,8 @@ void initialisationDuJoueur(Player *joueur, int i, int n) {
         std::string nomFichier = fichier + numero + extension;
         std::cout << "Joueur  qu'elle est votre nom de guerre ?" <<
                   std::endl;
-        joueur->setPseudo();
-
+        std::cin>> name;
+        joueur->setPseudo(name);
         std::cout << "Une collection de depart vous est attribue" <<
                   std::endl;
         joueur->createCollection("../MaPremiereCollection.txt");

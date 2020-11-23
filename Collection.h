@@ -8,6 +8,7 @@
 #include <iostream>
 #include <list>
 #include "Card.h"
+
 class Card;
 
 class Collection {

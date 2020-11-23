@@ -13,14 +13,28 @@ Player::Player(){
     m_money = 50;
 }
 
-void Player::setPseudo(){
-    std::cout<< "Entrez votre pseudo" <<std::endl;
-    std::cin>> m_pseudo;
+void Player::setPseudo(std::string pseudo){
+    m_pseudo = pseudo;
 }
 
+/*
 std::string Player::getPseudo(){
     return m_pseudo;
 }
+
+int Player::setMoney(int money) {
+    m_money = money;
+}
+*/
+void Player::getInfo(std::string nameDoc) {
+
+    std::ifstream player{nameDoc};
+
+    player>> m_pseudo;
+
+    player.close();
+}
+
 
 void Player::afficher(){
 
@@ -57,6 +71,8 @@ void Player::saveCollection(std::string nameDoc) {
 
     taille = liste.size();
 
+    player<< m_pseudo <<std::endl;
+    player<< m_money <<std::endl;
     player<< taille <<std::endl;
 
     std::list<Card*>::iterator it;
@@ -77,10 +93,12 @@ void Player::createCollection(std::string nameDoc){
 
     std::ifstream player{nameDoc};
 
-    int taille;
     std::string pseudo;
+    int taille;
     int type = 0;
 
+    player>> pseudo;
+    player>> m_money;
     player>> taille;
 
     for (int i = 0; i < taille; i++){
