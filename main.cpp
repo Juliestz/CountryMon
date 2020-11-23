@@ -6,7 +6,7 @@
 #include "Collection.h"
 #include "Energy.h"
 #include "GameBoard.h"
-
+#include <allegro5/allegro.h>
 #include <fstream>
 
 void creationDesCartesSpeciales() {
@@ -198,6 +198,11 @@ int main(){
     Player joueur1;
     Player joueur2;
 
+
+    ALLEGRO_DISPLAY *display;
+    assert(al_init());
+    display = al_create_display(1280, 752);
+    assert(display);
 
     /*
     joueur1.setPseudo();
