@@ -63,6 +63,8 @@ void GameBoard::putACard(Creature *cartePiochee) {
 void GameBoard::creatADeck() {
     int choix;
     int choix2;
+
+
     std::cout << "choisire les cartes du deck? (0:oui, 1:non)";
     std::cin >> choix;
 
@@ -139,6 +141,10 @@ void GameBoard::creatADeck() {
         std::vector<Card *> tabRepDeDeck;
         do {
             //AFFICHER tabRepDeColl
+            std::cout<<"\n\n\n\n\n\n\n\n\n\n"<<std::endl;
+                for(int i =0; i<tabRepDeColl.size();++i){
+                    std::cout<<"carte :"<< tabRepDeColl[i]->getName()<<"numéro :"<<tabRepDeColl[i]->getNum()<<std::endl;
+                }
 
             std::cout << std::endl << "choisisser une carte à ajouter au deck et mettez 0 quand vous avez fini :";
             std::cin >> choix2;
