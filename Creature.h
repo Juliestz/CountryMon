@@ -6,14 +6,14 @@
 #define ECEMON_T_CREATURE_H
 
 #include "Card.h"
+#include <iostream>
 #include <vector>
 #include "Attack.h"
 
 
 class Creature : public Card {
 
-private:
-
+protected:
     int m_HP;
     bool m_available;
     std::vector<Attack*> m_attacks;
@@ -23,7 +23,7 @@ public:
 
     Creature(std::string name, char numSerie, int HP, bool available);
 
-    Creature(std::istream& name, std::istream& HP, bool available);
+    //Creature(std::istream& name, std::istream& HP, bool available);
 
     void newAttack(std::string name, std::vector<char> energyNeeded,int degats, bool available);
 

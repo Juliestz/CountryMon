@@ -65,7 +65,6 @@ void creationDesCartesCreatures() {
     Japan.newAttack("Sous-marin nucleaire", {1, 1, 1, 1}, 2, 0);
     Japan.newAttack("Attaque DDOS", {0, 1, 2, 1}, 3, 0);
 
-
 }
 
 

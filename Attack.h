@@ -4,9 +4,9 @@
 
 #ifndef ECEMON_T_ATTACK_H
 #define ECEMON_T_ATTACK_H
-#include <string.h>
+#include <string>
 #include <iostream>
-#include "energy.h"
+#include "Energy.h"
 #include "GameBoard.h"
 #include "Creature.h"
 
