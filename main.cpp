@@ -257,7 +257,8 @@ int main() {
 
     //new GameBoard(&joueur1,joueur1.getCollection());
 
-
+    Game *jeu =new Game(new GameBoard(&joueur2, joueur1.getCollection()),new GameBoard(&joueur2,joueur2.getCollection())) ;
+    jeu->playTheGame();
 
 
 /*
