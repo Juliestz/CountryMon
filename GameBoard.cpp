@@ -72,13 +72,13 @@ void GameBoard::creatADeck() {
 
         }
     }
+    int nbRand;
 
     if (choix) {
 
         int nbCarteColl = tabRepDeColl.size();
         nbCarteColl = std::min(NB_MAX_CARD_DECK, nbCarteColl);
         nbCarteColl = std::max(NB_MIN_CARD_DECK, nbCarteColl);
-        int nbRand;
 
         for (int j = 0; j < nbCarteColl; ++j) {
             nbRand = std::rand() % tabRepDeColl.size();
@@ -120,7 +120,7 @@ void GameBoard::creatADeck() {
 
 
     } else {
-
+        std::vector<Card*> tabRepDeDeck;
         do {
             //AFFICHER tabRepDeColl
 
@@ -132,16 +132,16 @@ void GameBoard::creatADeck() {
 
                 if (tabRepDeColl[choix2]->getNum() < 8) {
 
-                    m_deck.push(new Special());
-                    *m_deck.back() = *tabRepDeColl[choix2];
+                    tabRepDeDeck.push_back(new Special());
+                    *tabRepDeDeck.back() = *tabRepDeColl[choix2];
 
                 } else if (tabRepDeColl[choix2]->getNum() < 12) {
-                    m_deck.push(new Energy());
-                    *m_deck.back() = *tabRepDeColl[choix2];
+                    tabRepDeDeck.push_back(new Energy());
+                    *tabRepDeDeck.back() = *tabRepDeColl[choix2];
 
                 } else {
-                    m_deck.push(new Creature());
-                    *m_deck.back() = *tabRepDeColl[choix2];
+                    tabRepDeDeck.push_back(new Creature());
+                    *tabRepDeDeck.back() = *tabRepDeColl[choix2];
 
                 }
 
@@ -166,7 +166,48 @@ void GameBoard::creatADeck() {
             }
 
 
-        } while (m_deck.size() < NB_MAX_CARD_DECK && m_deck.size() > NB_MIN_CARD_DECK && choix == 0);
+        } while (m_deck.size() > NB_MIN_CARD_DECK || (m_deck.size() < NB_MAX_CARD_DECK && choix2 == 0));
+
+        int nbCarteColl = tabRepDeDeck.size();
+        for (int j = 0; j < nbCarteColl; ++j) {
+            nbRand = std::rand() % tabRepDeColl.size();
+
+
+            if (tabRepDeDeck[nbRand]->getNum() < 8) {
+
+                m_deck.push(new Special());
+                *m_deck.back() = *tabRepDeColl[nbRand];
+
+            } else if (tabRepDeColl[nbRand]->getNum() < 12) {
+                m_deck.push(new Energy());
+                *m_deck.back() = *tabRepDeColl[nbRand];
+
+            } else {
+                m_deck.push(new Creature());
+                *m_deck.back() = *tabRepDeColl[nbRand];
+
+            }
+
+            delete tabRepDeColl[nbRand];
+
+
+            if (tabRepDeColl.back()->getNum() < 8) {
+                tabRepDeColl[nbRand] = (new Special());
+
+            } else if (tabRepDeColl.back()->getNum() < 12) {
+                tabRepDeColl[nbRand] = (new Energy());
+
+            } else {
+                tabRepDeColl[nbRand] = (new Creature());
+            }
+
+            tabRepDeColl[nbRand] = tabRepDeColl.back();
+            delete tabRepDeColl.back();
+            tabRepDeColl.pop_back();
+
+        }
+
+
 
     }
 
