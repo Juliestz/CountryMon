@@ -105,11 +105,11 @@ bool Game::verification(GameBoard *GB) {
     return GB->getPV() == 0;
 }
 
-bool isEmpty(GameBoard *GB) {
+bool Game::isEmpty(GameBoard *GB) {
     return GB->isEmpty();
 }
 
-/*
+
 void Game::playTheGame() {
 
     m_GB1->creatADeck();
@@ -140,7 +140,7 @@ void Game::playTheGame() {
     }
 
 }
-*/
+
 
 
 

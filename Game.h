@@ -30,7 +30,7 @@ public:
 
 
 
-   //void playTheGame();
+   void playTheGame();
 
 
 
