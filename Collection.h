@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include <list>
-
+#include "Card.h"
 class Card;
 
 class Collection {
@@ -17,7 +17,6 @@ public:
     Collection();
     void addCard(int type);
     void removeCard(char numSerie);
-    Collection* getCollection();
     std::list<Card*> getCardsCollection();
     void display();
     ~Collection();
