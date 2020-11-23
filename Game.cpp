@@ -119,6 +119,12 @@ void Game::playTheGame() {
     m_GB2->getCarteEnjeux();
     m_GB1->getCarteEnjeux();
 
+
+    for (int i = 0; i < 5; ++i) {
+        this->drawPhase(m_GB1, m_GB2);
+        this->drawPhase(m_GB2, m_GB1);
+    }
+
     do {
         partieContinue = playATurn(m_GB1, m_GB2);
         if (partieContinue && isEmpty(m_GB2)) {
