@@ -20,7 +20,9 @@ public:
 
     virtual void afficher() const;
 
-    char getNum();
+    char getNum() const;
+
+    std::string getName() const;
 
     void display(/*File *FichierFondCarte*/);
 

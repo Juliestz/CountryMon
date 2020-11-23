@@ -38,8 +38,21 @@ bool GameBoard::isEmpty() {
     return !m_deck.empty();
 }
 
-void GameBoard::display() {
+void GameBoard::displayL1() {
     std::cout << "pas interressant a coder maintenant";
+    int taille;
+    if (m_cemetary != nullptr){
+        std::cout << m_cemetary.
+    }else{
+        std::cout << "cimetiere";
+    }
+
+
+}
+
+
+void GameBoard::displayL2() {
+
 }
 
 void GameBoard::putACard(Creature *cartePiochee) {

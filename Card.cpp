@@ -25,8 +25,12 @@ void Card::display (/*File *FichierFondCarte*/) {
     //al_draw_bitmap(m_fondCarte,0,0,0);
 }
 
-char Card::getNum() {
+char Card::getNum() const{
     return m_numDeSerie;
+}
+
+std::string Card::getName() const{
+    return m_name;
 }
 
 

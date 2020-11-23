@@ -33,7 +33,9 @@ public:
 
     ~GameBoard();
 
-    void display();//a faire
+    void displayL1();
+
+    void displayL2();
 
     void creatADeck();
 
