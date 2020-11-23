@@ -145,8 +145,7 @@ Collection::~Collection(){
     debut = m_collection.begin();
     fin = m_collection.end();
     for (it = debut; it!=fin; ++it){
-        delete (*it);
+        delete *it;
     }
-
 
 }

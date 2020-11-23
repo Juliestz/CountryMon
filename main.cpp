@@ -1,4 +1,5 @@
 #include <iostream>
+#include <allegro5/allegro.h>
 #include "Special.h"
 #include "Player.h"
 #include "Creature.h"
@@ -216,10 +217,11 @@ int main(){
     joueur1.afficher();
 
     joueur1.saveCollection("Joueur1.txt");
-    */
 
-    //creationDesCartesSpeciales();
-    //creationDesCartesCreatures();
+
+    creationDesCartesSpeciales();
+    creationDesCartesCreatures();
+    */
 
 
     int i, n = 0;
@@ -245,8 +247,6 @@ int main(){
     std::cout << " Joueur 2 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
     std::cin >> i;
     initialisationDuJoueur(joueur2, i,n);
-
-
 
 
 
