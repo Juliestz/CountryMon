@@ -121,6 +121,7 @@ void Collection::removeCard(char numSerie) {
 
 
 void Collection::display(){
+
     std::list<Card*>::iterator it;
     std::list<Card*>::iterator debut;
     std::list<Card*>::iterator fin;

@@ -6,7 +6,7 @@
 #include "Player.h"
 #include "Collection.h"
 #include "Card.h"
-#include<cstdlib>
+#include <cstdlib>
 #include <ctime>
 
 Player::Player(){
@@ -26,19 +26,24 @@ void Player::afficher(){
 
     std::cout<< m_pseudo <<std::endl;
 
+
     std::list<Card*> liste;
+
     std::list<Card*>::iterator it;
     std::list<Card*>::iterator debut;
     std::list<Card*>::iterator fin;
 
+    std::cout<< "a" <<std::endl;
     liste.merge(m_collectionj.getCardsCollection()); //transfere d'une liste à une autre
-
+    std::cout<< "a" <<std::endl;
     debut = liste.begin();
     fin = liste.end();
 
-    for (it = debut ; it != fin ; ++it) {
+    for (it = debut; it != fin; ++it) {
+        std::cout<< "a" <<std::endl;
         (**it).afficher();
     }
+
 }
 
 void Player::saveCollection(std::string nameDoc) {
@@ -96,10 +101,10 @@ void Player::addCardToMyCollection(){
 
     for (int i=0;i<3; ++i){
         int nRand = rand()%19 +1 ;
-        std::cout<< nRand <<std::endl;
         m_collectionj.addCard(nRand);
         m_money-=5;
     }
+
 }
 
 

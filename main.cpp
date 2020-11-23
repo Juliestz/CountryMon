@@ -7,7 +7,6 @@
 #include "Energy.h"
 #include "GameBoard.h"
 #include <fstream>
-#include "Init_ALLEGRO.h"
 
 void creationDesCartesSpeciales() {
     Special sixAout45{"Six Aout 45", 1,
@@ -69,9 +68,10 @@ void creationDesCartesCreatures() {
 }
 
 
-std::string fonctionNum(int n) {
+
+std::string fonctionNum(int n){
     std::string var;
-    switch (n) {
+    switch(n){
         case 0 :
             var = '1';
             break;
@@ -121,9 +121,9 @@ int lectureDoc(std::string nameDoc) {
 }
 
 
-void acheterUnPack(Player joueur, int i) {
+void acheterUnPack(Player *joueur, int i){
     if (i == 1) {
-        joueur.addCardToMyCollection();
+        joueur->addCardToMyCollection();
         std::cout << "felicitations, vous avez achete un pack hors de prix !!!" << std::endl;
 
     } else {
@@ -136,28 +136,29 @@ void acheterUnPack(Player joueur, int i) {
 }
 
 
-void initialisationDuJoueur(Player joueur, int i, int n) {
+void initialisationDuJoueur(Player *joueur, int i, int n) {
     int k = 0;
     if (i == 1) {
         std::cout << " quel compte souhaitez vous utiliser ?" << std::endl;
         std::string fichier = "../player";
         std::string extension = ".txt";
         std::string j;
-        std::cin >> j;
+        std::cin>> j;
         std::string nomFichier = fichier + j + extension;
 
-        joueur.createCollection(nomFichier);//recréation de la collection du joueur depuis la sauvegarde
-        joueur.afficher();
+        joueur->createCollection(nomFichier);//recréation de la collection du joueur depuis la sauvegarde
+        joueur->afficher();
 
         std::cout
                 << "avant que  la partie commence vous avez la possibilte d'agrandir votre collection en achetant des cartes. 1/oui   2/non?"
                 << std::endl;
         std::cin >> k;
         acheterUnPack(joueur, k);
-        joueur.afficher();
-        joueur.saveCollection(nomFichier);
+        joueur->afficher();
+        joueur->saveCollection(nomFichier);
 
-    } else {
+    }
+    else {
 
         std::string fichier = "../player";
         std::string extension = ".txt";
@@ -166,24 +167,27 @@ void initialisationDuJoueur(Player joueur, int i, int n) {
         std::string nomFichier = fichier + numero + extension;
         std::cout << "Joueur  qu'elle est votre nom de guerre ?" <<
                   std::endl;
-        joueur.setPseudo();
+        joueur->setPseudo();
 
         std::cout << "Une collection de depart vous est attribue" <<
                   std::endl;
-        joueur.createCollection("../MaPremiereCollection.txt");
-        joueur.afficher();
-        joueur.saveCollection(nomFichier);
+        joueur->createCollection("../MaPremiereCollection.txt");
+        joueur->afficher();
+
+        joueur->saveCollection(nomFichier);
+
 
         n += 1;
         ecritureDoc("../file_save_player", n);
 
-        std::cout
-                << "avant que  la partie commence vous avez la possibilte d'agrandir votre collection en achetant des cartes. 1/oui   2/non?"
-                << std::endl;
+        std::cout<< "avant que  la partie commence vous avez la possibilte d'agrandir votre collection en achetant des cartes. 1/oui   2/non?"<< std::endl;
         std::cin >> k;
+
+        joueur->afficher();
+
         acheterUnPack(joueur, k);
-        joueur.afficher();
-        joueur.saveCollection(nomFichier);
+        joueur->afficher();
+        joueur->saveCollection(nomFichier);
 
     }
 }
@@ -283,15 +287,17 @@ int main() {
     std::cout << "il y a : " << n << " joueur sauvegarde" << std::endl;
     std::cout << " Joueur 1 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
     std::cin >> i;
-    if (i == 1) {
-        if (n != 0) {
-            initialisationDuJoueur(joueur1, i, n);
-        } else {
-            std::cout << "Il n'y a pas encore de compte, vous devez en creer un." << std::endl;
-            initialisationDuJoueur(joueur1, 2, n);
+    if (i == 1){
+        if (n != 0){
+            initialisationDuJoueur(&joueur1, i, n);
         }
-    } else {
-        initialisationDuJoueur(joueur1, i, n);
+        else{
+            std::cout<< "Il n'y a pas encore de compte, vous devez en creer un." <<std::endl;
+            initialisationDuJoueur(&joueur1, 2, n);
+        }
+    }
+    else{
+        initialisationDuJoueur(&joueur1, i, n);
     }
 
 
@@ -300,7 +306,7 @@ int main() {
 
     std::cout << " Joueur 2 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
     std::cin >> i;
-    initialisationDuJoueur(joueur2, i, n);
+    initialisationDuJoueur(&joueur2, i,n);
 
 
 
