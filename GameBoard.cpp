@@ -7,8 +7,7 @@
 #include <cstdio>
 
 
-#define NB_MAX_CARD_DECK 30
-#define NB_MIN_CARD_DECK 15
+#define NB_CARD_DECK 20
 
 GameBoard::GameBoard(Player *Playeur, Collection *Collection)
         : m_collection{Collection},
@@ -144,11 +143,8 @@ void GameBoard::creatADeck() {
 
     if (choix) {
 
-        int nbCarteColl = tabRepDeColl.size();
-        nbCarteColl = std::min(NB_MAX_CARD_DECK, nbCarteColl);
-        nbCarteColl = std::max(NB_MIN_CARD_DECK, nbCarteColl);
 
-        for (int j = 0; j < nbCarteColl; ++j) {
+        for (int j = 0; j < NB_CARD_DECK; ++j) {
             nbRand = rand() % tabRepDeColl.size();
 
 
@@ -201,7 +197,7 @@ void GameBoard::creatADeck() {
 
             //selection des cartes
 
-            if (choix2 > 0 && choix2 < tabRepDeColl.size() && m_deck.size() < NB_MAX_CARD_DECK) {
+            if (choix2 > 0 && choix2 < tabRepDeColl.size() + 1 && m_deck.size() != NB_CARD_DECK) {
                 choix2--;
 
                 if (tabRepDeColl[choix2]->getNum() < 8) {
@@ -235,12 +231,12 @@ void GameBoard::creatADeck() {
                 delete tabRepDeColl.back();
                 tabRepDeColl.pop_back();
 
-            } else if (m_deck.size() < NB_MIN_CARD_DECK) {
+            } else if (m_deck.size() < NB_CARD_DECK) {
                 std::cout << "vous devez rajouter des cartes au deck";
             }
 
 
-        } while (m_deck.size() > NB_MIN_CARD_DECK || (m_deck.size() < NB_MAX_CARD_DECK && choix2 == 0));
+        } while (m_deck.size() != NB_CARD_DECK);
 
         //on bar les cartes
 
