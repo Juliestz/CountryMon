@@ -59,8 +59,6 @@ bool Game::playATurn(GameBoard *GB, GameBoard *GB2) {
     return !this->verification(GB2);
 }
 
-//  FAIRE ATENTION AU DYNAMIQUE CASTE !!!!
-
 void Game::drawPhase(GameBoard *GB, GameBoard *GB2) {
     Card *carteManipulee = GB->pickUp();
     int choix;

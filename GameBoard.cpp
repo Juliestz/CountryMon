@@ -106,7 +106,11 @@ void GameBoard::displayL2() {
     std::cout << "\nEnergies :\n";
     std::cout << "     Politique : " << m_tabElements[0] << "   Militaire : " << m_tabElements[1];
 
-    for (int i = 0; i < 70; ++i) {
+    for (int i = 0; i < 40; ++i) {
+        std::cout << " ";
+    }
+    std::cout << " PV :" << m_PV;
+    for (int i = 0; i < 40; ++i) {
         std::cout << " ";
     }
     std::cout << "DECK";
@@ -488,7 +492,7 @@ int GameBoard::atkDeCreature() {
 
     }
 
-    if (m_permanente->getNum()==3){
+    if (m_permanente->getNum() == 3) {
         dmg++;
     }
 
