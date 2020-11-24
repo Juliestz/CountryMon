@@ -49,7 +49,7 @@ bool GameBoard::isEmpty() {
 void GameBoard::displayL1() {
     int taille;
     if (m_cemetary != nullptr) {
-        std::cout << m_cemetary->getName();
+        std::cout << "\n" << m_cemetary->getName();
         taille = m_cemetary->getName().size();
     } else {
         std::cout << "\ncimetiere";
@@ -490,14 +490,16 @@ int GameBoard::atkDeCreature() {
 
         }
 
+        if (m_permanente != nullptr) {
+            dmg++;
+        }
+
     } else {
         std::cout << "\n\nVous ne pouvez pas attaquer \n\n\n";
 
     }
 
-    if (m_permanente!= nullptr) {
-        dmg++;
-    }
+
 
     return dmg;
 }
