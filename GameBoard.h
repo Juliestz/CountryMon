@@ -37,6 +37,8 @@ public:
 
     void displayL2();
 
+    void addCardToDeck(int type);
+
     void creatADeck();
 
     bool isEmpty();
