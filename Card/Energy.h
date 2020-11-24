@@ -23,7 +23,7 @@ public:
 
     ~Energy();
 
-    void setDescription(const std::string &description);
+
 
 };
 
