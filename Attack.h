@@ -19,13 +19,11 @@ private:
 public:
     Attack(std::string name, std::vector<int> energyNeeded, int degats, bool available);
 
-    bool attackAvailable(std::vector<char> elements);
+    bool attackAvailable(std::vector<int> elements);
 
     int getDeg() const;
 
     std::string getName() const ;
-
-    void afficherBesoins();
 
     void afficher();
 
