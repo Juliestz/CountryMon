@@ -117,7 +117,7 @@ void Game::playTheGame() {
     m_GB1->creatADeck();
     m_GB2->creatADeck();
     char perdant = 1;
-    bool partieContinue = true;
+    bool partieContinue =  true;
     m_GB2->getCarteEnjeux();
     m_GB1->getCarteEnjeux();
 
