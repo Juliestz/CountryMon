@@ -115,7 +115,7 @@ void GameBoard::creatADeck() {
     int choix2;
 
 
-    std::cout << "choisire les cartes du deck? (0:oui, 1:non)";
+    std::cout << "choisir les cartes du deck? (0:oui, 1:non)\n\n";
     std::cin >> choix;
 
 

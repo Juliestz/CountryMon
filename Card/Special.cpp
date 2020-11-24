@@ -7,7 +7,7 @@
 #include <iostream>
 
 Special::Special() {
-    m_description = nullptr;
+    m_description = {'\0'};
     m_name = {'\0'};
     m_numDeSerie = '\0';
 }
