@@ -21,6 +21,10 @@ public:
 
     bool attackAvailable(std::vector<char> elements);
 
+    int getDeg() const;
+
+    std::string getName() const ;
+
     ~Attack();
 
 };

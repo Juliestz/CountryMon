@@ -21,12 +21,13 @@ GameBoard::GameBoard(Player *Playeur, Collection *Collection)
     m_tabElements = {0, 0, 0, 0};
 
 }
-void GameBoard::enleverEnergy(){
+
+void GameBoard::enleverEnergy() {
     int nbRand1;
-do{
-    nbRand1 = rand() % 4;
-}while (m_tabElements[nbRand1] ==0);
-    m_tabElements[nbRand1] -=1;
+    do {
+        nbRand1 = rand() % 4;
+    } while (m_tabElements[nbRand1] == 0);
+    m_tabElements[nbRand1] -= 1;
 
 }
 
@@ -163,23 +164,27 @@ void GameBoard::addCardToDeck(int type) {
 
             //Energy
         case 8 :
-            m_deck.push(new Energy{"Royaume", 8, "Votre nation possede un regime politique stable et puissant, cela vous permet "
-                                                            "de lancer des attaques de type Politique."});
+            m_deck.push(new Energy{"Royaume", 8,
+                                   "Votre nation possede un regime politique stable et puissant, cela vous permet "
+                                   "de lancer des attaques de type Politique."});
             break;
 
         case 9 :
-            m_deck.push(new Energy{"Loi de Programmation", 9, "Votre Hard Power se developpe, votre budget defense augmente,"
-                                                                         "vous pouvez désormais lancer des attaques de type militaire."});
+            m_deck.push(new Energy{"Loi de Programmation", 9,
+                                   "Votre Hard Power se developpe, votre budget defense augmente,"
+                                   "vous pouvez désormais lancer des attaques de type militaire."});
             break;
 
         case 10 :
-            m_deck.push(new Energy{"R&D", 10, "Votre pays est un pays de savants, votre  avance technologique vous permet de "
-                                                         "lancer des attaques de type Scientifique."});
+            m_deck.push(new Energy{"R&D", 10,
+                                   "Votre pays est un pays de savants, votre  avance technologique vous permet de "
+                                   "lancer des attaques de type Scientifique."});
             break;
 
         case 11 :
-            m_deck.push(new Energy{"ITER", 11, "Vous etes auto-suffisant en energie, vos centrales electriques tournent a plein regime"
-                                                          "vous pouvez lancer des attaques de type Ressource."});
+            m_deck.push(new Energy{"ITER", 11,
+                                   "Vous etes auto-suffisant en energie, vos centrales electriques tournent a plein regime"
+                                   "vous pouvez lancer des attaques de type Ressource."});
             break;
 
             //Creatures
@@ -445,7 +450,37 @@ void GameBoard::recoisDegats(const int &montantDegats) {
 }
 
 int GameBoard::atkDeCreature() {
-    int dmg;
+    int dmg = 0;
+    int choix = 1;
+
+    if (m_creature->getAttaque()[0]->attackAvailable(m_tabElements) ||
+        m_creature->getAttaque()[1]->attackAvailable(m_tabElements)) {
+        std::cout << "vous pouvez utiliser :\n\n";
+
+        if (m_creature->getAttaque()[0]->attackAvailable(m_tabElements)) {
+            std::cout << "         " << choix << ".  " << m_creature->getAttaque()[0]->getName() << " : fait "
+                      << m_creature->getAttaque()[0]->getDeg() << " degats à l'enemi\n";
+            choix++;
+        }
+        if (m_creature->getAttaque()[1]->attackAvailable(m_tabElements)) {
+            std::cout << "         " << choix << ".  " << m_creature->getAttaque()[1]->getName() << " : fait "
+                      << m_creature->getAttaque()[1]->getDeg() << " degats à l'enemi\n";
+        }
+
+        std::cin >> choix;
+
+        if (m_creature->getAttaque()[0]->attackAvailable(m_tabElements)) {
+            dmg = m_creature->getAttaque()[choix - 1]->getDeg();
+        } else {
+            dmg = m_creature->getAttaque()[choix]->getDeg();
+
+        }
+
+    } else {
+        std::cout << "\n\nVous ne pouvez pas attaquer \n\n\n";
+
+    }
+
 
     return dmg;
 }

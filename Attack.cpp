@@ -23,3 +23,11 @@ bool Attack::attackAvailable(std::vector<char> elements) {
 
 Attack::~Attack() {}
 
+int Attack::getDeg() const {
+    return m_degats;
+}
+
+std::string Attack::getName() const {
+    return m_name;
+}
+
