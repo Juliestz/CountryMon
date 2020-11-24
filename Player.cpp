@@ -120,7 +120,6 @@ void Player::createCollection(std::string nameDoc) {
 
 void Player::addCardToMyCollection() {
 
-    srand((unsigned int) time(0));
 
     for (int i = 0; i < 3; ++i) {
         int nRand = rand() % 19 + 1;
