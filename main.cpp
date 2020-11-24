@@ -142,7 +142,7 @@ void initialisationDuJoueur(Player *joueur, int i, int n) {
     std::string name;
     int k = 0;
     if (i == 1) {
-        std::cout << " quel compte souhaitez vous utiliser ?" << std::endl;
+        std::cout << " quel compte souhaitez vous utiliser ? (entrez son numero)" << std::endl;
         std::string fichier = "../player";
         std::string extension = ".txt";
         std::string j;
