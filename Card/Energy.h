@@ -15,8 +15,6 @@ class Energy : public Card {
 protected:
 
     std::string m_description;
-    std::vector<Energy> tab_energy;
-    bool  m_OK;
 public:
     Energy();
 
