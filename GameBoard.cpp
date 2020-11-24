@@ -318,7 +318,8 @@ void GameBoard::creatADeck() {
                 tabRepDeColl[nbRand] = (new Creature());
             }
             */
-            tabRepDeColl[nbRand] = tabRepDeColl.back();
+            tabRepDeColl[nbRand] = new Card();
+            *tabRepDeColl[nbRand] = *tabRepDeColl.back();
             delete tabRepDeColl.back();
             tabRepDeColl.pop_back();
 

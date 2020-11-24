@@ -42,7 +42,7 @@ void creationDesCartesCreatures() {
     // initialisation des attaques propres à chaque créatures
 
 
-    France.newAttack("L'effroyable en eaux profondes", {2, 1, 0, 0}, 2, 0);
+    France.newAttack("Le Redoutable en eaux profondes", {2, 1, 0, 0}, 2, 0);
     France.newAttack("Constellation de satellites", {1, 0, 2, 1}, 3, 0);
 
     USA.newAttack("OTAN", {2, 0, 1, 1}, 3, 0);
