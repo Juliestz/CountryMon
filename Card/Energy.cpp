@@ -18,9 +18,7 @@ void Energy::afficher() const{
     std::cout<< "Description :" <<std::endl << m_description <<std::endl;
 }
 
-void Energy::setDescription(const std::string &description) {
-    m_description = description;
-}
+
 
 
 Energy::~Energy() {}
