@@ -20,6 +20,7 @@ private:
     int m_money;
     Collection m_collectionj;
 
+
 public:
     Player();
     void setPseudo(std::string pseudo);
