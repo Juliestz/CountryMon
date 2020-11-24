@@ -85,7 +85,11 @@ void Game::drawPhase(GameBoard *GB, GameBoard *GB2) {
             GB->putAnEnergy(ce->getNum());
         }
     } else {
-        GB->putBack(carteManipulee);
+        int nbCard = carteManipulee->getNum();
+        delete carteManipulee;
+        GB->addCardToDeck(nbCard);
+
+        //GB->putBack(carteManipulee);
     }
     /*
     if (carteManipulee->getNum() < 10) {
