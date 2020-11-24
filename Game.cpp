@@ -13,35 +13,35 @@ void Game::utilisationDeCarteEvent(Special *Carte, GameBoard *GB, GameBoard *M_o
             M_opponent->enleverHP(2);
 
             /*Bombe Atomique : « six Aout 45 »
-
             Créature adverse -2 PV
-
             Créature allié -1 PV*/
+
             break;
         case 2:
-            M_opponent->getFirstCard()->display();
+            std::cout << "la prochaine carte de l'adversaire est : " << M_opponent->getFirstCard()->getName();
             /*  Espion : « James Bond »
-
               Voir la première carte du deck de l’adversaire*/
+
             break;
         case 4:
             this->drawPhase(GB, M_opponent);
-            drawPhase(GB, M_opponent);
+            this->drawPhase(GB, M_opponent);
             break;
         case 6:
             m_GB1->enleverEnergy();
             m_GB2->enleverEnergy();
-            /*Pandémie : « Confinement »
 
+            /*Pandémie : « Confinement »
             -1 carte énergie de chaque coté*/
+
             break;
         case 7:
             if (M_opponent->destroyPermanent()) {
                 std::cout << "il n'y avait pas de carte\n";
             }
             /*-	Territoire : « Alsace »
-
             -1 carte permanente adverse du plateau*/
+
             break;
         default:
             GB->utilisationDeCarteEvent(Carte);

@@ -106,7 +106,7 @@ void GameBoard::displayL2() {
     std::cout << "\nEnergies :\n";
     std::cout << "     Politique : " << m_tabElements[0] << "   Militaire : " << m_tabElements[1];
 
-    for (int i = 0; i < 50; ++i) {
+    for (int i = 0; i < 70; ++i) {
         std::cout << " ";
     }
     std::cout << "DECK";
@@ -443,12 +443,17 @@ void GameBoard::creatADeck() {
 }
 
 void GameBoard::recoisDegats(const int &montantDegats) {
-    bool temoins = m_creature->getState();
-    m_PV -= m_creature->mutHP(montantDegats);
-    if (temoins != m_creature->getState()) {
-        this->envoyerCartAuCimetiere(m_creature);
-        m_creature = nullptr;
+    if (m_creature->getHP() > 0 && m_creature->getHP() < 30) {
+        bool temoins = m_creature->getState();
+        m_PV -= m_creature->mutHP(montantDegats);
+        if (temoins != m_creature->getState()) {
+            this->envoyerCartAuCimetiere(m_creature);
+            m_creature = nullptr;
+        }
+    } else {
+        m_PV -= montantDegats;
     }
+
 }
 
 int GameBoard::atkDeCreature() {
@@ -483,6 +488,9 @@ int GameBoard::atkDeCreature() {
 
     }
 
+    if (m_permanente->getNum()==3){
+        dmg++;
+    }
 
     return dmg;
 }
@@ -498,7 +506,9 @@ void GameBoard::utilisationDeCarteEvent(Special *Carte) {
 
             break;
         case 5:
-            m_creature->mutHP(-2);
+            if (m_creature->getHP() > 0 && m_creature->getHP() < 30) {
+                m_creature->mutHP(-2);
+            }
             /*Hopital : « PostCovid »
 
             Créature alliée +2 PV*/
@@ -518,12 +528,15 @@ void GameBoard::putAnEnergy(const char &numCarte) {
 }
 
 void GameBoard::enleverHP(const int &nb) {
-    bool temoins = m_creature->getState();
-    m_creature->mutHP(nb);
-    if (temoins != m_creature->getState()) {
-        this->envoyerCartAuCimetiere(m_creature);
-        m_creature = nullptr;
+    if (m_creature->getHP() > 0 && m_creature->getHP() < 30) {
+        bool temoins = m_creature->getState();
+        m_creature->mutHP(nb);
+        if (temoins != m_creature->getState()) {
+            this->envoyerCartAuCimetiere(m_creature);
+            m_creature = nullptr;
+        }
     }
+
 }
 
 Card *GameBoard::getFirstCard() {
