@@ -20,8 +20,20 @@ GameBoard::GameBoard(Player *Playeur, Collection *Collection)
     m_PV = 20;
     m_tabElements = {0, 0, 0, 0};
 
-}
+}/*
+void enleverEnergy(std::vector<char> m_tabElements){
+    int nbRand1;
 
+    nbRand1 = rand() % 4;
+    while ()
+    if (m_tabElements[nbRand1] != 0){
+        m_tabElements[nbRand1]-=1;
+    }
+   else{
+
+
+   }
+}*/
 
 void GameBoard::envoyerCartAuCimetiere(Card *carteMorte) {
     delete m_cemetary;

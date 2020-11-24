@@ -56,6 +56,7 @@ public:
     void recoisDegats(const int &montantPV);
 
     void enleverHP(const int &nb);
+   /* void enleverEnergy(std::vector<char> m_tabElements);*/
 
     void utilisationDeCarteEvent(Special *Carte);
 

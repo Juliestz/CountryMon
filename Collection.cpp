@@ -72,57 +72,57 @@ void Collection::addCard(int type){
                 //Creatures
             case 12 :
                 m_collection.push_back(new Creature{"FRANCE", 12, 7, 1});
-                fin = m_collection.end();
-                (*fin)->newAttack("L'effroyable en eaux profondes", {2, 1, 0, 0}, 2, 0);
-                (*fin)->newAttack("Constellation de satellites", {1, 0, 2, 1}, 3, 0);
+              // fin = m_collection.end();
+                m_collection.back()->newAttack("L'effroyable en eaux profondes", {2, 1, 0, 0}, 2, 0);
+                m_collection.back()->newAttack("Constellation de satellites", {1, 0, 2, 1}, 3, 0);
                 break;
 
             case 13 :
                 m_collection.push_back(new Creature{"USA", 13, 7, 1});
                 fin = m_collection.end();
-                (*fin)->newAttack("Otan", {2, 0, 1, 1}, 3, 0);
-                (*fin)->newAttack("Bombe a hydrogen", {0, 1, 2, 1}, 2, 0);
+                m_collection.back()->newAttack("Otan", {2, 0, 1, 1}, 3, 0);
+                m_collection.back()->newAttack("Bombe a hydrogen", {0, 1, 2, 1}, 2, 0);
                 break;
 
             case 14 :
                 m_collection.push_back(new Creature{"RUSSIA", 14, 7, 1});
                 fin = m_collection.end();
-                (*fin)->newAttack("KGB", {1, 2, 0, 1}, 2, 0);
-                (*fin)->newAttack("Armee rouge", {1, 1, 1, 1}, 3, 0);
+                m_collection.back()->newAttack("KGB", {1, 2, 0, 1}, 2, 0);
+                m_collection.back()->newAttack("Armee rouge", {1, 1, 1, 1}, 3, 0);
                 break;
 
             case 15 :
                 m_collection.push_back(new Creature{"CHINA", 15, 7, 1});
                 fin = m_collection.end();
-                (*fin)->newAttack("Invasion a la tibetaine", {1, 1, 1, 1}, 2, 0);
-                (*fin)->newAttack("Piratage numerique", {0, 1, 2, 1}, 5, 0);
+                m_collection.back()->newAttack("Invasion a la tibetaine", {1, 1, 1, 1}, 2, 0);
+                m_collection.back()->newAttack("Piratage numerique", {0, 1, 2, 1}, 5, 0);
                 break;
 
             case 16 :
                 m_collection.push_back(new Creature{"NORTH KOREA", 16, 7, 1});
                 fin = m_collection.end();
-                (*fin)->newAttack("Invasion mondiale", {0, 2, 1, 1}, 2, 0);
-                (*fin)->newAttack("Missile nucleaire", {1, 1, 2, 1}, 5, 0);
+                m_collection.back()->newAttack("Invasion mondiale", {0, 2, 1, 1}, 2, 0);
+                m_collection.back()->newAttack("Missile nucleaire", {1, 1, 2, 1}, 5, 0);
                 break;
 
             case 17 :
                 m_collection.push_back(new Creature{"DUTSCHLAND", 17, 7, 1});
                 fin = m_collection.end();
-                (*fin)->newAttack("Blitzkrieg", {1, 1, 2, 0}, 3, 0);
-                (*fin)->newAttack("Luftwaffe", {0, 1, 1, 1}, 2, 0);
+                m_collection.back()->newAttack("Blitzkrieg", {1, 1, 2, 0}, 3, 0);
+                m_collection.back()->newAttack("Luftwaffe", {0, 1, 1, 1}, 2, 0);
                 break;
 
             case 18 :
                 m_collection.push_back(new Creature{"IRAN", 18, 7, 1});
                 fin = m_collection.end();
-                (*fin)->newAttack("Crise du petrole", {2, 0, 0, 1}, 3, 0);
-                (*fin)->newAttack("Bouclier spatiale", {0, 1, 1, 2}, 2, 0);
+                m_collection.back()->newAttack("Crise du petrole", {2, 0, 0, 1}, 3, 0);
+                m_collection.back()->newAttack("Bouclier spatiale", {0, 1, 1, 2}, 2, 0);
                 break;
             case 19 :
                 m_collection.push_back(new Creature{"JAPAN", 19, 7, 1});
                 fin = m_collection.end();
-                (*fin)->newAttack("Sous-marin nucleaire", {1, 1, 1, 1}, 2, 0);
-                (*fin)->newAttack("Attaque DDOS", {0, 1, 2, 1}, 3, 0);
+                m_collection.back()->newAttack("Sous-marin nucleaire", {1, 1, 1, 1}, 2, 0);
+                m_collection.back()->newAttack("Attaque DDOS", {0, 1, 2, 1}, 3, 0);
                 break;
         }
 }

@@ -29,7 +29,7 @@ void Game::utilisationDeCarteEvent(Special *Carte, GameBoard *GB, GameBoard *M_o
             drawPhase(GB, M_opponent);
             break;
         case 6:
-
+               // m_GB1
             /*Pandémie : « Confinement »
 
             -1 carte énergie de chaque coté*/
