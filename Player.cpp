@@ -9,11 +9,11 @@
 #include <cstdlib>
 #include <ctime>
 
-Player::Player(){
+Player::Player() {
     m_money = 50;
 }
 
-void Player::setPseudo(std::string pseudo){
+void Player::setPseudo(std::string pseudo) {
     m_pseudo = pseudo;
 }
 
@@ -30,31 +30,31 @@ void Player::getInfo(std::string nameDoc) {
 
     std::ifstream player{nameDoc};
 
-    player>> m_pseudo;
+    player >> m_pseudo;
 
     player.close();
 }
 
 
-void Player::afficher(){
+void Player::afficher() {
 
-    std::cout<< m_pseudo <<std::endl;
+    std::cout << m_pseudo << std::endl;
 
 
-    std::list<Card*> liste;
+    std::list<Card *> liste;
 
-    std::list<Card*>::iterator it;
-    std::list<Card*>::iterator debut;
-    std::list<Card*>::iterator fin;
+    std::list<Card *>::iterator it;
+    std::list<Card *>::iterator debut;
+    std::list<Card *>::iterator fin;
 
-    std::cout<< "a" <<std::endl;
+    std::cout << "a" << std::endl;
     liste.merge(m_collectionj.getCardsCollection()); //transfere d'une liste à une autre
-    std::cout<< "a" <<std::endl;
+    std::cout << "a" << std::endl;
     debut = liste.begin();
     fin = liste.end();
 
     for (it = debut; it != fin; ++it) {
-        std::cout<< "a" <<std::endl;
+        std::cout << "a" << std::endl;
         (**it).afficher();
     }
 
@@ -66,30 +66,30 @@ void Player::saveCollection(std::string nameDoc) {
     int type;
     std::ofstream player{nameDoc};
 
-    std::list<Card*> liste;
+    std::list<Card *> liste;
     liste.merge(m_collectionj.getCardsCollection());
 
     taille = liste.size();
 
-    player<< m_pseudo <<std::endl;
-    player<< m_money <<std::endl;
-    player<< taille <<std::endl;
+    player << m_pseudo << std::endl;
+    player << m_money << std::endl;
+    player << taille << std::endl;
 
-    std::list<Card*>::iterator it;
-    std::list<Card*>::iterator debut;
-    std::list<Card*>::iterator fin;
+    std::list<Card *>::iterator it;
+    std::list<Card *>::iterator debut;
+    std::list<Card *>::iterator fin;
     debut = liste.begin();
     fin = liste.end();
 
-    for (it = debut ; it != fin ; ++it) {
+    for (it = debut; it != fin; ++it) {
         type = (**it).getNum();
-        player<< type <<std::endl;
+        player << type << std::endl;
     }
 
     player.close();
 }
 
-void Player::createCollection(std::string nameDoc){
+void Player::createCollection(std::string nameDoc) {
 
     std::ifstream player{nameDoc};
 
@@ -97,12 +97,12 @@ void Player::createCollection(std::string nameDoc){
     int taille;
     int type = 0;
 
-    player>> pseudo;
-    player>> m_money;
-    player>> taille;
+    player >> pseudo;
+    player >> m_money;
+    player >> taille;
 
-    for (int i = 0; i < taille; i++){
-        player>> type;
+    for (int i = 0; i < taille; i++) {
+        player >> type;
         m_collectionj.addCard(type);
     }
 
@@ -113,20 +113,20 @@ void Player::createCollection(std::string nameDoc){
     return m_collection.getCollection();
 }*/
 
-void Player::addCardToMyCollection(){
+void Player::addCardToMyCollection() {
 
     srand((unsigned int) time(0));
 
-    for (int i=0;i<3; ++i){
-        int nRand = rand()%19 +1 ;
+    for (int i = 0; i < 3; ++i) {
+        int nRand = rand() % 19 + 1;
         m_collectionj.addCard(nRand);
-        m_money-=5;
+        m_money -= 5;
     }
 
 }
 
 
-Player::~Player(){}
+Player::~Player() {}
 
 Collection *Player::getCollection() {
     return &m_collectionj;
