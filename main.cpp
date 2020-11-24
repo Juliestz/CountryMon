@@ -9,65 +9,6 @@
 #include <fstream>
 #include "ALLEGRO/Init_ALLEGRO.h"
 
-void creationDesCartesSpeciales() {
-    Special sixAout45{"Six Aout 45", 1,
-                      "Vous lancez une bombe atomique sur la creature adverse : elle perd 2 HP. Malheureusement la deflagration est tres grande et fait perdre 1 HP a votre propre creature."};
-    Special bond{"James Bond", 2, "Vous envoyez un espion pour savoir quelle sera la prochaine carte"
-                                  " tirée par le joueur adverse."};
-    Special cdm{"Coupe du monde", 3, "Vous avez gagné la coupe du monde! Bravo!"
-                                     "Le moral des troupes est au plus haut. La puissance de votre créature en jeu est augmentée de 1."};
-    Special entente{"Triple Entente", 4, "Vous vous alliez avec d'autres puissances. Vous pouvez deffausser cette carte"
-                                         " et en piocher deux autre pour les jouer dans ce tour."};
-    Special hopital{"Hopital", 5,
-                    "Votre systeme de sante se remet de la crise sanitaire mais est plus performant que jamais."
-                    " Votre créature gagne 2 PV."};
-    Special pandemie{"Pandemie", 6,
-                     "La crise fait rage, vous perdez beaucoup de ressources pendant que votre population "
-                     "est en confinement. Vous et votre ennemi perdez une carte Energie mais VOUS choisissez de quel type il s'agira."};
-    Special territoire{"Territoire", 7, "Vous faites reculer l'ennemi dans son camp, enlevez lui une carte permanante "
-                                        "qui se trouve sur son plateau."};
-}
-
-void creationDesCartesCreatures() {
-    Creature France{"FRANCE", 12, 7, 1};
-    Creature USA{"USA", 13, 7, 1};
-    Creature Russia{"RUSSIA", 14, 7, 1};
-    Creature China{"CHINA", 15, 7, 1};
-    Creature NorthKorea{"NORTH KOREA", 16, 7, 1};
-    Creature Germany{"GERMANY", 17, 7, 1};
-    Creature Iran{"IRAN", 18, 7, 1};
-    Creature Japan{"JAPAN", 19, 7, 1};
-
-
-    // initialisation des attaques propres à chaque créatures
-
-
-    France.newAttack("Le Redoutable en eaux profondes", {2, 1, 0, 0}, 2, 0);
-    France.newAttack("Constellation de satellites", {1, 0, 2, 1}, 3, 0);
-
-    USA.newAttack("OTAN", {2, 0, 1, 1}, 3, 0);
-    USA.newAttack("Bombe a hydrogen", {0, 1, 2, 1}, 2, 0);
-
-    Russia.newAttack("KGB", {1, 2, 0, 1}, 2, 0);
-    Russia.newAttack("Armee rouge", {1, 1, 1, 1}, 3, 0);
-
-    China.newAttack("Invasion a la tibetaine", {1, 1, 1, 1}, 2, 0);
-    China.newAttack("Piratage numerique", {0, 1, 2, 1}, 5, 0);
-
-    NorthKorea.newAttack("Invasion mondiale", {0, 2, 1, 1}, 2, 0);
-    NorthKorea.newAttack("Missile nucleaire", {1, 1, 2, 1}, 5, 0);
-
-    Germany.newAttack("Blitzkrieg", {1, 1, 2, 0}, 3, 0);
-    Germany.newAttack("Luftwaffe", {0, 1, 1, 1}, 2, 0);
-
-    Iran.newAttack("Crise du petrole", {2, 0, 0, 1}, 3, 0);
-    Iran.newAttack("Bouclier spatiale", {0, 1, 1, 2}, 2, 0);
-
-    Japan.newAttack("Sous-marin nucleaire", {1, 1, 1, 1}, 2, 0);
-    Japan.newAttack("Attaque DDOS", {0, 1, 2, 1}, 3, 0);
-
-}
-
 
 
 std::string fonctionNum(int n){
@@ -211,8 +152,6 @@ int main() {
     Player joueur2;
 
 
-
-
     int i, n = 0;
 
     std::cout << "Bienvenue dans CountryMon, preparez vous a vivre des combats intenses!!!!" << std::endl;
@@ -262,7 +201,6 @@ int main() {
 
 
 ///ne pas oublier les delete
-///destruction des bitmaps
 
 
     return 0;
