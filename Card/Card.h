@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <sstream>
+#include <vector>
 
 class Card {
 protected:
@@ -19,6 +20,8 @@ public:
     void setName(const std::string &name);
 
     virtual void afficher() const;
+
+    virtual void newAttack(std::string name, std::vector<char> energyNeeded,int degats, bool available);
 
     char getNum() const;
 

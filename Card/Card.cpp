@@ -4,7 +4,7 @@
 
 #include "Card.h"
 #include <iostream>
-#include <string.h>
+#include <string>
 
 Card::Card(std::string& name, char numSerie) : m_name{name}, m_numDeSerie{numSerie}{}
 
@@ -19,6 +19,7 @@ void Card::afficher() const{
     std::cout<< m_name <<std::endl;
 }
 
+void Card::newAttack(std::string name, std::vector<char> energyNeeded,int degats, bool available){}
 
 void Card::display (/*File *FichierFondCarte*/) {
     //m_fondCarte=al_load_bitmap(FichierFondCarte);
