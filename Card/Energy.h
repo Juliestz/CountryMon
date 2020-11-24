@@ -20,7 +20,7 @@ protected:
 public:
     Energy();
 
-    Energy(std::string name, char numSerie);
+    Energy(std::string name, char numSerie, std::string description);
 
     virtual void afficher() const;
 

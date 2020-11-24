@@ -173,7 +173,6 @@ void initialisationDuJoueur(Player *joueur, int i, int n) {
 
         std::string fichier = "../player";
         std::string extension = ".txt";
-        std::string numero;
         numero = fonctionNum(n);
         std::string nomFichier = fichier + numero + extension;
         std::cout << "Joueur  qu'elle est votre nom de guerre ?" <<

@@ -53,14 +53,13 @@ void Player::afficher() {
     std::list<Card *>::iterator debut;
     std::list<Card *>::iterator fin;
 
-    std::cout << "a" << std::endl;
+
     liste.merge(m_collectionj.getCardsCollection()); //transfere d'une liste à une autre
-    std::cout << "a" << std::endl;
+
     debut = liste.begin();
     fin = liste.end();
 
     for (it = debut; it != fin; ++it) {
-        std::cout << "a" << std::endl;
         (**it).afficher();
     }
 

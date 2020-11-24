@@ -14,12 +14,12 @@ void Collection::addCard(int type){
                 //Specials
             case 1 :
                 m_collection.push_back(new Special{"Six Aout 45", 1, "Vous lancez une bombe atomique sur la creature adverse : elle perd 2 HP."
-                                                                  " Malheureusement la deflagration est tres grande et fait perdre 1 HP a votre propre creature."});
+                                                                     " Malheureusement la deflagration est tres grande et fait perdre 1 HP a votre propre creature."});
                 break;
 
             case 2 :
                 m_collection.push_back(new Special{"James Bond", 2, "Vous envoyez un espion pour savoir quelle sera la prochaine carte"
-                                                                " tiree par le joueur adverse."});
+                                                                    " tiree par le joueur adverse."});
                 break;
 
             case 3 :
@@ -34,34 +34,34 @@ void Collection::addCard(int type){
 
             case 5 :
                 m_collection.push_back(new Special{"Hopital", 5, "Votre systeme de sante se remet de la crise sanitaire mais est plus performant que jamais."
-                                                              " Votre creature gagne 2 PV."});
+                                                                 " Votre creature gagne 2 PV."});
                 break;
 
             case 6 :
                 m_collection.push_back(new Special{"Pandemie", 6, "La crise fait rage, vous perdez beaucoup de ressources pendant que votre population "
-                                                               "est en confinement. Vous et votre ennemi perdez une carte Energie mais VOUS choisissez de quel type il s'agira."});
+                                                                  "est en confinement. Vous et votre ennemi perdez une carte Energie mais VOUS choisissez de quel type il s'agira."});
                 break;
 
             case 7 :
                 m_collection.push_back(new Special{"Territoire", 7,"Vous faites reculer l'ennemi dans son camp, enlevez lui une carte permanante "
-                                                   "qui se trouve sur son plateau."});
+                                                                   "qui se trouve sur son plateau."});
                 break;
 
                 //Energy
             case 8 :
-                m_collection.push_back(new Energy{"Politique", 8});
+                m_collection.push_back(new Energy{"Politique", 8, ""});
                 break;
 
             case 9 :
-                m_collection.push_back(new Energy{"Militaire", 9});
+                m_collection.push_back(new Energy{"Militaire", 9, ""});
                 break;
 
             case 10 :
-                m_collection.push_back(new Energy{"Scientifique", 10});
+                m_collection.push_back(new Energy{"Scientifique", 10, ""});
                 break;
 
             case 11 :
-                m_collection.push_back(new Energy{"Ressource", 11});
+                m_collection.push_back(new Energy{"Ressource", 11, ""});
                 break;
 
                 //Creatures

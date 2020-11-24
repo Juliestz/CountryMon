@@ -10,14 +10,12 @@ Energy::Energy() {
 }
 
 
-Energy::Energy(std::string name, char numSerie): Card::Card{name, numSerie}{}
+Energy::Energy(std::string name, char numSerie, std::string description): Card::Card{name, numSerie}, m_description{description}{}
 
 
 void Energy::afficher() const{
-    int num = m_numDeSerie;
-
     Card::afficher();
-    std::cout<< num <<std::endl;
+    std::cout<< "Description :" <<std::endl << m_description <<std::endl;
 }
 
 void Energy::setDescription(const std::string &description) {
