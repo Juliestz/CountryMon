@@ -27,6 +27,7 @@ void Attack::afficher(){
     for (size_t i = 0; i < m_energyNeeded.size(); i++){
         std::cout << m_energyNeeded[i];
     }
+    std::cout<<std::endl;
 }
 
 Attack::~Attack() {}
