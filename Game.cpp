@@ -65,7 +65,7 @@ void Game::drawPhase(GameBoard *GB, GameBoard *GB2) {
     Card *carteManipulee = GB->pickUp();
     int choix;
 
-    std::cout << "\n\n\n\mvous avez tire : " << carteManipulee->getName();
+    std::cout << "\n\n\n\nvous avez tire : " << carteManipulee->getName();
 
     std::cout << "\n\n              voulez vous utiliser cette carte (oui:1, non:0):\n";
     std::cin >> choix;
