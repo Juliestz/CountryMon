@@ -470,12 +470,12 @@ int GameBoard::atkDeCreature() {
 
         if (m_creature->getAttaque()[0]->attackAvailable(m_tabElements)) {
             std::cout << "         " << choix << ".  " << m_creature->getAttaque()[0]->getName() << " : fait "
-                      << m_creature->getAttaque()[0]->getDeg() << " degats à l'enemi\n";
+                      << m_creature->getAttaque()[0]->getDeg() << " degats a l'enemi\n";
             choix++;
         }
         if (m_creature->getAttaque()[1]->attackAvailable(m_tabElements)) {
             std::cout << "         " << choix << ".  " << m_creature->getAttaque()[1]->getName() << " : fait "
-                      << m_creature->getAttaque()[1]->getDeg() << " degats à l'enemi\n";
+                      << m_creature->getAttaque()[1]->getDeg() << " degats a l'enemi\n";
         }
 
         std::cin >> choix;
