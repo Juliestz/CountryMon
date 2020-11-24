@@ -4,7 +4,10 @@
 
 #include "Energy.h"
 
-Energy::Energy() {}
+Energy::Energy() {
+    m_name = {'\0'};
+    m_numDeSerie = '\0';
+}
 
 
 Energy::Energy(std::string name, char numSerie): Card::Card{name, numSerie}{}

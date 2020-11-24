@@ -10,7 +10,11 @@ Creature::Creature(std::string name, char numSerie, int HP, bool available) : Ca
 
 
 Creature::Creature() : m_HP{0}, m_available{false}, m_attacks{0} {
-
+    m_HP = 0;
+    m_available = false;
+    m_attacks = {nullptr};
+    m_name = {'\0'};
+    m_numDeSerie = '\0';
 }
 
 
