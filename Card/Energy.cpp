@@ -22,13 +22,5 @@ void Energy::setDescription(const std::string &description) {
     m_description = description;
 }
 
-bool Energy::read(std::istream &stream) {
-    m_OK = false;
-    return m_OK;
-}
-
-bool Energy::IsOK() const {
-    return m_OK;
-}
 
 Energy::~Energy() {}

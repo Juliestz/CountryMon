@@ -25,14 +25,6 @@ public:
 
     void setDescription(const std::string &description);
 
-    bool  read(std::istream& stream);
-
-    bool IsOK() const;
-
-
-
-
-
 };
 
 
