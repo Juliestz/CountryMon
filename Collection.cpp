@@ -23,7 +23,7 @@ void Collection::addCard(int type){
                 break;
 
             case 3 :
-                m_collection.push_back(new Special{"Coupe du monde", 3, "Vous ave z gagne la coupe du monde! Bravo!"
+                m_collection.push_back(new Special{"Coupe du monde", 3, "Vous avez gagne la coupe du monde! Bravo!"
                                                                      "Le moral des troupes est au plus haut. La puissance de votre creature en jeu est augmentee de 1."});
                 break;
 
@@ -71,13 +71,13 @@ void Collection::addCard(int type){
                 //Creatures
             case 12 :
                 m_collection.push_back(new Creature{"FRANCE", 12, 7, 1});
-                m_collection.back()->newAttack("L'effroyable en eaux profondes", {2, 1, 0, 0}, 2, 0);
+                m_collection.back()->newAttack("Le Redoutable en eaux profondes", {2, 1, 0, 0}, 2, 0);
                 m_collection.back()->newAttack("Constellation de satellites", {1, 0, 2, 1}, 3, 0);
                 break;
 
             case 13 :
                 m_collection.push_back(new Creature{"USA", 13, 7, 1});
-                m_collection.back()->newAttack("Otan", {2, 0, 1, 1}, 3, 0);
+                m_collection.back()->newAttack("OTAN", {2, 0, 1, 1}, 3, 0);
                 m_collection.back()->newAttack("Bombe a hydrogen", {0, 1, 2, 1}, 2, 0);
                 break;
 
@@ -100,7 +100,7 @@ void Collection::addCard(int type){
                 break;
 
             case 17 :
-                m_collection.push_back(new Creature{"DUTSCHLAND", 17, 7, 1});
+                m_collection.push_back(new Creature{"GERMANY", 17, 7, 1});
                 m_collection.back()->newAttack("Blitzkrieg", {1, 1, 2, 0}, 3, 0);
                 m_collection.back()->newAttack("Luftwaffe", {0, 1, 1, 1}, 2, 0);
                 break;

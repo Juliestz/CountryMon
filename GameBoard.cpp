@@ -512,7 +512,7 @@ void GameBoard::putBack(Card *cartePiochee) {
 }
 
 void GameBoard::putAnEnergy(const char &numCarte) {
-    m_tabElements[numCarte - 7] += 1;
+    m_tabElements[numCarte - 8] += 1;
 }
 
 void GameBoard::enleverHP(const int &nb) {
