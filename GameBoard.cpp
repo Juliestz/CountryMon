@@ -318,7 +318,7 @@ void GameBoard::creatADeck() {
                 tabRepDeColl[nbRand] = (new Creature());
             }
             */
-            tabRepDeColl[nbRand] = new Card();
+            tabRepDeColl[nbRand] = (new Card());
             *tabRepDeColl[nbRand] = *tabRepDeColl.back();
             delete tabRepDeColl.back();
             tabRepDeColl.pop_back();
@@ -372,8 +372,8 @@ void GameBoard::creatADeck() {
                 } else {
                     tabRepDeColl[choix2] = (new Creature());
                 }*/
-
-                tabRepDeColl[choix2] = tabRepDeColl.back();
+                tabRepDeColl[choix2] = (new Card());
+                *tabRepDeColl[choix2] = *tabRepDeColl.back();
                 delete tabRepDeColl.back();
                 tabRepDeColl.pop_back();
 
@@ -421,8 +421,8 @@ void GameBoard::creatADeck() {
             } else {
                 tabRepDeDeck[nbRand] = (new Creature());
             }*/
-
-            tabRepDeDeck[nbRand] = tabRepDeDeck.back();
+            tabRepDeDeck[nbRand] = (new Card());
+            *tabRepDeDeck[nbRand] = *tabRepDeDeck.back();
             delete tabRepDeDeck.back();
             tabRepDeDeck.pop_back();
 
