@@ -286,7 +286,6 @@ void GameBoard::creatADeck() {
 
     }
 
-    std::cout << "a";
     int nbRand;
 
     if (choix == 0) {
@@ -341,7 +340,7 @@ void GameBoard::creatADeck() {
                 std::cout << i + 1 << "carte :" << tabRepDeColl[i]->getName() << std::endl;
             }
 
-            std::cout << std::endl << "choisisser une carte à ajouter au deck :";
+            std::cout << std::endl << "choisisser une carte a ajouter au deck :";
             std::cin >> choix2;
 
             //selection des cartes
