@@ -123,7 +123,7 @@ void GameBoard::creatADeck() {
 
     Card carteAuDeck;
 
-    for (auto it : tabRepDeColl) {
+    for (auto it : m_collection->getCardsCollection()) {
         carteAuDeck = *it;
 
         if (carteAuDeck.getNum() < 8) {

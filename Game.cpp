@@ -69,6 +69,8 @@ void Game::drawPhase(GameBoard *GB, GameBoard *GB2) {
     std::cout << "voulez vous utiliser cette carte (oui:1, non:0):\n";
     std::cin >> choix;
     if (choix) {
+
+
         Special *cs = dynamic_cast<Special *>(carteManipulee);
         if (cs) {
             this->utilisationDeCarteEvent(cs, GB, GB2);
