@@ -3,8 +3,7 @@
 #include "Player.h"
 #include "Card/Creature.h"
 #include "Attack.h"
-#include "Collection.h"
-#include "Card/Energy.h"
+
 #include "GameBoard.h"
 #include "Game.h"
 #include <fstream>
@@ -58,7 +57,7 @@ void creationDesCartesCreatures() {
     NorthKorea.newAttack("Invasion mondiale", {0, 2, 1, 1}, 2, 0);
     NorthKorea.newAttack("Missile nucleaire", {1, 1, 2, 1}, 5, 0);
 
-    Germany.newAttack("3ieme Reich", {1, 1, 2, 0}, 3, 0);
+    Germany.newAttack("Blitzkrieg", {1, 1, 2, 0}, 3, 0);
     Germany.newAttack("Luftwaffe", {0, 1, 1, 1}, 2, 0);
 
     Iran.newAttack("Crise du petrole", {2, 0, 0, 1}, 3, 0);

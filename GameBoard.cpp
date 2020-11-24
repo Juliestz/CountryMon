@@ -114,7 +114,7 @@ void GameBoard::creatADeck() {
     int choix;
     int choix2;
 
-
+std::cout<< "a";
     std::cout << "choisir les cartes du deck? (0:oui, 1:non)\n\n";
     std::cin >> choix;
 
@@ -122,8 +122,9 @@ void GameBoard::creatADeck() {
     std::vector<Card *> tabRepDeColl;
 
     Card carteAuDeck;
-
+    std::cout<< "a";
     for (auto it : m_collection->getCardsCollection()) {
+
         carteAuDeck = *it;
 
         if (carteAuDeck.getNum() < 8) {
@@ -139,12 +140,12 @@ void GameBoard::creatADeck() {
             *tabRepDeColl.back() = *it;
 
         }
-    }
+    }std::cout<< "a";
     int nbRand;
 
     if (choix) {
 
-        srand((unsigned int) time(0));
+
         for (int j = 0; j < NB_CARD_DECK; ++j) {
             nbRand = rand() % tabRepDeColl.size();
 
