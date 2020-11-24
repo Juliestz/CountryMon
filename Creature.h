@@ -5,7 +5,7 @@
 #ifndef ECEMON_T_CREATURE_H
 #define ECEMON_T_CREATURE_H
 
-#include "Card.h"
+#include "Card/Card.h"
 #include <iostream>
 #include <vector>
 #include "Attack.h"

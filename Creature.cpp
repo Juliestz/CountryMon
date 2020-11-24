@@ -5,7 +5,8 @@
 #include "Creature.h"
 
 
-Creature::Creature(std::string name, char numSerie, int HP, bool available) : Card::Card{name, numSerie}, m_HP{HP}, m_available{available} {}
+Creature::Creature(std::string name, char numSerie, int HP, bool available) : Card::Card{name, numSerie}, m_HP{HP},
+                                                                              m_available{available} {}
 
 
 Creature::Creature() : m_HP{0}, m_available{false}, m_attacks{0} {
@@ -31,19 +32,18 @@ bool Creature::getState() const {
 }
 
 
-
 int Creature::utilisation(char phase) {
 
     return 0;
 }
 
-void Creature::newAttack(std::string name, std::vector<char> energyNeeded,int degats, bool available ) {
+void Creature::newAttack(std::string name, std::vector<char> energyNeeded, int degats, bool available) {
     m_attacks.push_back(new Attack(name, energyNeeded, degats, available));
 
 }
 
-std::vector<Attack*> Creature::getAttaque(){
-    return std::vector<Attack*>(m_attacks);
+std::vector<Attack *> Creature::getAttaque() {
+    return std::vector<Attack *>(m_attacks);
 }
 
 int Creature::getHP() {

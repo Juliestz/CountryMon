@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include <queue>
-#include "Card.h"
+#include "Card/Card.h"
 #include "Creature.h"
 #include "Player.h"
 #include "Special.h"

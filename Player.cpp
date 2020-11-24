@@ -5,7 +5,7 @@
 #include <fstream>
 #include "Player.h"
 #include "Collection.h"
-#include "Card.h"
+#include "Card/Card.h"
 #include <cstdlib>
 #include <ctime>
 

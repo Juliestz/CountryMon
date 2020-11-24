@@ -8,7 +8,7 @@
 #include <iostream>
 #include <string>
 #include "Collection.h"
-#include "Card.h"
+#include "Card/Card.h"
 
 class Collection;
 

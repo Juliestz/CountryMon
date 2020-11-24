@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include <list>
-#include "Card.h"
+#include "Card/Card.h"
 
 class Card;
 
