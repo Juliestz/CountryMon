@@ -54,7 +54,7 @@ Game::Game(GameBoard *GB1, GameBoard *GB2) : m_GB1{GB1}, m_GB2{GB2} {}
 bool Game::playATurn(GameBoard *GB, GameBoard *GB2) {
 //le joueur 1 joue en premier
     this->drawPhase(GB, GB2);
-    this->battlePhase(GB);//attaque...
+    this->battlePhase(GB, GB2);//attaque...
     //this->verification(GB2);//on vérifie que l'autre joueur ne soit pas mort.
     return !this->verification(GB2);
 }
@@ -102,8 +102,8 @@ void Game::drawPhase(GameBoard *GB, GameBoard *GB2) {
 
 }
 
-void Game::battlePhase(GameBoard *GB) {
-
+void Game::battlePhase(GameBoard *GB, GameBoard *GB2) {
+    GB2->recoisDegats(GB->atkDeCreature());
 }
 
 bool Game::verification(GameBoard *GB) {
@@ -120,7 +120,7 @@ void Game::playTheGame() {
     m_GB1->creatADeck();
     m_GB2->creatADeck();
     char perdant = 1;
-    bool partieContinue =  true;
+    bool partieContinue = true;
     m_GB2->getCarteEnjeux();
     m_GB1->getCarteEnjeux();
 

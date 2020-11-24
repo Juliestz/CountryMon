@@ -26,7 +26,7 @@ public:
 
     void drawPhase(GameBoard *GB, GameBoard *GB2);
 
-    void battlePhase(GameBoard *GB);
+    static void battlePhase(GameBoard *GB, GameBoard *GB2);
 
     void dislay(GameBoard *GB, GameBoard *GB2);
 
