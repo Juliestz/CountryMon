@@ -36,10 +36,7 @@ bool Creature::getState() const {
 }
 
 
-int Creature::utilisation(char phase) {
 
-    return 0;
-}
 
 void Creature::newAttack(std::string name, std::vector<int> energyNeeded, int degats, bool available) {
     m_attacks.push_back(new Attack(name, energyNeeded, degats, available));
@@ -56,7 +53,7 @@ void Creature::afficher() const{
 std::vector<Attack *> Creature::getAttaque() {
     return std::vector<Attack *>(m_attacks);
 }
-
+/*
 void Creature::attack(GameBoard gameBoard, std::vector<Attack*> attacks) {
     if (m_attacks[0]->isChosen() == 1 ){
         gameBoard.recoisDegats(m_attacks[0]->getDegats() );
@@ -64,7 +61,7 @@ void Creature::attack(GameBoard gameBoard, std::vector<Attack*> attacks) {
     else if (m_attacks[1]->isChosen() == 1){
         gameBoard.recoisDegats(m_attacks[1]->getDegats());
     }
-}
+}*/
 
 int Creature::getHP() {
     return m_HP;
