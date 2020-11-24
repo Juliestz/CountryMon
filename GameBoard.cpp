@@ -537,7 +537,7 @@ void GameBoard::putAnEnergy(const char &numCarte) {
 }
 
 void GameBoard::enleverHP(const int &nb) {
-    if (m_creature->getHP() > 0 && m_creature->getHP() < 30) {
+    if (m_creature!= nullptr) {
         bool temoins = m_creature->getState();
         m_creature->mutHP(nb);
         if (temoins != m_creature->getState()) {
