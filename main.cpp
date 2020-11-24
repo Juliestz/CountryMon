@@ -45,7 +45,7 @@ void creationDesCartesCreatures() {
     France.newAttack("L'effroyable en eaux profondes", {2, 1, 0, 0}, 2, 0);
     France.newAttack("Constellation de satellites", {1, 0, 2, 1}, 3, 0);
 
-    USA.newAttack("Otan", {2, 0, 1, 1}, 3, 0);
+    USA.newAttack("OTAN", {2, 0, 1, 1}, 3, 0);
     USA.newAttack("Bombe a hydrogen", {0, 1, 2, 1}, 2, 0);
 
     Russia.newAttack("KGB", {1, 2, 0, 1}, 2, 0);
