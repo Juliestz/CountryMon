@@ -142,7 +142,7 @@ void initialisationDuJoueur(Player *joueur, int i, int n) {
     std::string numero;
     int k = 0;
     if (i == 1) {
-        std::string fichier = "../player";
+        std::string fichier = "../Sauvegarde/player";
         std::string extension = ".txt";
         for (int m = 0; m < n; m++){
             numero = fonctionNum(m);
@@ -171,7 +171,7 @@ void initialisationDuJoueur(Player *joueur, int i, int n) {
     }
     else {
 
-        std::string fichier = "../player";
+        std::string fichier = "../Sauvegarde/player";
         std::string extension = ".txt";
         numero = fonctionNum(n);
         std::string nomFichier = fichier + numero + extension;
@@ -181,14 +181,14 @@ void initialisationDuJoueur(Player *joueur, int i, int n) {
         joueur->setPseudo(name);
         std::cout << "Une collection de depart vous est attribue" <<
                   std::endl;
-        joueur->createCollection("../MaPremiereCollection.txt");
+        joueur->createCollection("../Sauvegarde/MaPremiereCollection.txt");
         joueur->afficher();
 
         joueur->saveCollection(nomFichier);
 
 
         n += 1;
-        ecritureDoc("../file_save_player", n);
+        ecritureDoc("../Sauvegarde/file_save_player", n);
 
         std::cout<< "avant que  la partie commence vous avez la possibilte d'agrandir votre collection en achetant des cartes. 1/oui   2/non?"<< std::endl;
         std::cin >> k;
@@ -297,7 +297,7 @@ int main() {
 
     std::cout << "Bienvenue dans CountryMon, preparez vous a vivre des combats intenses!!!!" << std::endl;
 
-    n = lectureDoc("../file_save_player");// on lit le fichier avec le nombre de joueur sauvegardé
+    n = lectureDoc("../Sauvegarde/file_save_player");// on lit le fichier avec le nombre de joueur sauvegardé
 
     std::cout << "il y a : " << n << " joueur sauvegarde" << std::endl;
     std::cout << " Joueur 1 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
@@ -316,7 +316,7 @@ int main() {
     }
 
 
-    n = lectureDoc("../file_save_player");
+    n = lectureDoc("../Sauvegarde/file_save_player");
     std::cout << "il y a : " << n << " joueur sauvegarde" << std::endl;
 
     std::cout << " Joueur 2 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
