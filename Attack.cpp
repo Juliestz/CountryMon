@@ -13,18 +13,17 @@ Attack::Attack(std::string name, std::vector<int> energyNeeded, int degats, bool
                                                                                                m_degats{degats},
                                                                                                m_available{available} {}
 
-bool Attack::attackAvailable(std::vector<char> elements) {
-    if (elements[0] >= m_energyNeeded[0] && elements[1] >= m_energyNeeded[1] && elements[2] == m_energyNeeded[2] &&
-        elements[3] == m_energyNeeded[3]) {
-        m_available = 1;
-    } else m_available = 0;
+bool Attack::attackAvailable(std::vector<int> elements) {
+    m_available =
+            elements[0] >= m_energyNeeded[0] && elements[1] >= m_energyNeeded[1] && elements[2] >= m_energyNeeded[2] &&
+            elements[3] >= m_energyNeeded[3];
     return m_available;
 }
 
 
-void Attack::afficher(){
-    std::cout<< m_name << ", degats : " << m_degats << ", besoins : ";
-    for (size_t i = 0; i < m_energyNeeded.size(); i++){
+void Attack::afficher() {
+    std::cout << m_name << ", degats : " << m_degats << ", besoins : ";
+    for (size_t i = 0; i < m_energyNeeded.size(); i++) {
         std::cout << m_energyNeeded[i];
     }
     std::cout<<std::endl;
