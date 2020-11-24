@@ -41,7 +41,7 @@ int Creature::utilisation(char phase) {
     return 0;
 }
 
-void Creature::newAttack(std::string name, std::vector<char> energyNeeded, int degats, bool available) {
+void Creature::newAttack(std::string name, std::vector<int> energyNeeded, int degats, bool available) {
     m_attacks.push_back(new Attack(name, energyNeeded, degats, available));
 }
 

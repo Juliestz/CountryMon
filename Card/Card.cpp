@@ -22,7 +22,7 @@ void Card::afficher() const {
     std::cout << m_name << std::endl;
 }
 
-void Card::newAttack(std::string name, std::vector<char> energyNeeded,int degats, bool available){}
+void Card::newAttack(std::string name, std::vector<int> energyNeeded,int degats, bool available){}
 
 void Card::display(/*File *FichierFondCarte*/) {
     //m_fondCarte=al_load_bitmap(FichierFondCarte);

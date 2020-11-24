@@ -21,7 +21,7 @@ public:
 
     virtual void afficher() const;
 
-    virtual void newAttack(std::string name, std::vector<char> energyNeeded,int degats, bool available);
+    virtual void newAttack(std::string name, std::vector<int> energyNeeded,int degats, bool available);
 
     char getNum() const;
 

@@ -27,7 +27,7 @@ public:
 
     virtual std::vector<Attack*> getAttaque();
 
-    void newAttack(std::string name, std::vector<char> energyNeeded,int degats, bool available);
+    void newAttack(std::string name, std::vector<int> energyNeeded,int degats, bool available);
 
     virtual void afficher() const;
 

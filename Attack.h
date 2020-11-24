@@ -14,10 +14,10 @@ class Attack {
 private:
     std::string m_name;
     bool m_available = 0;
-    std::vector<char> m_energyNeeded;
+    std::vector<int> m_energyNeeded;
     int m_degats;
 public:
-    Attack(std::string name, std::vector<char> energyNeeded, int degats, bool available);
+    Attack(std::string name, std::vector<int> energyNeeded, int degats, bool available);
 
     bool attackAvailable(std::vector<char> elements);
 
