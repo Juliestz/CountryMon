@@ -108,6 +108,7 @@ void Game::drawPhase(GameBoard *GB, GameBoard *GB2) {
 void Game::battlePhase(GameBoard *GB, GameBoard *GB2){
     if (GB->creatPos()) {
         GB2->recoisDegats(GB->atkDeCreature());
+
     }
 }
 

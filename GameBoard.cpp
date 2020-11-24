@@ -457,7 +457,6 @@ void GameBoard::recoisDegats(const int &montantDegats) {
     } else {
         m_PV -= montantDegats;
     }
-
 }
 
 int GameBoard::atkDeCreature() {
@@ -497,7 +496,7 @@ int GameBoard::atkDeCreature() {
 
     }
 
-    if (m_permanente->getNum() == 3) {
+    if (m_permanente!= nullptr) {
         dmg++;
     }
 
