@@ -461,6 +461,11 @@ void GameBoard::recoisDegats(const int &montantDegats) {
 }
 
 int GameBoard::atkDeCreature() {
+
+    if (m_creature == nullptr) {
+        return 0;
+    }
+
     int dmg = 0;
     int choix = 1;
 
