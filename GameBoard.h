@@ -8,11 +8,11 @@
 #include <iostream>
 #include <queue>
 #include "Card/Card.h"
-#include "Creature.h"
+#include "Card/Creature.h"
 #include "Player.h"
-#include "Special.h"
+#include "Card/Special.h"
 #include "Collection.h"
-#include "Energy.h"
+#include "Card/Energy.h"
 
 
 class GameBoard {

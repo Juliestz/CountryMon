@@ -5,7 +5,7 @@
 #ifndef ECEMON_T_ENERGY_H
 #define ECEMON_T_ENERGY_H
 
-#include "Card/Card.h"
+#include "Card.h"
 #include <string>
 #include <vector>
 #include <fstream>

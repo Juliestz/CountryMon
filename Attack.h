@@ -7,7 +7,7 @@
 
 #include <string>
 #include <iostream>
-#include "Energy.h"
+#include "Card/Energy.h"
 
 
 class Attack {

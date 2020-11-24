@@ -3,9 +3,9 @@
 //
 
 #include "Collection.h"
-#include "Special.h"
-#include "Energy.h"
-#include "Creature.h"
+#include "Card/Special.h"
+#include "Card/Energy.h"
+#include "Card/Creature.h"
 
 Collection::Collection(){}
 

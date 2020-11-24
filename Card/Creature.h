@@ -5,10 +5,10 @@
 #ifndef ECEMON_T_CREATURE_H
 #define ECEMON_T_CREATURE_H
 
-#include "Card/Card.h"
+#include "Card.h"
 #include <iostream>
 #include <vector>
-#include "Attack.h"
+#include "../Attack.h"
 
 
 class Creature : public Card {

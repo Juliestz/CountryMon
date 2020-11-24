@@ -3,7 +3,7 @@
 //
 
 #include "Special.h"
-#include "Card/Card.h"
+#include "Card.h"
 #include <iostream>
 
 Special::Special() : m_description(NULL){}

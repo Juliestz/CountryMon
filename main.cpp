@@ -1,14 +1,14 @@
 #include <iostream>
-#include "Special.h"
+#include "Card/Special.h"
 #include "Player.h"
-#include "Creature.h"
+#include "Card/Creature.h"
 #include "Attack.h"
 #include "Collection.h"
-#include "Energy.h"
+#include "Card/Energy.h"
 #include "GameBoard.h"
 #include "Game.h"
 #include <fstream>
-#include "Init_ALLEGRO.h"
+#include "ALLEGRO/Init_ALLEGRO.h"
 
 void creationDesCartesSpeciales() {
     Special sixAout45{"Six Aout 45", 1,

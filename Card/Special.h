@@ -6,7 +6,7 @@
 #define ECEMON_T_SPECIAL_H
 
 #include <iostream>
-#include "Card/Card.h"
+#include "Card.h"
 
 
 class Special : public Card {
