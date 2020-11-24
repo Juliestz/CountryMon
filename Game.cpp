@@ -28,8 +28,12 @@ void Game::utilisationDeCarteEvent(Special *Carte, GameBoard *GB, GameBoard *M_o
             this->drawPhase(GB, M_opponent);
             break;
         case 6:
-            m_GB1->enleverEnergy();
-            m_GB2->enleverEnergy();
+            std::cout
+                    << "\nquelle energie voulez-vous retirer ? \n(1 : politique  2 : militaire  3 : scientifique  4 : ressource)\n";
+            int n;
+            std::cin >> n;
+            m_GB1->enleverEnergy(n-1);
+            m_GB2->enleverEnergy(n-1);
 
             /*Pandémie : « Confinement »
             -1 carte énergie de chaque coté*/
@@ -105,7 +109,7 @@ void Game::drawPhase(GameBoard *GB, GameBoard *GB2) {
 
 }
 
-void Game::battlePhase(GameBoard *GB, GameBoard *GB2){
+void Game::battlePhase(GameBoard *GB, GameBoard *GB2) {
     if (GB->creatPos()) {
         GB2->recoisDegats(GB->atkDeCreature());
 

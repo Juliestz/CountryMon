@@ -22,12 +22,12 @@ GameBoard::GameBoard(Player *Playeur, Collection *Collection)
 
 }
 
-void GameBoard::enleverEnergy() {
-    int nbRand1;
-    do {
-        nbRand1 = rand() % 4;
-    } while (m_tabElements[nbRand1] == 0);
-    m_tabElements[nbRand1] -= 1;
+void GameBoard::enleverEnergy(int n) {
+
+    if (m_tabElements[n] != 0){
+        m_tabElements[n] -=1;
+    }
+
 
 }
 

@@ -57,7 +57,7 @@ public:
 
     void enleverHP(const int &nb);
 
-    void enleverEnergy();
+    void enleverEnergy(int n);
 
     void utilisationDeCarteEvent(Special *Carte);
 
