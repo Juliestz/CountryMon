@@ -205,93 +205,12 @@ void initialisationDuJoueur(Player *joueur, int i, int n) {
 
 int main() {
     srand((unsigned int) time(0));
-    /*  ///initialisation des données nécessaire à ALLEGRO
-      int mousePosX = 0;
-      int mousePosY = 0;
-      int isEnd = 0;
-      int screenW = 0, screenH = 0;
-      int w, h = 0; // dimension bitmap*/
-    /*******************************************************************************************
-      *                               déclaration ALLEGRO                                        *
-       ******************************************************************************************/
-/*
-    ALLEGRO_DISPLAY *display = NULL;
-
-    ALLEGRO_BITMAP  *nomBitmaps = NULL;
-
-    ALLEGRO_EVENT_QUEUE *queue = NULL;
-    ALLEGRO_EVENT  event = {0};
-
-    ALLEGRO_TIMER  *timer = NULL;
-
-    ALLEGRO_MOUSE_STATE mouse_state;
-    ALLEGRO_MOUSE_CURSOR *cursor;
-
-    ALLEGRO_COLOR blanc;
-
-
-    assert(al_init());
-    assert(al_install_mouse());
-    assert(al_install_keyboard());
-    assert(al_init_image_addon());
-    assert(al_init_primitives_addon());
-    al_init_font_addon();
-    assert(al_init_ttf_addon());
-    //création
-    // timer
-    // texte
-    //couleur Blanc et noir
-    blanc = al_map_rgb(255, 255, 255);
-
-    screenW = al_get_display_width(display);
-    screenH = al_get_display_height(display);
-    //chargement des images
-
-    //registre evenements
-    al_register_event_source(queue, al_get_display_event_source(display));
-    al_register_event_source(queue, al_get_keyboard_event_source());
-    al_register_event_source(queue, al_get_mouse_event_source());
-    al_register_event_source(queue, al_get_timer_event_source(timer));*/
-    /*******************************************************************************************
-      *                              fin déclaration ALLEGRO                                    *
-       ******************************************************************************************/
-    /*******************************************************************************************
-      *                             chargement des images nécesaire au jeu                      *
-       ******************************************************************************************/
-
 
 
     Player joueur1;
     Player joueur2;
 
-    //new GameBoard(&joueur1,joueur1.getCollection());
 
-
-
-
-/*
-    ALLEGRO_DISPLAY *display;
-    assert(al_init());
-    display = al_create_display(1280, 752);
-    assert(display);
-
-
-    joueur1.setPseudo();
-
-    creerMaPremiereCollection(joueur1);
-    joueur1.createCollection("MaPremiereCollection.txt");
-
-    joueur1.afficher();
-
-    joueur1.addCardToMyCollection();
-    joueur1.afficher();
-
-    joueur1.saveCollection("Joueur1.txt");
-
-
-    creationDesCartesSpeciales();
-    creationDesCartesCreatures();
-    */
 
 
     int i, n = 0;
@@ -327,20 +246,6 @@ int main() {
     Game *jeu =new Game(new GameBoard(&joueur2, joueur1.getCollection()),new GameBoard(&joueur2,joueur2.getCollection())) ;
     jeu->playTheGame();
 
-/*
-    while (!isEnd) {
-        al_wait_for_event(queue, &event);
-        if (event.keyboard.keycode == ALLEGRO_KEY_ESCAPE) {
-            //le joueur passe son tour.
-        }
-        for (int j = 0; j < 3; ++j) //3 par default car normalement il n'y a que 3 zone qui ont des actions.
-        {
-            if (event.mouse.x >= posZone[i].x && event.mouse.x <= posZone[i].x + 90 &&
-                event.mouse.y >= posZone[i].y && event.mouse.y <= posZone[i].y + 65) {
-
-            }
-        }
-    }*/
 
 
 

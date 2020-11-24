@@ -65,7 +65,7 @@ void Game::drawPhase(GameBoard *GB, GameBoard *GB2) {
 
     std::cout << "\n\n\n\nvous avez tire : ";
     carteManipulee->afficher();
-
+//rajouter description carte
     std::cout << "\n\n              voulez vous utiliser cette carte (oui:1, non:0):\n";
     std::cin >> choix;
     if (choix) {
