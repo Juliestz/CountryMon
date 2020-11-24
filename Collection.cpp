@@ -23,7 +23,7 @@ void Collection::addCard(int type){
                 break;
 
             case 3 :
-                m_collection.push_back(new Special{"Coupe du monde", 3, "Vous avez gagne la coupe du monde! Bravo!"
+                m_collection.push_back(new Special{"Coupe du monde", 3, "Vous ave z gagne la coupe du monde! Bravo!"
                                                                      "Le moral des troupes est au plus haut. La puissance de votre creature en jeu est augmentee de 1."});
                 break;
 
