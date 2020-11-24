@@ -29,6 +29,8 @@ public:
 
     void newAttack(std::string name, std::vector<char> energyNeeded,int degats, bool available);
 
+    void afficher();
+
     virtual ~Creature() = default;
 
     virtual int mutHP(int montantDegats);

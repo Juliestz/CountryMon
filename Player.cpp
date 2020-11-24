@@ -96,6 +96,7 @@ void Player::saveCollection(std::string nameDoc) {
 
 void Player::createCollection(std::string nameDoc) {
 
+
     std::ifstream player{nameDoc};
 
     std::string pseudo;
