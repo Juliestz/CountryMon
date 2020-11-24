@@ -204,6 +204,7 @@ void initialisationDuJoueur(Player *joueur, int i, int n) {
 
 
 int main() {
+    srand((unsigned int) time(0));
     /*  ///initialisation des données nécessaire à ALLEGRO
       int mousePosX = 0;
       int mousePosY = 0;
