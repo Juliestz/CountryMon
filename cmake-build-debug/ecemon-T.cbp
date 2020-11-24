@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ecemon-T">
-				<Option output="C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/ecemon-T.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug"/>
+				<Option output="C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/ecemon-T.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -33,15 +33,15 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 ecemon-T"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/Makefile&quot;  VERBOSE=1 ecemon-T"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ecemon-T/fast">
-				<Option output="C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/ecemon-T.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug"/>
+				<Option output="C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/ecemon-T.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -55,103 +55,103 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/8.2.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 ecemon-T/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/Makefile&quot;  VERBOSE=1 ecemon-T/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/Attack.cpp">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/Attack.cpp">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/Attack.h">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/Attack.h">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/Card.cpp">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/Card.cpp">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/Card.h">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/Card.h">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/Collection.cpp">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/Collection.cpp">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/Collection.h">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/Collection.h">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/Creature.cpp">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/Creature.cpp">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/Creature.h">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/Creature.h">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/Energy.cpp">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/Energy.cpp">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/Energy.h">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/Energy.h">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/Game.cpp">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/Game.cpp">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/Game.h">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/Game.h">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/GameBoard.cpp">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/GameBoard.cpp">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/GameBoard.h">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/GameBoard.h">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/Init_ALLEGRO.cpp">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/Init_ALLEGRO.cpp">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/Init_ALLEGRO.h">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/Init_ALLEGRO.h">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/Player.cpp">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/Player.cpp">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/Player.h">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/Player.h">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/Show.cpp">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/Show.cpp">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/Show.h">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/Show.h">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/Special.cpp">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/Special.cpp">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/Special.h">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/Special.h">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/main.cpp">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/main.cpp">
 			<Option target="ecemon-T"/>
 		</Unit>
-		<Unit filename="C:/Users/Julie/CLionProjects/ecemon-T/CMakeLists.txt">
+		<Unit filename="C:/Users/Julie/CLionProjects/CountryMon/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

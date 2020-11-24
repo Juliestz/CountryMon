@@ -4,18 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Julie/CLionProjects/ecemon-T/Attack.cpp" "C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/CMakeFiles/ecemon-T.dir/Attack.cpp.obj"
-  "C:/Users/Julie/CLionProjects/ecemon-T/Card.cpp" "C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/CMakeFiles/ecemon-T.dir/Card.cpp.obj"
-  "C:/Users/Julie/CLionProjects/ecemon-T/Collection.cpp" "C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/CMakeFiles/ecemon-T.dir/Collection.cpp.obj"
-  "C:/Users/Julie/CLionProjects/ecemon-T/Creature.cpp" "C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/CMakeFiles/ecemon-T.dir/Creature.cpp.obj"
-  "C:/Users/Julie/CLionProjects/ecemon-T/Energy.cpp" "C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/CMakeFiles/ecemon-T.dir/Energy.cpp.obj"
-  "C:/Users/Julie/CLionProjects/ecemon-T/Game.cpp" "C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/CMakeFiles/ecemon-T.dir/Game.cpp.obj"
-  "C:/Users/Julie/CLionProjects/ecemon-T/GameBoard.cpp" "C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/CMakeFiles/ecemon-T.dir/GameBoard.cpp.obj"
-  "C:/Users/Julie/CLionProjects/ecemon-T/Init_ALLEGRO.cpp" "C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/CMakeFiles/ecemon-T.dir/Init_ALLEGRO.cpp.obj"
-  "C:/Users/Julie/CLionProjects/ecemon-T/Player.cpp" "C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/CMakeFiles/ecemon-T.dir/Player.cpp.obj"
-  "C:/Users/Julie/CLionProjects/ecemon-T/Show.cpp" "C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/CMakeFiles/ecemon-T.dir/Show.cpp.obj"
-  "C:/Users/Julie/CLionProjects/ecemon-T/Special.cpp" "C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/CMakeFiles/ecemon-T.dir/Special.cpp.obj"
-  "C:/Users/Julie/CLionProjects/ecemon-T/main.cpp" "C:/Users/Julie/CLionProjects/ecemon-T/cmake-build-debug/CMakeFiles/ecemon-T.dir/main.cpp.obj"
+  "C:/Users/Julie/CLionProjects/CountryMon/Attack.cpp" "C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/CMakeFiles/ecemon-T.dir/Attack.cpp.obj"
+  "C:/Users/Julie/CLionProjects/CountryMon/Card.cpp" "C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/CMakeFiles/ecemon-T.dir/Card.cpp.obj"
+  "C:/Users/Julie/CLionProjects/CountryMon/Collection.cpp" "C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/CMakeFiles/ecemon-T.dir/Collection.cpp.obj"
+  "C:/Users/Julie/CLionProjects/CountryMon/Creature.cpp" "C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/CMakeFiles/ecemon-T.dir/Creature.cpp.obj"
+  "C:/Users/Julie/CLionProjects/CountryMon/Energy.cpp" "C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/CMakeFiles/ecemon-T.dir/Energy.cpp.obj"
+  "C:/Users/Julie/CLionProjects/CountryMon/Game.cpp" "C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/CMakeFiles/ecemon-T.dir/Game.cpp.obj"
+  "C:/Users/Julie/CLionProjects/CountryMon/GameBoard.cpp" "C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/CMakeFiles/ecemon-T.dir/GameBoard.cpp.obj"
+  "C:/Users/Julie/CLionProjects/CountryMon/Init_ALLEGRO.cpp" "C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/CMakeFiles/ecemon-T.dir/Init_ALLEGRO.cpp.obj"
+  "C:/Users/Julie/CLionProjects/CountryMon/Player.cpp" "C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/CMakeFiles/ecemon-T.dir/Player.cpp.obj"
+  "C:/Users/Julie/CLionProjects/CountryMon/Show.cpp" "C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/CMakeFiles/ecemon-T.dir/Show.cpp.obj"
+  "C:/Users/Julie/CLionProjects/CountryMon/Special.cpp" "C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/CMakeFiles/ecemon-T.dir/Special.cpp.obj"
+  "C:/Users/Julie/CLionProjects/CountryMon/main.cpp" "C:/Users/Julie/CLionProjects/CountryMon/cmake-build-debug/CMakeFiles/ecemon-T.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

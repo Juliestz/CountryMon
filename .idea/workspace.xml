@@ -11,13 +11,45 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f28dbab4-0461-43cc-adcd-85ebf49a57b4" name="Default Changelist" comment="">
+    <list default="true" id="f28dbab4-0461-43cc-adcd-85ebf49a57b4" name="Default Changelist" comment="sauvegarde">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Collection.h" beforeDir="false" afterPath="$PROJECT_DIR$/Collection.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MaPremiereCollection.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MaPremiereCollection.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Player.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player.h" beforeDir="false" afterPath="$PROJECT_DIR$/Player.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/Attack.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/Attack.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/Card.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/Card.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/Collection.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/Collection.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/Creature.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/Creature.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/Energy.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/Energy.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/Game.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/Game.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/GameBoard.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/GameBoard.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/Init_ALLEGRO.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/Init_ALLEGRO.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/Player.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/Player.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/Special.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/Special.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ecemon-T.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ecemon-T.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ecemon-T.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ecemon-T.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ecemon-T.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file_save_player" beforeDir="false" afterPath="$PROJECT_DIR$/file_save_player" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,6 +138,7 @@
       <workItem from="1606077724708" duration="519000" />
       <workItem from="1606115110060" duration="12997000" />
       <workItem from="1606130582232" duration="12803000" />
+      <workItem from="1606154662792" duration="6996000" />
     </task>
     <task id="LOCAL-00001" summary="Special">
       <created>1605558186850</created>
@@ -470,10 +503,10 @@
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
     <state x="-1110" y="285" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606063970033" />
-    <state x="-1332" y="34" key="CommitChangelistDialog2" timestamp="1606151287081">
+    <state x="-1332" y="34" key="CommitChangelistDialog2" timestamp="1606162456020">
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
-    <state x="-1332" y="34" key="CommitChangelistDialog2/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606151287081" />
+    <state x="-1332" y="34" key="CommitChangelistDialog2/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606162456020" />
     <state x="265" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1605979833362" />
     <state x="140" y="31" key="DiffContextDialog" timestamp="1605967722296">
       <screen x="0" y="0" width="1280" height="680" />
@@ -484,25 +517,25 @@
     </state>
     <state x="-655" y="175" key="FileChooserDialogImpl/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606130315670" />
     <state x="781" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1605983016519" />
-    <state width="1637" height="271" key="GridCell.Tab.0.bottom" timestamp="1606151310656">
+    <state width="1637" height="271" key="GridCell.Tab.0.bottom" timestamp="1606162405461">
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
-    <state width="1637" height="271" key="GridCell.Tab.0.bottom/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606151310656" />
+    <state width="1637" height="271" key="GridCell.Tab.0.bottom/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606162405461" />
     <state width="1637" height="336" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1606130551141" />
-    <state width="1637" height="271" key="GridCell.Tab.0.center" timestamp="1606151310656">
+    <state width="1637" height="271" key="GridCell.Tab.0.center" timestamp="1606162405461">
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
-    <state width="1637" height="271" key="GridCell.Tab.0.center/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606151310656" />
+    <state width="1637" height="271" key="GridCell.Tab.0.center/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606162405461" />
     <state width="1637" height="336" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1606130551141" />
-    <state width="1637" height="271" key="GridCell.Tab.0.left" timestamp="1606151310656">
+    <state width="1637" height="271" key="GridCell.Tab.0.left" timestamp="1606162405461">
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
-    <state width="1637" height="271" key="GridCell.Tab.0.left/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606151310656" />
+    <state width="1637" height="271" key="GridCell.Tab.0.left/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606162405461" />
     <state width="1637" height="336" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1606130551141" />
-    <state width="1637" height="271" key="GridCell.Tab.0.right" timestamp="1606151310656">
+    <state width="1637" height="271" key="GridCell.Tab.0.right" timestamp="1606162405461">
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
-    <state width="1637" height="271" key="GridCell.Tab.0.right/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606151310656" />
+    <state width="1637" height="271" key="GridCell.Tab.0.right/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606162405461" />
     <state width="1637" height="336" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1606130551141" />
     <state width="1637" height="336" key="GridCell.Tab.1.bottom" timestamp="1606142133636">
       <screen x="-1680" y="34" width="1680" height="1010" />
@@ -524,14 +557,14 @@
     </state>
     <state width="1637" height="336" key="GridCell.Tab.1.right/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606142133636" />
     <state width="1637" height="336" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1606130551141" />
-    <state x="-1360" y="248" key="MergeDialog" timestamp="1606149727071">
+    <state x="-1360" y="248" key="MergeDialog" timestamp="1606162450223">
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
-    <state x="-1360" y="248" key="MergeDialog/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606149727071" />
-    <state x="-1128" y="254" key="MultipleFileMergeDialog" timestamp="1606149727098">
+    <state x="-1360" y="248" key="MergeDialog/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606162450223" />
+    <state x="-1128" y="254" key="MultipleFileMergeDialog" timestamp="1606162450242">
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
-    <state x="-1128" y="254" key="MultipleFileMergeDialog/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606149727098" />
+    <state x="-1128" y="254" key="MultipleFileMergeDialog/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606162450242" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1606032531128">
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
@@ -545,19 +578,20 @@
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
     <state x="-1588" y="126" width="1496" height="826" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606142095814" />
-    <state x="-1089" y="416" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606151300974">
+    <state x="-1089" y="416" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606162417691">
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
-    <state x="-1089" y="416" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606151300974" />
+    <state x="-1089" y="416" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606162417691" />
     <state x="450" y="257" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1605979805522" />
     <state x="-1202" y="230" key="git4idea.merge.GitPullDialog" timestamp="1606077775242">
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
     <state x="-1202" y="230" key="git4idea.merge.GitPullDialog/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606077775242" />
     <state x="364" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1605967603712" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1605807290459">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="-1282" y="35" width="882" height="1008" key="search.everywhere.popup" timestamp="1606156140666">
+      <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
+    <state x="-1282" y="35" width="882" height="1008" key="search.everywhere.popup/0.0.1280.680/-1680.34.1680.1010@-1680.34.1680.1010" timestamp="1606156140666" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1605807290459" />
   </component>
   <component name="XDebuggerManager">

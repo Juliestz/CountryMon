@@ -20,10 +20,13 @@ private:
     int m_money;
     Collection m_collectionj;
 
+
 public:
     Player();
-    void setPseudo();
-    std::string getPseudo();
+    void setPseudo(std::string pseudo);
+    //std::string getPseudo();
+    //int setMoney(int money);
+    void getInfo(std::string nameDoc);
     void afficher();
     void saveCollection(std::string nameDoc);
     void createCollection(std::string nameDoc);
