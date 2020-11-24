@@ -194,7 +194,7 @@ std::cout<< "a";
                 std::cout << i + 1 << "carte :" << tabRepDeColl[i]->getName() << std::endl;
             }
 
-            std::cout << std::endl << "choisisser une carte à ajouter au deck et mettez 0 quand vous avez fini :";
+            std::cout << std::endl << "choisisser une carte a ajouter au deck et mettez 0 quand vous avez fini :";
             std::cin >> choix2;
 
             //selection des cartes

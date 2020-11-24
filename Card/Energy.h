@@ -13,7 +13,6 @@
 class Energy : public Card {
 
 protected:
-
     std::string m_description;
 public:
     Energy();
