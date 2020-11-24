@@ -161,7 +161,7 @@ void initialisationDuJoueur(Player *joueur, int i, int n) {
         joueur->afficher();
 
         std::cout
-                << "avant que  la partie commence vous avez la possibilte d'agrandir votre collection en achetant des cartes. 1/oui   2/non?"
+                << "avant que la partie commence vous avez la possibilte d'agrandir votre collection en achetant des cartes. 1/oui   0/non?"
                 << std::endl;
         std::cin >> k;
         acheterUnPack(joueur, k);
@@ -301,7 +301,7 @@ int main() {
     n = lectureDoc("../file_save_player");// on lit le fichier avec le nombre de joueur sauvegardé
 
     std::cout << "il y a : " << n << " joueur sauvegarde" << std::endl;
-    std::cout << " Joueur 1 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
+    std::cout << " Joueur 1 voulez-vous utiliser un compte existant? 1/oui   0/non?" << std::endl;
     std::cin >> i;
     if (i == 1){
         if (n != 0){
@@ -320,7 +320,7 @@ int main() {
     n = lectureDoc("../file_save_player");
     std::cout << "il y a : " << n << " joueur sauvegarde" << std::endl;
 
-    std::cout << " Joueur 2 voulez-vous utiliser un compte existant? 1/oui   2/non?" << std::endl;
+    std::cout << " Joueur 2 voulez-vous utiliser un compte existant? 1/oui   0/non?" << std::endl;
     std::cin >> i;
     initialisationDuJoueur(&joueur2, i,n);
 

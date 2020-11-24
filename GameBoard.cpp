@@ -249,7 +249,7 @@ void GameBoard::creatADeck() {
     int choix2;
 
 
-    std::cout << "choisir les cartes du deck? (0:oui, 1:non)\n\n";
+    std::cout << "choisir les cartes du deck? (1:oui, 0:non)\n\n";
     std::cin >> choix;
 
 
@@ -289,7 +289,7 @@ void GameBoard::creatADeck() {
     std::cout << "a";
     int nbRand;
 
-    if (choix) {
+    if (choix == 0) {
 
 
         for (int j = 0; j < NB_CARD_DECK; ++j) {
