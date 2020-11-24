@@ -57,6 +57,15 @@ std::vector<Attack *> Creature::getAttaque() {
     return std::vector<Attack *>(m_attacks);
 }
 
+void Creature::attack(GameBoard gameBoard, std::vector<Attack*> attacks) {
+    if (m_attacks[0]->isChosen() == 1 ){
+        gameBoard.recoisDegats(m_attacks[0]->getDegats() );
+    }
+    else if (m_attacks[1]->isChosen() == 1){
+        gameBoard.recoisDegats(m_attacks[1]->getDegats());
+    }
+}
+
 int Creature::getHP() {
     return m_HP;
 }

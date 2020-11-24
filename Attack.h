@@ -16,6 +16,7 @@ private:
     bool m_available = 0;
     std::vector<int> m_energyNeeded;
     int m_degats;
+    bool m_chosen;
 public:
     Attack(std::string name, std::vector<int> energyNeeded, int degats, bool available);
 
@@ -28,6 +29,8 @@ public:
     void afficherBesoins();
 
     void afficher();
+
+    bool isChosen(); // sert a indiquer a la creature qui joue si le joueur a choisi d utiliser l attaque 1 ou 2
 
     ~Attack();
 

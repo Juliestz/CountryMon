@@ -9,6 +9,7 @@
 #include <iostream>
 #include <vector>
 #include "../Attack.h"
+#include "GameBoard.h"
 
 
 class Creature : public Card {
@@ -39,7 +40,8 @@ public:
 
     virtual int getHP();
 
-    virtual int utilisation(char phase);
+    void attack(GameBoard gameBoard, std::vector<Attack*> attacks); // sert a efectuer l attaque donc retrancher les points de degats au nb d HP de la creature adverse
+
 
     //void serialize(std::ostream &os) const;
 
