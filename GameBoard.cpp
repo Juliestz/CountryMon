@@ -52,7 +52,7 @@ void GameBoard::displayL1() {
         std::cout << m_cemetary->getName();
         taille = m_cemetary->getName().size();
     } else {
-        std::cout << "cimetiere";
+        std::cout << "\ncimetiere";
         taille = 9;
     }
 
@@ -91,17 +91,19 @@ void GameBoard::displayL1() {
 
     std::cout << std::endl;
     if (m_creature != nullptr && m_creature->getState()) {
-        for (int i = 0; i < taille; ++i) {
+        for (int i = 0; i < 45; ++i) {
             std::cout << " ";
         }
-        std::cout << "PV : " << m_creature->getHP();
+        std::cout << "PV de la creature : " << m_creature->getHP();
     }
+    std::cout << "\n";
+
 }
 
 
 void GameBoard::displayL2() {
 
-    std::cout << "\n\nEnergies :\n";
+    std::cout << "\nEnergies :\n";
     std::cout << "     Politique : " << m_tabElements[0] << "   Militaire : " << m_tabElements[1];
 
     for (int i = 0; i < 50; ++i) {
@@ -109,7 +111,7 @@ void GameBoard::displayL2() {
     }
     std::cout << "DECK";
 
-    std::cout << "\n     Scientifique : " << m_tabElements[2] << "   Militaire : " << m_tabElements[3];
+    std::cout << "\n     Scientifique : " << m_tabElements[2] << "   Ressources : " << m_tabElements[3];
 
 }
 

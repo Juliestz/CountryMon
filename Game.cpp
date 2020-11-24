@@ -65,9 +65,9 @@ void Game::drawPhase(GameBoard *GB, GameBoard *GB2) {
     Card *carteManipulee = GB->pickUp();
     int choix;
 
-    std::cout << "vous avez tire : " << carteManipulee->getName();
+    std::cout << "\n\n\n\mvous avez tire : " << carteManipulee->getName();
 
-    std::cout << "voulez vous utiliser cette carte (oui:1, non:0):\n";
+    std::cout << "\n\n              voulez vous utiliser cette carte (oui:1, non:0):\n";
     std::cin >> choix;
     if (choix) {
 
@@ -121,6 +121,7 @@ void Game::playTheGame() {
     m_GB2->creatADeck();
     char perdant = 1;
     bool partieContinue = true;
+    char inutil;
     m_GB2->getCarteEnjeux();
     m_GB1->getCarteEnjeux();
 
@@ -129,8 +130,15 @@ void Game::playTheGame() {
         this->dislay(m_GB1, m_GB2);
         this->drawPhase(m_GB1, m_GB2);
 
+        std::cout << "\n\n terminez votre tour";
+        std::cin >> inutil;
+
         this->dislay(m_GB2, m_GB1);
         this->drawPhase(m_GB2, m_GB1);
+
+        std::cout << "\n\n terminez votre tour";
+        std::cin >> inutil;
+
     }
 
     do {
@@ -138,9 +146,15 @@ void Game::playTheGame() {
         this->dislay(m_GB1, m_GB2);
         partieContinue = playATurn(m_GB1, m_GB2);
 
+        std::cout << "\n\n terminez votre tour";
+        std::cin >> inutil;
+
         if (partieContinue && isEmpty(m_GB2)) {
             this->dislay(m_GB2, m_GB1);
             partieContinue = playATurn(m_GB2, m_GB1);
+
+            std::cout << "\n\n terminez votre tour";
+            std::cin >> inutil;
 
         } else {
             perdant = 2;
@@ -148,7 +162,10 @@ void Game::playTheGame() {
 
     } while (partieContinue && isEmpty(m_GB1));
 
+    std::cout << "\n\n\n\nvous avez perdu ";
+
     if (perdant == 1) {
+
         m_GB2->addCardToColl(m_GB1->removeCardToColl());
 
     } else if (perdant == 2) {
@@ -161,13 +178,26 @@ void Game::playTheGame() {
 }
 
 void Game::dislay(GameBoard *GB, GameBoard *GB2) {
+    char a = 6;
+
     std::cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
 
     GB2->displayL2();
+    std::cout << "\n";
     GB2->displayL1();
-    std::cout << "\n\n                 BATTLEFIELD\n\n";
+    for (int i = 0; i < 120; ++i) {
+        std::cout << a;
+    }
+    std::cout << "\n\n                              BATTLEFIELD\n\n";
+
+    for (int i = 0; i < 120; ++i) {
+        std::cout << a;
+    }
     GB->displayL1();
+    std::cout << "\n";
     GB->displayL2();
+    std::cout << "\n";
+
 }
 
 
