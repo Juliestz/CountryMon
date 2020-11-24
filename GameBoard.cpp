@@ -178,33 +178,49 @@ void GameBoard::addCardToDeck(int type) {
             //Creatures
         case 12 :
             m_deck.push(new Creature{"FRANCE", 12, 7, 1});
+            (m_deck.back())->newAttack("L'effroyable en eaux profondes", {2, 1, 0, 0}, 2, 0);
+            (m_deck.back())->newAttack("Constellation de satellites", {1, 0, 2, 1}, 3, 0);
             break;
 
         case 13 :
             m_deck.push(new Creature{"USA", 13, 7, 1});
+            (m_deck.back())->newAttack("Otan", {2, 0, 1, 1}, 3, 0);
+            (m_deck.back())->newAttack("Bombe a hydrogen", {0, 1, 2, 1}, 2, 0);
             break;
 
         case 14 :
             m_deck.push(new Creature{"RUSSIA", 14, 7, 1});
+            (m_deck.back())->newAttack("KGB", {1, 2, 0, 1}, 2, 0);
+            (m_deck.back())->newAttack("Armee rouge", {1, 1, 1, 1}, 3, 0);
             break;
 
         case 15 :
             m_deck.push(new Creature{"CHINA", 15, 7, 1});
+            (m_deck.back())->newAttack("Invasion a la tibetaine", {1, 1, 1, 1}, 2, 0);
+            (m_deck.back())->newAttack("Piratage numerique", {0, 1, 2, 1}, 5, 0);
             break;
 
         case 16 :
             m_deck.push(new Creature{"NORTH KOREA", 16, 7, 1});
+            (m_deck.back())->newAttack("Invasion mondiale", {0, 2, 1, 1}, 2, 0);
+            (m_deck.back())->newAttack("Missile nucleaire", {1, 1, 2, 1}, 5, 0);
             break;
 
         case 17 :
             m_deck.push(new Creature{"DUTSCHLAND", 17, 7, 1});
+            (m_deck.back())->newAttack("Blitzkrieg", {1, 1, 2, 0}, 3, 0);
+            (m_deck.back())->newAttack("Luftwaffe", {0, 1, 1, 1}, 2, 0);
             break;
 
         case 18 :
             m_deck.push(new Creature{"IRAN", 18, 7, 1});
+            (m_deck.back())->newAttack("Crise du petrole", {2, 0, 0, 1}, 3, 0);
+            (m_deck.back())->newAttack("Bouclier spatiale", {0, 1, 1, 2}, 2, 0);
             break;
         case 19 :
             m_deck.push(new Creature{"JAPAN", 19, 7, 1});
+            (m_deck.back())->newAttack("Sous-marin nucleaire", {1, 1, 1, 1}, 2, 0);
+            (m_deck.back())->newAttack("Attaque DDOS", {0, 1, 2, 1}, 3, 0);
             break;
     }
 }
