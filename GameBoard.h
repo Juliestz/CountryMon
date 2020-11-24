@@ -75,6 +75,8 @@ public:
 
     int removeCardToColl();
 
+    bool creatPos();
+
 };
 
 

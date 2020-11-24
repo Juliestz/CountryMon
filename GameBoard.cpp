@@ -447,7 +447,7 @@ void GameBoard::creatADeck() {
 }
 
 void GameBoard::recoisDegats(const int &montantDegats) {
-    if (m_creature->getHP() > 0 && m_creature->getHP() < 30) {
+    if (m_creature != nullptr) {
         bool temoins = m_creature->getState();
         m_PV -= m_creature->mutHP(montantDegats);
         if (temoins != m_creature->getState()) {
@@ -537,7 +537,7 @@ void GameBoard::putAnEnergy(const char &numCarte) {
 }
 
 void GameBoard::enleverHP(const int &nb) {
-    if (m_creature!= nullptr) {
+    if (m_creature != nullptr) {
         bool temoins = m_creature->getState();
         m_creature->mutHP(nb);
         if (temoins != m_creature->getState()) {
@@ -589,6 +589,14 @@ GameBoard::~GameBoard() {
     delete m_cemetary;
     delete m_creature;
     delete m_permanente;
+}
+
+bool GameBoard::creatPos() {
+    if (m_creature == nullptr) {
+        return false;
+    } else {
+        return true;
+    }
 }
 
 
