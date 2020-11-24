@@ -45,10 +45,12 @@ void Creature::newAttack(std::string name, std::vector<char> energyNeeded, int d
     m_attacks.push_back(new Attack(name, energyNeeded, degats, available));
 }
 
-void Creature::afficher(){
+void Creature::afficher() const{
     Card::afficher();
-    std::cout<< m_attacks[0] <<std::endl;
-    std::cout<< m_attacks[1] <<std::endl;
+    std::cout<< "Attack 1 : ";
+    m_attacks[0]->afficher();
+    std::cout<< "Attack 2 : ";
+    m_attacks[1]->afficher();
 }
 
 std::vector<Attack *> Creature::getAttaque() {

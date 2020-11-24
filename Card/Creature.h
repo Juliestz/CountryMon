@@ -29,7 +29,7 @@ public:
 
     void newAttack(std::string name, std::vector<char> energyNeeded,int degats, bool available);
 
-    virtual void afficher();
+    virtual void afficher() const;
 
     virtual ~Creature() = default;
 

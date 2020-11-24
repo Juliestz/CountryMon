@@ -25,6 +25,10 @@ public:
 
     std::string getName() const ;
 
+    void afficherBesoins();
+
+    void afficher();
+
     ~Attack();
 
 };

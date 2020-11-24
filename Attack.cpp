@@ -21,6 +21,14 @@ bool Attack::attackAvailable(std::vector<char> elements) {
     return m_available;
 }
 
+
+void Attack::afficher(){
+    std::cout<< m_name << ", degats : " << m_degats << ", besoins : ";
+    for (size_t i = 0; i < m_energyNeeded.size(); i++){
+        std::cout << m_energyNeeded[i];
+    }
+}
+
 Attack::~Attack() {}
 
 int Attack::getDeg() const {
