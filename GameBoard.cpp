@@ -110,11 +110,111 @@ void GameBoard::putACard(Creature *cartePiochee) {
     m_creature = cartePiochee;
 }
 
+
+void GameBoard::addCardToDeck(int type) {
+    switch (type) {
+        //Specials
+        case 1 :
+            m_deck.push(new Special{"Six Aout 45", 1,
+                                    "Vous lancez une bombe atomique sur la creature adverse : elle perd 2 HP."
+                                    " Malheureusement la deflagration est tres grande et fait perdre 1 HP a votre propre creature."});
+            break;
+
+        case 2 :
+            m_deck.push(new Special{"James Bond", 2, "Vous envoyez un espion pour savoir quelle sera la prochaine carte"
+                                                     " tiree par le joueur adverse."});
+            break;
+
+        case 3 :
+            m_deck.push(new Special{"Coupe du monde", 3, "Vous ave z gagne la coupe du monde! Bravo!"
+                                                         "Le moral des troupes est au plus haut. La puissance de votre creature en jeu est augmentee de 1."});
+            break;
+
+        case 4 :
+            m_deck.push(new Special{"Triple Entente", 4,
+                                    "Vous vous alliez avec d'autres puissances. Vous pouvez deffausser cette carte"
+                                    " et en piocher deux autre pour les jouer dans ce tour."});
+            break;
+
+        case 5 :
+            m_deck.push(new Special{"Hopital", 5,
+                                    "Votre systeme de sante se remet de la crise sanitaire mais est plus performant que jamais."
+                                    " Votre creature gagne 2 PV."});
+            break;
+
+        case 6 :
+            m_deck.push(new Special{"Pandemie", 6,
+                                    "La crise fait rage, vous perdez beaucoup de ressources pendant que votre population "
+                                    "est en confinement. Vous et votre ennemi perdez une carte Energie mais VOUS choisissez de quel type il s'agira."});
+            break;
+
+        case 7 :
+            m_deck.push(new Special{"Territoire", 7,
+                                    "Vous faites reculer l'ennemi dans son camp, enlevez lui une carte permanante "
+                                    "qui se trouve sur son plateau."});
+            break;
+
+            //Energy
+        case 8 :
+            m_deck.push(new Energy{"Royaume", 8, "Votre nation possede un regime politique stable et puissant, cela vous permet "
+                                                            "de lancer des attaques de type Politique."});
+            break;
+
+        case 9 :
+            m_deck.push(new Energy{"Loi de Programmation", 9, "Votre Hard Power se developpe, votre budget defense augmente,"
+                                                                         "vous pouvez désormais lancer des attaques de type militaire."});
+            break;
+
+        case 10 :
+            m_deck.push(new Energy{"R&D", 10, "Votre pays est un pays de savants, votre  avance technologique vous permet de "
+                                                         "lancer des attaques de type Scientifique."});
+            break;
+
+        case 11 :
+            m_deck.push(new Energy{"ITER", 11, "Vous etes auto-suffisant en energie, vos centrales electriques tournent a plein regime"
+                                                          "vous pouvez lancer des attaques de type Ressource."});
+            break;
+
+            //Creatures
+        case 12 :
+            m_deck.push(new Creature{"FRANCE", 12, 7, 1});
+            break;
+
+        case 13 :
+            m_deck.push(new Creature{"USA", 13, 7, 1});
+            break;
+
+        case 14 :
+            m_deck.push(new Creature{"RUSSIA", 14, 7, 1});
+            break;
+
+        case 15 :
+            m_deck.push(new Creature{"CHINA", 15, 7, 1});
+            break;
+
+        case 16 :
+            m_deck.push(new Creature{"NORTH KOREA", 16, 7, 1});
+            break;
+
+        case 17 :
+            m_deck.push(new Creature{"DUTSCHLAND", 17, 7, 1});
+            break;
+
+        case 18 :
+            m_deck.push(new Creature{"IRAN", 18, 7, 1});
+            break;
+        case 19 :
+            m_deck.push(new Creature{"JAPAN", 19, 7, 1});
+            break;
+    }
+}
+
+
 void GameBoard::creatADeck() {
     int choix;
     int choix2;
 
-std::cout<< "a";
+    std::cout << "a";
     std::cout << "choisir les cartes du deck? (0:oui, 1:non)\n\n";
     std::cin >> choix;
 
@@ -122,7 +222,8 @@ std::cout<< "a";
     std::vector<Card *> tabRepDeColl;
 
     Card carteAuDeck;
-    std::cout<< "a";
+
+    /*
     for (auto it : m_collection->getCardsCollection()) {
 
         carteAuDeck = *it;
@@ -140,7 +241,18 @@ std::cout<< "a";
             *tabRepDeColl.back() = *it;
 
         }
-    }std::cout<< "a";
+    }*/
+
+
+    for (auto it : m_collection->getCardsCollection()) {
+
+        carteAuDeck = *it;
+        tabRepDeColl.push_back(new Card());
+        *tabRepDeColl.back() = *it;
+
+    }
+
+    std::cout << "a";
     int nbRand;
 
     if (choix) {
@@ -149,8 +261,8 @@ std::cout<< "a";
         for (int j = 0; j < NB_CARD_DECK; ++j) {
             nbRand = rand() % tabRepDeColl.size();
 
-
-            if (tabRepDeColl[nbRand]->getNum() < 8) {
+            this->addCardToDeck(tabRepDeColl[nbRand]->getNum());
+            /*if (tabRepDeColl[nbRand]->getNum() < 8) {
 
                 m_deck.push(new Special());
                 *m_deck.back() = *tabRepDeColl[nbRand];
@@ -163,11 +275,11 @@ std::cout<< "a";
                 m_deck.push(new Creature());
                 *m_deck.back() = *tabRepDeColl[nbRand];
 
-            }
+            }*/
 
             delete tabRepDeColl[nbRand];
 
-
+            /*
             if (tabRepDeColl.back()->getNum() < 8) {
                 tabRepDeColl[nbRand] = (new Special());
 
@@ -177,7 +289,7 @@ std::cout<< "a";
             } else {
                 tabRepDeColl[nbRand] = (new Creature());
             }
-
+            */
             tabRepDeColl[nbRand] = tabRepDeColl.back();
             delete tabRepDeColl.back();
             tabRepDeColl.pop_back();
@@ -194,15 +306,18 @@ std::cout<< "a";
                 std::cout << i + 1 << "carte :" << tabRepDeColl[i]->getName() << std::endl;
             }
 
-            std::cout << std::endl << "choisisser une carte a ajouter au deck et mettez 0 quand vous avez fini :";
+            std::cout << std::endl << "choisisser une carte à ajouter au deck :";
             std::cin >> choix2;
 
             //selection des cartes
 
-            if (choix2 > 0 && choix2 < tabRepDeColl.size() + 1 && m_deck.size() != NB_CARD_DECK) {
+            if (choix2 > 0 && choix2 < tabRepDeColl.size() + 1 && tabRepDeDeck.size() != NB_CARD_DECK) {
                 choix2--;
 
-                if (tabRepDeColl[choix2]->getNum() < 8) {
+                tabRepDeDeck.push_back(new Card());
+                *tabRepDeDeck.back() = *tabRepDeColl[choix2];
+
+                /*if (tabRepDeColl[choix2]->getNum() < 8) {
 
                     tabRepDeDeck.push_back(new Special());
                     *tabRepDeDeck.back() = *tabRepDeColl[choix2];
@@ -215,11 +330,11 @@ std::cout<< "a";
                     tabRepDeDeck.push_back(new Creature());
                     *tabRepDeDeck.back() = *tabRepDeColl[choix2];
 
-                }
+                }*/
 
                 delete tabRepDeColl[choix2];
 
-                if (tabRepDeColl.back()->getNum() < 8) {
+                /*if (tabRepDeColl.back()->getNum() < 8) {
                     tabRepDeColl[choix2] = (new Special());
 
                 } else if (tabRepDeColl.back()->getNum() < 12) {
@@ -227,18 +342,18 @@ std::cout<< "a";
 
                 } else {
                     tabRepDeColl[choix2] = (new Creature());
-                }
+                }*/
 
                 tabRepDeColl[choix2] = tabRepDeColl.back();
                 delete tabRepDeColl.back();
                 tabRepDeColl.pop_back();
 
-            } else if (m_deck.size() < NB_CARD_DECK) {
-                std::cout << "vous devez rajouter des cartes au deck";
+            } else if (tabRepDeDeck.size() < NB_CARD_DECK) {
+                std::cout << "\nvous devez rajouter des cartes existantes au deck\n";
             }
 
 
-        } while (m_deck.size() != NB_CARD_DECK);
+        } while (tabRepDeDeck.size() != NB_CARD_DECK);
 
         //on bar les cartes
 
@@ -247,6 +362,9 @@ std::cout<< "a";
             nbRand = rand() % tabRepDeColl.size();
 
 
+            this->addCardToDeck(tabRepDeColl[nbRand]->getNum());
+
+            /*
             if (tabRepDeDeck[nbRand]->getNum() < 8) {
 
                 m_deck.push(new Special());
@@ -260,11 +378,11 @@ std::cout<< "a";
                 m_deck.push(new Creature());
                 *m_deck.back() = *tabRepDeDeck[nbRand];
 
-            }
+            }*/
 
             delete tabRepDeDeck[nbRand];
 
-
+            /*
             if (tabRepDeDeck.back()->getNum() < 8) {
                 tabRepDeDeck[nbRand] = (new Special());
 
@@ -273,7 +391,7 @@ std::cout<< "a";
 
             } else {
                 tabRepDeDeck[nbRand] = (new Creature());
-            }
+            }*/
 
             tabRepDeDeck[nbRand] = tabRepDeDeck.back();
             delete tabRepDeDeck.back();

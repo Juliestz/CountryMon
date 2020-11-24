@@ -50,19 +50,23 @@ void Collection::addCard(int type){
 
                 //Energy
             case 8 :
-                m_collection.push_back(new Energy{"Politique", 8, ""});
+                m_collection.push_back(new Energy{"Royaume", 8, "Votre nation possede un regime politique stable et puissant, cela vous permet "
+                                                                  "de lancer des attaques de type Politique."});
                 break;
 
             case 9 :
-                m_collection.push_back(new Energy{"Militaire", 9, ""});
+                m_collection.push_back(new Energy{"Loi de Programmation", 9, "Votre Hard Power se developpe, votre budget defense augmente,"
+                                                                  "vous pouvez désormais lancer des attaques de type militaire."});
                 break;
 
             case 10 :
-                m_collection.push_back(new Energy{"Scientifique", 10, ""});
+                m_collection.push_back(new Energy{"R&D", 10, "Votre pays est un pays de savants, votre  avance technologique vous permet de "
+                                                                      "lancer des attaques de type Scientifique."});
                 break;
 
             case 11 :
-                m_collection.push_back(new Energy{"Ressource", 11, ""});
+                m_collection.push_back(new Energy{"ITER", 11, "Vous etes auto-suffisant en energie, vos centrales electriques tournent a plein regime"
+                                                                   "vous pouvez lancer des attaques de type Ressource."});
                 break;
 
                 //Creatures
