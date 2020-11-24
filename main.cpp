@@ -140,11 +140,19 @@ void acheterUnPack(Player *joueur, int i){
 
 void initialisationDuJoueur(Player *joueur, int i, int n) {
     std::string name;
+    std::string numero;
     int k = 0;
     if (i == 1) {
-        std::cout << " quel compte souhaitez vous utiliser ? (entrez son numero)" << std::endl;
         std::string fichier = "../player";
         std::string extension = ".txt";
+        for (int m = 0; m < n; m++){
+            numero = fonctionNum(m);
+            std::string nomFichier = fichier + numero + extension;
+            name = joueur->getPseudo(nomFichier);
+            std::cout<< numero << " :  " << name <<std::endl;
+        }
+
+        std::cout<< " quel compte souhaitez vous utiliser ? (entrez son numero)" << std::endl;
         std::string j;
         std::cin>> j;
         std::string nomFichier = fichier + j + extension;

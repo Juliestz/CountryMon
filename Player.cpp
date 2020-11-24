@@ -17,11 +17,17 @@ void Player::setPseudo(std::string pseudo) {
     m_pseudo = pseudo;
 }
 
-/*
-std::string Player::getPseudo(){
-    return m_pseudo;
-}
 
+std::string Player::getPseudo(std::string nameDoc){
+    std::ifstream player{nameDoc};
+
+    std::string pseudo;
+    player >> pseudo;
+
+    player.close();
+    return pseudo;
+}
+/*
 int Player::setMoney(int money) {
     m_money = money;
 }

@@ -24,7 +24,7 @@ private:
 public:
     Player();
     void setPseudo(std::string pseudo);
-    //std::string getPseudo();
+    std::string getPseudo(std::string nameDoc);
     //int setMoney(int money);
     void getInfo(std::string nameDoc);
     void afficher();
