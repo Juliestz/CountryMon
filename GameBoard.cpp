@@ -57,14 +57,14 @@ void GameBoard::displayL1() {
     }
 
     if (m_creature != nullptr && m_creature->getState()) {
-        taille = 60 - (taille + m_creature->getName().size() / 2);
+        taille = 55 - (taille + m_creature->getName().size() / 2);
         for (int i = 0; i < taille; ++i) {
             std::cout << " ";
         }
         std::cout << m_creature->getName();
 
     } else {
-        taille = 60 - (taille + 10);
+        taille = 50 - (taille + 10);
         for (int i = 0; i < taille; ++i) {
             std::cout << " ";
         }
@@ -73,7 +73,7 @@ void GameBoard::displayL1() {
 
     if (m_permanente != nullptr) {
 
-        taille = 120 - (taille + m_permanente->getName().size());
+        taille = 110 - (taille + m_permanente->getName().size());
         for (int i = 0; i < taille; ++i) {
             std::cout << " ";
         }
@@ -81,7 +81,7 @@ void GameBoard::displayL1() {
         std::cout << m_permanente->getName();
 
     } else {
-        taille = 120 - (taille + 23);
+        taille = 90 - (taille + 23);
         for (int i = 0; i < taille; ++i) {
             std::cout << " ";
         }
@@ -96,17 +96,17 @@ void GameBoard::displayL1() {
         }
         std::cout << "PV de la creature : " << m_creature->getHP();
     }
-    std::cout << "\n";
+
 
 }
 
 
 void GameBoard::displayL2() {
 
-    std::cout << "\nEnergies :\n";
+    std::cout << "Energies :\n";
     std::cout << "     Politique : " << m_tabElements[0] << "   Militaire : " << m_tabElements[1];
 
-    for (int i = 0; i < 40; ++i) {
+    for (int i = 0; i < 30; ++i) {
         std::cout << " ";
     }
     std::cout << " PV :" << m_PV;

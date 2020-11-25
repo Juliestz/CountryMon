@@ -55,6 +55,69 @@ void Game::utilisationDeCarteEvent(Special *Carte, GameBoard *GB, GameBoard *M_o
 
 Game::Game(GameBoard *GB1, GameBoard *GB2) : m_GB1{GB1}, m_GB2{GB2} {}
 
+void Game::playTheGame() {
+
+    m_GB1->creatADeck();
+    m_GB2->creatADeck();
+    char perdant = 1;
+    bool partieContinue = true;
+    char inutil;
+    m_GB2->getCarteEnjeux();
+    m_GB1->getCarteEnjeux();
+
+    //preparation phase
+
+    for (int i = 0; i < 5; ++i) {
+        this->dislay(m_GB1, m_GB2);
+        this->drawPhase(m_GB1, m_GB2);
+
+        std::cout << "\n\n terminez votre tour";
+        std::cin >> inutil;
+
+        this->dislay(m_GB2, m_GB1);
+        this->drawPhase(m_GB2, m_GB1);
+
+        std::cout << "\n\n terminez votre tour";
+        std::cin >> inutil;
+
+    }
+
+    do {
+
+        this->dislay(m_GB1, m_GB2);
+        partieContinue = playATurn(m_GB1, m_GB2);
+
+        std::cout << "\n\n terminez votre tour";
+        std::cin >> inutil;
+
+        if (partieContinue && isEmpty(m_GB2)) {
+            this->dislay(m_GB2, m_GB1);
+            partieContinue = playATurn(m_GB2, m_GB1);
+
+            std::cout << "\n\n terminez votre tour";
+            std::cin >> inutil;
+
+        } else {
+            perdant = 2;
+        }
+
+    } while (partieContinue && isEmpty(m_GB1));
+
+    std::cout << "\n\n\n\nvous avez perdu ";
+
+    if (perdant == 1) {
+
+        m_GB2->addCardToColl(m_GB1->removeCardToColl());
+
+    } else if (perdant == 2) {
+        m_GB1->addCardToColl(m_GB2->removeCardToColl());
+
+    } else {
+        std::cout << "problemme de perdant";
+    }
+
+}
+
 bool Game::playATurn(GameBoard *GB, GameBoard *GB2) {
 //le joueur 1 joue en premier
     this->drawPhase(GB, GB2);
@@ -124,69 +187,6 @@ bool Game::isEmpty(GameBoard *GB) {
     return GB->isEmpty();
 }
 
-
-void Game::playTheGame() {
-
-    m_GB1->creatADeck();
-    m_GB2->creatADeck();
-    char perdant = 1;
-    bool partieContinue = true;
-    char inutil;
-    m_GB2->getCarteEnjeux();
-    m_GB1->getCarteEnjeux();
-
-
-    for (int i = 0; i < 5; ++i) {
-        this->dislay(m_GB1, m_GB2);
-        this->drawPhase(m_GB1, m_GB2);
-
-        std::cout << "\n\n terminez votre tour";
-        std::cin >> inutil;
-
-        this->dislay(m_GB2, m_GB1);
-        this->drawPhase(m_GB2, m_GB1);
-
-        std::cout << "\n\n terminez votre tour";
-        std::cin >> inutil;
-
-    }
-
-    do {
-
-        this->dislay(m_GB1, m_GB2);
-        partieContinue = playATurn(m_GB1, m_GB2);
-
-        std::cout << "\n\n terminez votre tour";
-        std::cin >> inutil;
-
-        if (partieContinue && isEmpty(m_GB2)) {
-            this->dislay(m_GB2, m_GB1);
-            partieContinue = playATurn(m_GB2, m_GB1);
-
-            std::cout << "\n\n terminez votre tour";
-            std::cin >> inutil;
-
-        } else {
-            perdant = 2;
-        }
-
-    } while (partieContinue && isEmpty(m_GB1));
-
-    std::cout << "\n\n\n\nvous avez perdu ";
-
-    if (perdant == 1) {
-
-        m_GB2->addCardToColl(m_GB1->removeCardToColl());
-
-    } else if (perdant == 2) {
-        m_GB1->addCardToColl(m_GB2->removeCardToColl());
-
-    } else {
-        std::cout << "problemme de perdant";
-    }
-
-}
-
 void Game::dislay(GameBoard *GB, GameBoard *GB2) {
     char a = 6;
 
@@ -198,7 +198,7 @@ void Game::dislay(GameBoard *GB, GameBoard *GB2) {
     for (int i = 0; i < 120; ++i) {
         std::cout << a;
     }
-    std::cout << "\n\n                              BATTLEFIELD\n\n";
+    std::cout << "\n                              BATTLEFIELD\n\n";
 
     for (int i = 0; i < 120; ++i) {
         std::cout << a;
