@@ -139,7 +139,7 @@ void Collection::removeCard(char numSerie) {
     }
 }
 
-
+/*
 void Collection::display(){
 
     std::list<Card*>::iterator it;
@@ -151,7 +151,7 @@ void Collection::display(){
         (*it)->afficher();
     }
 }
-
+*/
 
 std::list<Card *> Collection::getCardsCollection() {
     return std::list<Card *>(m_collection);

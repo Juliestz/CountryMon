@@ -19,7 +19,6 @@ public:
     void addCard(int type);
     void removeCard(char numSerie);
     std::list<Card*> getCardsCollection();
-    void display();
     ~Collection();
 };
 

@@ -81,7 +81,7 @@ void acheterUnPack(Player *joueur, int i){
 }
 
 
-void initialisationDuJoueur(Player *joueur, int i, int n) {
+std::string initialisationDuJoueur(Player *joueur, int i, int n) {
     std::string name;
     std::string numero;
     int k = 0;
@@ -111,6 +111,8 @@ void initialisationDuJoueur(Player *joueur, int i, int n) {
         acheterUnPack(joueur, k);
         joueur->afficher();
         joueur->saveCollection(nomFichier);
+
+        return j;
 
     }
     else {
@@ -146,10 +148,18 @@ void initialisationDuJoueur(Player *joueur, int i, int n) {
     }
 }
 
+void miseAJourFin(std::string j, Player *joueur){
+    std::string fichier = "../player";
+    std::string extension = ".txt";
+    std::string nomFichier = fichier + j + extension;
+    joueur->saveCollection(nomFichier);
+}
 
 int main() {
     srand((unsigned int) time(0));
 
+    std::string j1;
+    std::string j2;
 
     Player joueur1;
     Player joueur2;
@@ -166,15 +176,17 @@ int main() {
     std::cin >> i;
     if (i == 1){
         if (n != 0){
-            initialisationDuJoueur(&joueur1, i, n);
+            j1 = initialisationDuJoueur(&joueur1, i, n);
         }
         else{
             std::cout<< "Il n'y a pas encore de compte, vous devez en creer un." <<std::endl;
             initialisationDuJoueur(&joueur1, 2, n);
+            j1 = "1";
         }
     }
     else{
         initialisationDuJoueur(&joueur1, i, n);
+        j1 = "1";
     }
 
 
@@ -183,12 +195,13 @@ int main() {
 
     std::cout << " Joueur 2 voulez-vous utiliser un compte existant? 1/oui   0/non?" << std::endl;
     std::cin >> i;
-    initialisationDuJoueur(&joueur2, i,n);
+    j2 = initialisationDuJoueur(&joueur2, i,n);
 
     Game *jeu =new Game(new GameBoard(&joueur2, joueur1.getCollection()),new GameBoard(&joueur2,joueur2.getCollection())) ;
     jeu->playTheGame();
 
-
+    miseAJourFin(j1, &joueur1);
+    miseAJourFin(j2, &joueur2);
 
 
 

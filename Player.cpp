@@ -7,7 +7,7 @@
 #include "Collection.h"
 #include "Card/Card.h"
 #include <cstdlib>
-#include <ctime>
+
 
 Player::Player() {
     m_money = 50;
@@ -112,12 +112,7 @@ void Player::createCollection(std::string nameDoc) {
     player.close();
 }
 
-/*Collection* Player::getCollection(){
-    return m_collection.getCollection();
-}*/
-
 void Player::addCardToMyCollection() {
-
 
     for (int i = 0; i < 3; ++i) {
         int nRand = rand() % 19 + 1;
@@ -128,8 +123,9 @@ void Player::addCardToMyCollection() {
 }
 
 
-Player::~Player() {}
-
 Collection *Player::getCollection() {
     return &m_collectionj;
 }
+
+
+Player::~Player() {}
