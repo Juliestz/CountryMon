@@ -15,31 +15,34 @@ std::string fonctionNum(int n){
     std::string var;
     switch(n){
         case 0 :
-            var = '1';
+            var = "1";
             break;
         case 1 :
-            var = '2';
+            var = "2";
             break;
         case 2 :
-            var = '3';
+            var = "3";
             break;
         case 3 :
-            var = '4';
+            var = "4";
             break;
         case 4 :
-            var = '5';
+            var = "5";
             break;
         case 5 :
-            var = '6';
+            var = "6";
             break;
         case 6 :
-            var = '7';
+            var = "7";
             break;
         case 7 :
-            var = '8';
+            var = "8";
             break;
         case 8 :
-            var = '9';
+            var = "9";
+            break;
+        case 9 :
+            var = "10";
             break;
     }
     return var;

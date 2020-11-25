@@ -27,11 +27,8 @@ std::string Player::getPseudo(std::string nameDoc){
     player.close();
     return pseudo;
 }
-/*
-int Player::setMoney(int money) {
-    m_money = money;
-}
-*/
+
+
 void Player::getInfo(std::string nameDoc) {
 
     std::ifstream player{nameDoc};
