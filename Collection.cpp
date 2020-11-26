@@ -11,7 +11,7 @@ Collection::Collection() {}
 
 void Collection::addCard(int type) {
     switch (type) {
-        //Specials
+            // Specials //
         case 1 :
             m_collection.push_back(new Special{"Six Aout 45", 1,
                                                "Vous lancez une bombe atomique sur la creature adverse : elle perd 2 HP."
@@ -53,7 +53,7 @@ void Collection::addCard(int type) {
                                                "qui se trouve sur son plateau."});
             break;
 
-            //Energy
+            // Energy //
         case 8 :
             m_collection.push_back(new Energy{"Royaume", 8,
                                               "Votre nation possede un regime politique stable et puissant, cela vous permet "
@@ -78,7 +78,7 @@ void Collection::addCard(int type) {
                                               "vous pouvez lancer des attaques de type Ressource."});
             break;
 
-            //Creatures
+            // Creatures //
         case 12 :
             m_collection.push_back(new Creature{"FRANCE", 12, 7, 1});
             m_collection.back()->newAttack("Le Redoutable en eaux profondes", {2, 1, 0, 0}, 2, 0);
