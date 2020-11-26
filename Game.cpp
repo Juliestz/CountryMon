@@ -100,7 +100,7 @@ void Game::playTheGame() {
             std::cout << "\n\n terminez votre tour";
             std::cin >> inutil;
 
-        }
+        }//a
 
     } while (partieContinue && !isEmpty(m_GB1) && !isEmpty(m_GB2));
 
