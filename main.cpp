@@ -136,7 +136,7 @@ std::string initialisationDuJoueur(Player *joueur, int i, int n) {
         n += 1;
         ecritureDoc("../file_save_player", n);
 
-        std::cout<< "avant que  la partie commence vous avez la possibilte d'agrandir votre collection en achetant des cartes. 1/oui   2/non?"<< std::endl;
+        std::cout<< "avant que  la partie commence vous avez la possibilte d'agrandir votre collection en achetant des cartes. 1/oui   0/non?"<< std::endl;
         std::cin >> k;
 
         joueur->afficher();
@@ -190,7 +190,6 @@ int main() {
         j1 = "1";
     }
 
-
     n = lectureDoc("../file_save_player");
     std::cout << "il y a : " << n << " joueur sauvegarde" << std::endl;
 
@@ -198,7 +197,7 @@ int main() {
     std::cin >> i;
     j2 = initialisationDuJoueur(&joueur2, i,n);
 
-    Game *jeu =new Game(new GameBoard(&joueur2, joueur1.getCollection()),new GameBoard(&joueur2,joueur2.getCollection())) ;
+    Game *jeu =new Game(new GameBoard(&joueur1, joueur1.getCollection()),new GameBoard(&joueur2,joueur2.getCollection())) ;
     jeu->playTheGame();
 
     miseAJourFin(j1, &joueur1);

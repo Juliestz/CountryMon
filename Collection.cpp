@@ -130,27 +130,40 @@ void Collection::addCard(int type) {
 
 void Collection::removeCard(char numSerie) {
     bool notRemove = true;
-    /* std::list<Card *>::iterator it;
+     std::list<Card *>::iterator it;
      std::list<Card *>::iterator debut;
      std::list<Card *>::iterator fin;
      debut = m_collection.begin();
-     fin = m_collection.end();*/
+     fin = m_collection.end();
 
-    // for (it = debut; it != fin; ++it) {
-    for (auto it:m_collection) {
+    for (it = debut; it != fin; ++it) {
         if (notRemove) {
 
-            if ((it)->getNum() == numSerie) {
+            if ((*it)->getNum() == numSerie) {
 
-                m_collection.erase();
-                delete it;
+                m_collection.erase(it);
+                delete *it;
                 notRemove = false;
 
             }
         }
     }
+    /*
+    for (auto it:m_collection) {
+        if (notRemove) {
 
+            if ((it)->getNum() == numSerie) {
+
+                 m_collection.erase();
+                 delete it;
+                 notRemove = false;
+
+            }
+        }
+    }
+     */
 }
+
 
 /*
 void Collection::display(){
