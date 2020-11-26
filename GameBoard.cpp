@@ -333,13 +333,9 @@ void GameBoard::creatADeck() {
         for (int j = 0; j < nbCarteDeck; ++j) {
             nbRand = rand() % tabRepDeColl.size();
 
-
             this->addCardToDeck(tabRepDeColl[nbRand]->getNum());
 
-
-
             delete tabRepDeDeck[nbRand];
-
 
             tabRepDeDeck[nbRand] = (new Card());
             *tabRepDeDeck[nbRand] = *tabRepDeDeck.back();
