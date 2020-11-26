@@ -24,8 +24,8 @@ GameBoard::GameBoard(Player *Playeur, Collection *Collection)
 
 void GameBoard::enleverEnergy(int n) {
 
-    if (m_tabElements[n] != 0){
-        m_tabElements[n] -=1;
+    if (m_tabElements[n] != 0) {
+        m_tabElements[n] -= 1;
     }
 
 
@@ -60,6 +60,7 @@ void GameBoard::displayL1() {
         taille = 55 - (taille + m_creature->getName().size() / 2);
         for (int i = 0; i < taille; ++i) {
             std::cout << " ";
+            taille += m_creature->getName().size() / 2;
         }
         std::cout << m_creature->getName();
 
@@ -503,7 +504,6 @@ int GameBoard::atkDeCreature() {
     }
 
 
-
     return dmg;
 }
 
@@ -575,7 +575,7 @@ void GameBoard::getCarteEnjeux() {
 
 int GameBoard::removeCardToColl() {
     m_collection->removeCard(m_enjeu->getNum());
-    std::cout<<"\n\nvous avez gagné la carte :";
+    std::cout << "\n\nvous avez gagné la carte :";
     m_enjeu->afficher();
     return m_enjeu->getNum();
 }
