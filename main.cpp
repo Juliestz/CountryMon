@@ -144,6 +144,7 @@ std::string initialisationDuJoueur(Player *joueur, int i, int n) {
         acheterUnPack(joueur, k);
         joueur->afficher();
         joueur->saveCollection(nomFichier);
+        return "";
 
     }
 }
