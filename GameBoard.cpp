@@ -60,7 +60,7 @@ void GameBoard::displayL1() {
         taille = 55 - (taille + m_creature->getName().size() / 2);
         for (int i = 0; i < taille; ++i) {
             std::cout << " ";
-            taille += m_creature->getName().size() / 2;
+            taille += m_creature->getName().size();
         }
         std::cout << m_creature->getName();
 
