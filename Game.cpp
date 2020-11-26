@@ -32,8 +32,8 @@ void Game::utilisationDeCarteEvent(Special *Carte, GameBoard *GB, GameBoard *M_o
                     << "\nquelle energie voulez-vous retirer ? \n(1 : politique  2 : militaire  3 : scientifique  4 : ressource)\n";
             int n;
             std::cin >> n;
-            m_GB1->enleverEnergy(n-1);
-            m_GB2->enleverEnergy(n-1);
+            m_GB1->enleverEnergy(n - 1);
+            m_GB2->enleverEnergy(n - 1);
 
             /*Pandémie : « Confinement »
             -1 carte énergie de chaque coté*/
@@ -101,7 +101,7 @@ void Game::playTheGame() {
             perdant = 2;
         }
 
-    } while (partieContinue && isEmpty(m_GB1));
+    } while (partieContinue || isEmpty(m_GB1) || isEmpty(m_GB2));
 
     std::cout << "\n\n\n\nvous avez perdu ";
 
