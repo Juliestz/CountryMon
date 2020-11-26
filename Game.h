@@ -14,6 +14,7 @@ private:
     GameBoard *m_GB2;
 
 public:
+
     Game(GameBoard *GB1, GameBoard *GB2);
 
     void utilisationDeCarteEvent(Special *Carte, GameBoard *GB, GameBoard *M_opponent);

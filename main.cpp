@@ -82,6 +82,7 @@ void acheterUnPack(Player *joueur, int i){
 
 
 std::string initialisationDuJoueur(Player *joueur, int i, int n) {
+
     std::string name;
     std::string numero;
     int k = 0;

@@ -10,7 +10,7 @@
 
 
 class Special : public Card {
-protected :
+private :
     std::string m_description;
 public:
     Special();

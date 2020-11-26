@@ -128,6 +128,7 @@ void Collection::addCard(int type) {
     }
 }
 
+
 void Collection::removeCard(char numSerie) {
     bool notRemove = true;
      std::list<Card *>::iterator it;
@@ -148,6 +149,7 @@ void Collection::removeCard(char numSerie) {
             }
         }
     }
+
     /*
     for (auto it:m_collection) {
         if (notRemove) {
