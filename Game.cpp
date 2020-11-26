@@ -84,6 +84,7 @@ void Game::playTheGame() {
 
     do {
 
+        perdant = 2;
         this->dislay(m_GB1, m_GB2);
         partieContinue = playATurn(m_GB1, m_GB2);
 
@@ -91,14 +92,14 @@ void Game::playTheGame() {
         std::cin >> inutil;
 
         if (partieContinue && isEmpty(m_GB2)) {
+            perdant = 1;
+
             this->dislay(m_GB2, m_GB1);
             partieContinue = playATurn(m_GB2, m_GB1);
 
             std::cout << "\n\n terminez votre tour";
             std::cin >> inutil;
 
-        } else {
-            perdant = 2;
         }
 
     } while (partieContinue || isEmpty(m_GB1) || isEmpty(m_GB2));
