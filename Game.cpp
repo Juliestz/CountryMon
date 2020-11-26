@@ -109,6 +109,7 @@ void Game::playTheGame() {
 
         m_GB2->addCardToColl(m_GB1->removeCardToColl());
 
+
     } else if (perdant == 2) {
         m_GB1->addCardToColl(m_GB2->removeCardToColl());
 

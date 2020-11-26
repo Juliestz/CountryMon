@@ -572,6 +572,8 @@ void GameBoard::getCarteEnjeux() {
 
 int GameBoard::removeCardToColl() {
     m_collection->removeCard(m_enjeu->getNum());
+    std::cout<<"\n\nvous avez gagné la carte :";
+    m_enjeu->afficher();
     return m_enjeu->getNum();
 }
 
