@@ -104,7 +104,7 @@ void Game::playTheGame() {
 
     } while (partieContinue && isEmpty(m_GB1) && isEmpty(m_GB2));
 
-    std::cout << "\n\n\n\nvous avez perdu ";
+    std::cout << "\n\n\n\nvous avez perdu" <<std::endl;
 
     if (perdant == 1) {
 

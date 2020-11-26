@@ -491,7 +491,7 @@ int GameBoard::removeCardToColl() {
 
 void GameBoard::addCardToColl(int type) {
     m_playeur->afficherPseudo();
-    std::cout << "vous avez gagné la carte :";
+    std::cout << "vous avez gagne la carte : ";
     m_enjeu->afficher();
     m_collection->addCard(type);
 }

@@ -149,7 +149,7 @@ std::string initialisationDuJoueur(Player *joueur, int i, int n) {
     }
 }
 
-void miseAJourFin(std::string j, Player *joueur){
+void miseAJourFin(const std::string& j, Player *joueur){
     std::string fichier = "../player";
     std::string extension = ".txt";
     std::string nomFichier = fichier + j + extension;
