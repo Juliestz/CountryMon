@@ -60,10 +60,10 @@ void GameBoard::displayL1() {
         taille = 55 - (taille + m_creature->getName().size() / 2);
         for (int i = 0; i < taille; ++i) {
             std::cout << " ";
-            taille += m_creature->getName().size();
+
         }
         std::cout << m_creature->getName();
-
+        taille += m_creature->getName().size();
     } else {
         taille = 50 - (taille + 10);
         for (int i = 0; i < taille; ++i) {
@@ -261,26 +261,6 @@ void GameBoard::creatADeck() {
 
     Card carteAuDeck;
 
-    /*
-    for (auto it : m_collection->getCardsCollection()) {
-
-        carteAuDeck = *it;
-
-        if (carteAuDeck.getNum() < 8) {
-            tabRepDeColl.push_back(new Special());
-            *tabRepDeColl.back() = *it;
-
-        } else if (carteAuDeck.getNum() < 12) {
-            tabRepDeColl.push_back(new Energy());
-            *tabRepDeColl.back() = *it;
-
-        } else {
-            tabRepDeColl.push_back(new Creature());
-            *tabRepDeColl.back() = *it;
-
-        }
-    }*/
-
 
     for (auto it : m_collection->getCardsCollection()) {
 
@@ -299,34 +279,9 @@ void GameBoard::creatADeck() {
             nbRand = rand() % tabRepDeColl.size();
 
             this->addCardToDeck(tabRepDeColl[nbRand]->getNum());
-            /*if (tabRepDeColl[nbRand]->getNum() < 8) {
-
-                m_deck.push(new Special());
-                *m_deck.back() = *tabRepDeColl[nbRand];
-
-            } else if (tabRepDeColl[nbRand]->getNum() < 12) {
-                m_deck.push(new Energy());
-                *m_deck.back() = *tabRepDeColl[nbRand];
-
-            } else {
-                m_deck.push(new Creature());
-                *m_deck.back() = *tabRepDeColl[nbRand];
-
-            }*/
 
             delete tabRepDeColl[nbRand];
 
-            /*
-            if (tabRepDeColl.back()->getNum() < 8) {
-                tabRepDeColl[nbRand] = (new Special());
-
-            } else if (tabRepDeColl.back()->getNum() < 12) {
-                tabRepDeColl[nbRand] = (new Energy());
-
-            } else {
-                tabRepDeColl[nbRand] = (new Creature());
-            }
-            */
             tabRepDeColl[nbRand] = (new Card());
             *tabRepDeColl[nbRand] = *tabRepDeColl.back();
             delete tabRepDeColl.back();
@@ -338,7 +293,7 @@ void GameBoard::creatADeck() {
     } else {
         std::vector<Card *> tabRepDeDeck;
         do {
-            //AFFICHER tabRepDeColl
+
             std::cout << "\n\n\n\n\n\n\n\n\n\n" << std::endl;
             for (int i = 0; i < tabRepDeColl.size(); ++i) {
                 std::cout << i + 1 << "carte :" << tabRepDeColl[i]->getName() << std::endl;
@@ -355,32 +310,11 @@ void GameBoard::creatADeck() {
                 tabRepDeDeck.push_back(new Card());
                 *tabRepDeDeck.back() = *tabRepDeColl[choix2];
 
-                /*if (tabRepDeColl[choix2]->getNum() < 8) {
 
-                    tabRepDeDeck.push_back(new Special());
-                    *tabRepDeDeck.back() = *tabRepDeColl[choix2];
-
-                } else if (tabRepDeColl[choix2]->getNum() < 12) {
-                    tabRepDeDeck.push_back(new Energy());
-                    *tabRepDeDeck.back() = *tabRepDeColl[choix2];
-
-                } else {
-                    tabRepDeDeck.push_back(new Creature());
-                    *tabRepDeDeck.back() = *tabRepDeColl[choix2];
-
-                }*/
 
                 delete tabRepDeColl[choix2];
 
-                /*if (tabRepDeColl.back()->getNum() < 8) {
-                    tabRepDeColl[choix2] = (new Special());
 
-                } else if (tabRepDeColl.back()->getNum() < 12) {
-                    tabRepDeColl[choix2] = (new Energy());
-
-                } else {
-                    tabRepDeColl[choix2] = (new Creature());
-                }*/
                 tabRepDeColl[choix2] = (new Card());
                 *tabRepDeColl[choix2] = *tabRepDeColl.back();
                 delete tabRepDeColl.back();
@@ -402,34 +336,11 @@ void GameBoard::creatADeck() {
 
             this->addCardToDeck(tabRepDeColl[nbRand]->getNum());
 
-            /*
-            if (tabRepDeDeck[nbRand]->getNum() < 8) {
 
-                m_deck.push(new Special());
-                *m_deck.back() = *tabRepDeDeck[nbRand];
-
-            } else if (tabRepDeDeck[nbRand]->getNum() < 12) {
-                m_deck.push(new Energy());
-                *m_deck.back() = *tabRepDeDeck[nbRand];
-
-            } else {
-                m_deck.push(new Creature());
-                *m_deck.back() = *tabRepDeDeck[nbRand];
-
-            }*/
 
             delete tabRepDeDeck[nbRand];
 
-            /*
-            if (tabRepDeDeck.back()->getNum() < 8) {
-                tabRepDeDeck[nbRand] = (new Special());
 
-            } else if (tabRepDeDeck.back()->getNum() < 12) {
-                tabRepDeDeck[nbRand] = (new Energy());
-
-            } else {
-                tabRepDeDeck[nbRand] = (new Creature());
-            }*/
             tabRepDeDeck[nbRand] = (new Card());
             *tabRepDeDeck[nbRand] = *tabRepDeDeck.back();
             delete tabRepDeDeck.back();
