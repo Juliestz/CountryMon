@@ -102,7 +102,7 @@ void Game::playTheGame() {
 
         }
 
-    } while (partieContinue || isEmpty(m_GB1) || isEmpty(m_GB2));
+    } while (partieContinue && isEmpty(m_GB1) && isEmpty(m_GB2));
 
     std::cout << "\n\n\n\nvous avez perdu ";
 
@@ -125,7 +125,7 @@ bool Game::playATurn(GameBoard *GB, GameBoard *GB2) {
     this->drawPhase(GB, GB2);
     this->battlePhase(GB, GB2);//attaque...
     //this->verification(GB2);//on vérifie que l'autre joueur ne soit pas mort.
-    return !this->verification(GB2);
+    return this->verification(GB2);
 }
 
 void Game::drawPhase(GameBoard *GB, GameBoard *GB2) {
@@ -182,11 +182,11 @@ void Game::battlePhase(GameBoard *GB, GameBoard *GB2) {
 }
 
 bool Game::verification(GameBoard *GB) {
-    return GB->getPV() <= 0;
+    return GB->getPV() > 0;
 }
 
 bool Game::isEmpty(GameBoard *GB) {
-    return GB->isEmpty();
+    return !GB->isEmpty();
 }
 
 void Game::dislay(GameBoard *GB, GameBoard *GB2) {
