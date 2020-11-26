@@ -73,7 +73,7 @@ void GameBoard::displayL1() {
 
     if (m_permanente != nullptr) {
 
-        taille = 110 - (taille + m_permanente->getName().size());
+        taille = 95 - (taille + m_permanente->getName().size());
         for (int i = 0; i < taille; ++i) {
             std::cout << " ";
         }
