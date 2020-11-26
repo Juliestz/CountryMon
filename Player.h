@@ -32,6 +32,7 @@ public:
     void addCardToMyCollection();
     Collection* getCollection();
     ~Player();
+    void afficherPseudo();
 };
 
 

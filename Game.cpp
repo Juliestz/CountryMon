@@ -91,7 +91,7 @@ void Game::playTheGame() {
         std::cout << "\n\n terminez votre tour";
         std::cin >> inutil;
 
-        if (partieContinue && isEmpty(m_GB2)) {
+        if (partieContinue && !isEmpty(m_GB2)) {
             perdant = 1;
 
             this->dislay(m_GB2, m_GB1);

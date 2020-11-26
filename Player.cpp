@@ -61,6 +61,9 @@ void Player::afficher() {
     }
 
 }
+void Player::afficherPseudo(){
+    std::cout << m_pseudo ;
+}
 
 void Player::saveCollection(std::string nameDoc) {
 

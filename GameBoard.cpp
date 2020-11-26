@@ -575,12 +575,13 @@ void GameBoard::getCarteEnjeux() {
 
 int GameBoard::removeCardToColl() {
     m_collection->removeCard(m_enjeu->getNum());
-    std::cout << "\n\nvous avez gagné la carte :";
-    m_enjeu->afficher();
     return m_enjeu->getNum();
 }
 
 void GameBoard::addCardToColl(int type) {
+    m_playeur->afficherPseudo();
+    std::cout << "vous avez gagné la carte :";
+    m_enjeu->afficher();
     m_collection->addCard(type);
 }
 
