@@ -200,7 +200,7 @@ void Game::dislay(GameBoard *GB, GameBoard *GB2) {
     for (int i = 0; i < 120; ++i) {
         std::cout << a;
     }
-    std::cout << "\n                              BATTLEFIELD\n\n";
+    std::cout << "\n\n                              BATTLEFIELD\n\n";
 
     for (int i = 0; i < 120; ++i) {
         std::cout << a;
