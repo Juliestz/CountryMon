@@ -182,7 +182,7 @@ void Game::battlePhase(GameBoard *GB, GameBoard *GB2) {
 }
 
 bool Game::verification(GameBoard *GB) {
-    return GB->getPV() == 0;
+    return GB->getPV() <= 0;
 }
 
 bool Game::isEmpty(GameBoard *GB) {
