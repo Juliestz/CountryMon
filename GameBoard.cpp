@@ -86,6 +86,7 @@ void GameBoard::displayL1() {
             std::cout << " ";
         }
         std::cout << "pas de carte permanente";
+
     }
 
 
@@ -95,6 +96,8 @@ void GameBoard::displayL1() {
             std::cout << " ";
         }
         std::cout << "PV de la creature : " << m_creature->getHP();
+        std::cout << "\n";
+
     }
 
 
